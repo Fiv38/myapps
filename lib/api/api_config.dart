@@ -1,0 +1,6 @@
+class APIConfig {
+  final String supabaseUrl = "https://ygannoowryfwenysrutq.supabase.co";
+  final String supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlnYW5ub293cnlmd2VueXNydXRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM0MDQzNDIsImV4cCI6MjA1ODk4MDM0Mn0.AM1p0dHlTHL6JETP2UeSkffZbE4aK7jCsJ87aOP4zXs";
+  final String supabaseServiceRoleKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlnYW5ub293cnlmd2VueXNydXRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM0MDQzNDIsImV4cCI6MjA1ODk4MDM0Mn0.AM1p0dHlTHL6JETP2UeSkffZbE4aK7jCsJ87aOP4zXs";
+}
+
