@@ -56,6 +56,16 @@ class PosBloc extends Bloc<PosEvent, PosState> {
     on<_UpdateCustomerPaymentStatus>(_onUpdateCustomerPaymentStatus);
     on<_SubmitToDb>(_onSubmitToDb);
     on<_RemoveCustomerService>(_onRemoveCustomerService);
+
+    on<_UpdatePaymentMethodNew>((event, emit) {
+      cartOrder = cartOrder.copyWith(orderPaymentMethodId: event.paymentMethodId);
+      emit(const PosState.done()); // Adjust based on your real state
+    });
+
+    on<_UpdatePaymentStatusNew>((event, emit) {
+      cartOrder = cartOrder.copyWith(orderPaymentStatusId: event.paymentStatusId);
+      emit(const PosState.done());
+    });
   }
 
   Future<void> _onStarted(_Started event, Emitter<PosState> emit) async {
@@ -114,6 +124,9 @@ class PosBloc extends Bloc<PosEvent, PosState> {
     emit(const PosState.deleteService());
   }
 
+
+
+
   void _onUpdateCustomerPayment(_UpdateCustomerPayment event, Emitter<PosState> emit) {
     final raw     = userCustomerDibayarkanTEC.text;
     final digitsOnly = raw.replaceAll(RegExp(r'[^0-9]'), '');
@@ -135,23 +148,23 @@ class PosBloc extends Bloc<PosEvent, PosState> {
   }
 
   void _onUpdateCustomerPaymentStatus(_UpdateCustomerPaymentStatus event, Emitter<PosState> emit) {
-    final raw     = userCustomerDibayarkanTEC.text;
-    final digitsOnly = raw.replaceAll(RegExp(r'[^0-9]'), '');
-    final payment = double.tryParse(digitsOnly) ?? 0.0;
-    double changeTemp;
-    if (cartOrder.orderTotalTransaction > 0) {
-      changeTemp = payment - cartOrder.orderTotalTransaction;
-    } else {
-      changeTemp = 0.0;
-    }
-
-    cartOrder = cartOrder.copyWith(
-      orderTotalPayment: payment,
-      orderTotalChange:  changeTemp < 0 ? 0.0 : changeTemp,
-    );
-    totalPayment = payment;
-    totalChange = changeTemp;
-    emit(const PosState.done());
+    // final raw     = userCustomerDibayarkanTEC.text;
+    // final digitsOnly = raw.replaceAll(RegExp(r'[^0-9]'), '');
+    // final payment = double.tryParse(digitsOnly) ?? 0.0;
+    // double changeTemp;
+    // if (cartOrder.orderTotalTransaction > 0) {
+    //   changeTemp = payment - cartOrder.orderTotalTransaction;
+    // } else {
+    //   changeTemp = 0.0;
+    // }
+    //
+    // cartOrder = cartOrder.copyWith(
+    //   orderTotalPayment: payment,
+    //   orderTotalChange:  changeTemp < 0 ? 0.0 : changeTemp,
+    // );
+    // totalPayment = payment;
+    // totalChange = changeTemp;
+    // emit(const PosState.done());
   }
 
   Future<void> _onSubmitServiceToCart(_SubmitService event, Emitter<PosState> emit) async {

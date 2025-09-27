@@ -40,4 +40,13 @@ class PosEvent with _$PosEvent {
 
   const factory PosEvent.removeCustomerService({ required int id }) = _RemoveCustomerService;
 
+  const factory PosEvent.updatePaymentMethodNew({
+    required String paymentMethodId,
+  }) = _UpdatePaymentMethodNew;
+
+  const factory PosEvent.updatePaymentStatusNew({
+    required String paymentStatusId,
+  }) = _UpdatePaymentStatusNew;
+
+
 }

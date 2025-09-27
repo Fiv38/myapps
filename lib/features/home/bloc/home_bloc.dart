@@ -139,8 +139,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         int pengeluaran = 0;
 
         for (final item in txRes.data as List) {
-          pemasukan   += int.tryParse(item['order_total_payment'].toString()) ?? 0;
-          pengeluaran += int.tryParse(item['order_total_change'].toString())  ?? 0;
+          pemasukan = double.tryParse(item['order_total_payment'].toString())?.toInt() ?? 0;
+          pengeluaran  = double.tryParse(item['order_total_change'].toString())?.toInt() ?? 0;
         }
 
         totalOrderCount = txRes.data.length;

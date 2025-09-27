@@ -20,21 +20,24 @@ mixin _$CashflowEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllCashFlow,
-    required TResult Function() addCashFlow,
+    required TResult Function(int categoryId, String description, int amount)
+        addCashFlow,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllCashFlow,
-    TResult? Function()? addCashFlow,
+    TResult? Function(int categoryId, String description, int amount)?
+        addCashFlow,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllCashFlow,
-    TResult Function()? addCashFlow,
+    TResult Function(int categoryId, String description, int amount)?
+        addCashFlow,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,7 +123,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllCashFlow,
-    required TResult Function() addCashFlow,
+    required TResult Function(int categoryId, String description, int amount)
+        addCashFlow,
   }) {
     return started();
   }
@@ -130,7 +134,8 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllCashFlow,
-    TResult? Function()? addCashFlow,
+    TResult? Function(int categoryId, String description, int amount)?
+        addCashFlow,
   }) {
     return started?.call();
   }
@@ -140,7 +145,8 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllCashFlow,
-    TResult Function()? addCashFlow,
+    TResult Function(int categoryId, String description, int amount)?
+        addCashFlow,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -228,7 +234,8 @@ class _$GetAllCashFlowImpl implements _GetAllCashFlow {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllCashFlow,
-    required TResult Function() addCashFlow,
+    required TResult Function(int categoryId, String description, int amount)
+        addCashFlow,
   }) {
     return getAllCashFlow();
   }
@@ -238,7 +245,8 @@ class _$GetAllCashFlowImpl implements _GetAllCashFlow {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllCashFlow,
-    TResult? Function()? addCashFlow,
+    TResult? Function(int categoryId, String description, int amount)?
+        addCashFlow,
   }) {
     return getAllCashFlow?.call();
   }
@@ -248,7 +256,8 @@ class _$GetAllCashFlowImpl implements _GetAllCashFlow {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllCashFlow,
-    TResult Function()? addCashFlow,
+    TResult Function(int categoryId, String description, int amount)?
+        addCashFlow,
     required TResult orElse(),
   }) {
     if (getAllCashFlow != null) {
@@ -301,6 +310,8 @@ abstract class _$$AddCashFlowImplCopyWith<$Res> {
   factory _$$AddCashFlowImplCopyWith(
           _$AddCashFlowImpl value, $Res Function(_$AddCashFlowImpl) then) =
       __$$AddCashFlowImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int categoryId, String description, int amount});
 }
 
 /// @nodoc
@@ -310,35 +321,82 @@ class __$$AddCashFlowImplCopyWithImpl<$Res>
   __$$AddCashFlowImplCopyWithImpl(
       _$AddCashFlowImpl _value, $Res Function(_$AddCashFlowImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? categoryId = null,
+    Object? description = null,
+    Object? amount = null,
+  }) {
+    return _then(_$AddCashFlowImpl(
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$AddCashFlowImpl implements _AddCashFlow {
-  const _$AddCashFlowImpl();
+  const _$AddCashFlowImpl(
+      {required this.categoryId,
+      required this.description,
+      required this.amount});
+
+  @override
+  final int categoryId;
+// 100 = Pemasukan, selain itu = Pengeluaran
+  @override
+  final String description;
+  @override
+  final int amount;
 
   @override
   String toString() {
-    return 'CashflowEvent.addCashFlow()';
+    return 'CashflowEvent.addCashFlow(categoryId: $categoryId, description: $description, amount: $amount)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AddCashFlowImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AddCashFlowImpl &&
+            (identical(other.categoryId, categoryId) ||
+                other.categoryId == categoryId) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.amount, amount) || other.amount == amount));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, categoryId, description, amount);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddCashFlowImplCopyWith<_$AddCashFlowImpl> get copyWith =>
+      __$$AddCashFlowImplCopyWithImpl<_$AddCashFlowImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllCashFlow,
-    required TResult Function() addCashFlow,
+    required TResult Function(int categoryId, String description, int amount)
+        addCashFlow,
   }) {
-    return addCashFlow();
+    return addCashFlow(categoryId, description, amount);
   }
 
   @override
@@ -346,9 +404,10 @@ class _$AddCashFlowImpl implements _AddCashFlow {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllCashFlow,
-    TResult? Function()? addCashFlow,
+    TResult? Function(int categoryId, String description, int amount)?
+        addCashFlow,
   }) {
-    return addCashFlow?.call();
+    return addCashFlow?.call(categoryId, description, amount);
   }
 
   @override
@@ -356,11 +415,12 @@ class _$AddCashFlowImpl implements _AddCashFlow {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllCashFlow,
-    TResult Function()? addCashFlow,
+    TResult Function(int categoryId, String description, int amount)?
+        addCashFlow,
     required TResult orElse(),
   }) {
     if (addCashFlow != null) {
-      return addCashFlow();
+      return addCashFlow(categoryId, description, amount);
     }
     return orElse();
   }
@@ -401,7 +461,17 @@ class _$AddCashFlowImpl implements _AddCashFlow {
 }
 
 abstract class _AddCashFlow implements CashflowEvent {
-  const factory _AddCashFlow() = _$AddCashFlowImpl;
+  const factory _AddCashFlow(
+      {required final int categoryId,
+      required final String description,
+      required final int amount}) = _$AddCashFlowImpl;
+
+  int get categoryId; // 100 = Pemasukan, selain itu = Pengeluaran
+  String get description;
+  int get amount;
+  @JsonKey(ignore: true)
+  _$$AddCashFlowImplCopyWith<_$AddCashFlowImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1015,7 +1085,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
     Object? message = null,
   }) {
     return _then(_$ErrorImpl(
-      null == message
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1026,7 +1096,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ErrorImpl implements _Error {
-  const _$ErrorImpl(this.message);
+  const _$ErrorImpl({required this.message});
 
   @override
   final String message;
@@ -1141,7 +1211,7 @@ class _$ErrorImpl implements _Error {
 }
 
 abstract class _Error implements CashflowState {
-  const factory _Error(final String message) = _$ErrorImpl;
+  const factory _Error({required final String message}) = _$ErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)

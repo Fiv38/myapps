@@ -337,7 +337,7 @@ class HomeScreenView extends StatelessWidget {
                                   ),
                                   DashboardCard(
                                     icon: Icons.manage_history,
-                                    label: "Cashflow History",
+                                    label: "Cashflow",
                                     onTap:
                                         () => context.router.push(
                                           const CashFlowRoute(),
@@ -365,6 +365,7 @@ class HomeScreenView extends StatelessWidget {
                           ),
                           const Divider(thickness: 0.5),
                           const SizedBox(height: 8),
+                          const Spacer(), // <-- Pushes footer to the bottom
                           Center(
                             child: Text(
                               '© 2025 MaxClean App',
@@ -472,25 +473,6 @@ class HomeScreenView extends StatelessWidget {
           borderRadius: radius ?? BorderRadius.circular(4),
         ),
       ),
-    );
-  }
-
-  Widget _shimmerList() {
-    return Column(
-      children: List.generate(2, (index) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: Shimmer.fromColors(
-            baseColor: Colors.grey[300]!,
-            highlightColor: Colors.grey[100]!,
-            child: Container(
-              height: 20,
-              width: double.infinity,
-              color: Colors.white,
-            ),
-          ),
-        );
-      }),
     );
   }
 

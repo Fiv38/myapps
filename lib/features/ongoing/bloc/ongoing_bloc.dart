@@ -61,7 +61,7 @@ class OngoingBloc extends Bloc<OngoingEvent, OngoingState> {
       Emitter<OngoingState> emit,
       ) async {
     emit(const OngoingState.loading());
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 1));
     try {
       final raw = await sl<APIClient>().fetchListOrderAllWithDio();
       myOrders = [];

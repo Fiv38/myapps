@@ -372,9 +372,14 @@ class PosScreenView extends StatelessWidget {
                                         );
                                         return;
                                       }
-                                      FocusManager.instance.primaryFocus
-                                          ?.unfocus();
-                                      _onPrintStruk(context, bloc);
+                                      // FocusManager.instance.primaryFocus
+                                      //     ?.unfocus();
+                                      // _onPrintStruk(context, bloc);
+
+                                      FocusManager.instance.primaryFocus?.unfocus();
+
+                                      // ✅ Just submit to DB, no printing
+                                      bloc.add(const PosEvent.submitToDb());
                                     },
                                     padding: const EdgeInsets.symmetric(
                                       horizontal: 16,
@@ -456,12 +461,15 @@ class PosScreenView extends StatelessWidget {
             )
           )
               .toList(),
-          onChanged: (val) {
-            if (val == null) return;
-            bloc.paymentMethodIds = val;
-            bloc.cartOrder = bloc.cartOrder.copyWith(orderPaymentMethodId: val);
-          },
-
+          // onChanged: (val) {
+          //   if (val == null) return;
+          //   bloc.paymentMethodIds = val;
+          //   bloc.cartOrder = bloc.cartOrder.copyWith(orderPaymentMethodId: val);
+          // },
+            onChanged: (val) {
+              if (val == null) return;
+              bloc.add(PosEvent.updatePaymentMethodNew(paymentMethodId: val));
+            },
         ),
       ],
     );
@@ -525,11 +533,15 @@ class PosScreenView extends StatelessWidget {
             ),
           )
               .toList(),
-          onChanged: (val) {
-            if (val == null) return;
-            bloc.paymentStatusIds = val;
-            bloc.cartOrder = bloc.cartOrder.copyWith(orderPaymentStatusId: val);
-          },
+          // onChanged: (val) {
+          //   if (val == null) return;
+          //   bloc.paymentStatusIds = val;
+          //   bloc.cartOrder = bloc.cartOrder.copyWith(orderPaymentStatusId: val);
+          // },
+            onChanged: (val) {
+              if (val == null) return;
+              bloc.add(PosEvent.updatePaymentStatusNew(paymentStatusId: val));
+            },
         ),
       ],
     );
@@ -905,7 +917,7 @@ class PosScreenView extends StatelessWidget {
     // final printService = PrintService();
     // bool didConnect = false;
     //
-    try {
+    // try {
     //   // 1) discover paired devices
     //   final devices = await printService.getPairedDevices();
     //   final panda = devices.firstWhere(
@@ -938,13 +950,13 @@ class PosScreenView extends StatelessWidget {
     //   );
 
       // 5) tell your BLoC to submit to DB
-      bloc.add(const PosEvent.submitToDb());
-
-      // show success
-      ToastUtils.showSuccess(context, message: 'Struk printed!');
-    } catch (e) {
-      ToastUtils.showFailure(context, message: 'Print error: $e');
-    } finally {
+    //   bloc.add(const PosEvent.submitToDb());
+    //
+    //   // show success
+    //   ToastUtils.showSuccess(context, message: 'Struk printed!');
+    // } catch (e) {
+    //   ToastUtils.showFailure(context, message: 'Print error: $e');
+    // } finally {
       // only attempt disconnect if we actually connected
       // if (didConnect) {
       //   try {
@@ -953,7 +965,7 @@ class PosScreenView extends StatelessWidget {
       //     ToastUtils.showFailure(context, message: 'Print error: _');
       //   }
       // }
-    }
+    // }
   }
 
 }

@@ -35,6 +35,8 @@ mixin _$PosEvent {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +58,8 @@ mixin _$PosEvent {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,6 +81,8 @@ mixin _$PosEvent {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -102,6 +108,10 @@ mixin _$PosEvent {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -122,6 +132,8 @@ mixin _$PosEvent {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -142,6 +154,8 @@ mixin _$PosEvent {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -219,6 +233,8 @@ class _$StartedImpl implements _Started {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return started();
   }
@@ -243,6 +259,8 @@ class _$StartedImpl implements _Started {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return started?.call();
   }
@@ -267,6 +285,8 @@ class _$StartedImpl implements _Started {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -298,6 +318,10 @@ class _$StartedImpl implements _Started {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return started(this);
   }
@@ -321,6 +345,8 @@ class _$StartedImpl implements _Started {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return started?.call(this);
   }
@@ -344,6 +370,8 @@ class _$StartedImpl implements _Started {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -412,6 +440,8 @@ class _$GetCartImpl implements _GetCart {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return getCart();
   }
@@ -436,6 +466,8 @@ class _$GetCartImpl implements _GetCart {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return getCart?.call();
   }
@@ -460,6 +492,8 @@ class _$GetCartImpl implements _GetCart {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (getCart != null) {
@@ -491,6 +525,10 @@ class _$GetCartImpl implements _GetCart {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return getCart(this);
   }
@@ -514,6 +552,8 @@ class _$GetCartImpl implements _GetCart {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return getCart?.call(this);
   }
@@ -537,6 +577,8 @@ class _$GetCartImpl implements _GetCart {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (getCart != null) {
@@ -605,6 +647,8 @@ class _$DeleteCartImpl implements _DeleteCart {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return deleteCart();
   }
@@ -629,6 +673,8 @@ class _$DeleteCartImpl implements _DeleteCart {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return deleteCart?.call();
   }
@@ -653,6 +699,8 @@ class _$DeleteCartImpl implements _DeleteCart {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (deleteCart != null) {
@@ -684,6 +732,10 @@ class _$DeleteCartImpl implements _DeleteCart {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return deleteCart(this);
   }
@@ -707,6 +759,8 @@ class _$DeleteCartImpl implements _DeleteCart {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return deleteCart?.call(this);
   }
@@ -730,6 +784,8 @@ class _$DeleteCartImpl implements _DeleteCart {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (deleteCart != null) {
@@ -798,6 +854,8 @@ class _$ModifyCartImpl implements _ModifyCart {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return modifyCart();
   }
@@ -822,6 +880,8 @@ class _$ModifyCartImpl implements _ModifyCart {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return modifyCart?.call();
   }
@@ -846,6 +906,8 @@ class _$ModifyCartImpl implements _ModifyCart {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (modifyCart != null) {
@@ -877,6 +939,10 @@ class _$ModifyCartImpl implements _ModifyCart {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return modifyCart(this);
   }
@@ -900,6 +966,8 @@ class _$ModifyCartImpl implements _ModifyCart {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return modifyCart?.call(this);
   }
@@ -923,6 +991,8 @@ class _$ModifyCartImpl implements _ModifyCart {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (modifyCart != null) {
@@ -991,6 +1061,8 @@ class _$CheckingServiceImpl implements _CheckingService {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return checkingService();
   }
@@ -1015,6 +1087,8 @@ class _$CheckingServiceImpl implements _CheckingService {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return checkingService?.call();
   }
@@ -1039,6 +1113,8 @@ class _$CheckingServiceImpl implements _CheckingService {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (checkingService != null) {
@@ -1070,6 +1146,10 @@ class _$CheckingServiceImpl implements _CheckingService {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return checkingService(this);
   }
@@ -1093,6 +1173,8 @@ class _$CheckingServiceImpl implements _CheckingService {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return checkingService?.call(this);
   }
@@ -1116,6 +1198,8 @@ class _$CheckingServiceImpl implements _CheckingService {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (checkingService != null) {
@@ -1261,6 +1345,8 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return addServiceToCart(laundryTypes, laundryNames, qty, keterangan, price);
   }
@@ -1285,6 +1371,8 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return addServiceToCart?.call(
         laundryTypes, laundryNames, qty, keterangan, price);
@@ -1310,6 +1398,8 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (addServiceToCart != null) {
@@ -1342,6 +1432,10 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return addServiceToCart(this);
   }
@@ -1365,6 +1459,8 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return addServiceToCart?.call(this);
   }
@@ -1388,6 +1484,8 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (addServiceToCart != null) {
@@ -1470,6 +1568,8 @@ class _$SubmitServiceImpl implements _SubmitService {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return submitService();
   }
@@ -1494,6 +1594,8 @@ class _$SubmitServiceImpl implements _SubmitService {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return submitService?.call();
   }
@@ -1518,6 +1620,8 @@ class _$SubmitServiceImpl implements _SubmitService {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (submitService != null) {
@@ -1549,6 +1653,10 @@ class _$SubmitServiceImpl implements _SubmitService {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return submitService(this);
   }
@@ -1572,6 +1680,8 @@ class _$SubmitServiceImpl implements _SubmitService {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return submitService?.call(this);
   }
@@ -1595,6 +1705,8 @@ class _$SubmitServiceImpl implements _SubmitService {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (submitService != null) {
@@ -1663,6 +1775,8 @@ class _$SubmitToDbImpl implements _SubmitToDb {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return submitToDb();
   }
@@ -1687,6 +1801,8 @@ class _$SubmitToDbImpl implements _SubmitToDb {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return submitToDb?.call();
   }
@@ -1711,6 +1827,8 @@ class _$SubmitToDbImpl implements _SubmitToDb {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (submitToDb != null) {
@@ -1742,6 +1860,10 @@ class _$SubmitToDbImpl implements _SubmitToDb {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return submitToDb(this);
   }
@@ -1765,6 +1887,8 @@ class _$SubmitToDbImpl implements _SubmitToDb {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return submitToDb?.call(this);
   }
@@ -1788,6 +1912,8 @@ class _$SubmitToDbImpl implements _SubmitToDb {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (submitToDb != null) {
@@ -1883,6 +2009,8 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return updateCustomerName(name);
   }
@@ -1907,6 +2035,8 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return updateCustomerName?.call(name);
   }
@@ -1931,6 +2061,8 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerName != null) {
@@ -1962,6 +2094,10 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return updateCustomerName(this);
   }
@@ -1985,6 +2121,8 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return updateCustomerName?.call(this);
   }
@@ -2008,6 +2146,8 @@ class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerName != null) {
@@ -2109,6 +2249,8 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return updateCustomerPhone(phone);
   }
@@ -2133,6 +2275,8 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return updateCustomerPhone?.call(phone);
   }
@@ -2157,6 +2301,8 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPhone != null) {
@@ -2188,6 +2334,10 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return updateCustomerPhone(this);
   }
@@ -2211,6 +2361,8 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return updateCustomerPhone?.call(this);
   }
@@ -2234,6 +2386,8 @@ class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPhone != null) {
@@ -2337,6 +2491,8 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return updateCustomerOrderDate(date);
   }
@@ -2361,6 +2517,8 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return updateCustomerOrderDate?.call(date);
   }
@@ -2385,6 +2543,8 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerOrderDate != null) {
@@ -2416,6 +2576,10 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return updateCustomerOrderDate(this);
   }
@@ -2439,6 +2603,8 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return updateCustomerOrderDate?.call(this);
   }
@@ -2462,6 +2628,8 @@ class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerOrderDate != null) {
@@ -2538,6 +2706,8 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return updateCustomerPayment();
   }
@@ -2562,6 +2732,8 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return updateCustomerPayment?.call();
   }
@@ -2586,6 +2758,8 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPayment != null) {
@@ -2617,6 +2791,10 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return updateCustomerPayment(this);
   }
@@ -2640,6 +2818,8 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return updateCustomerPayment?.call(this);
   }
@@ -2663,6 +2843,8 @@ class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPayment != null) {
@@ -2735,6 +2917,8 @@ class _$UpdateCustomerPaymentStatusImpl
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return updateCustomerPaymentStatus();
   }
@@ -2759,6 +2943,8 @@ class _$UpdateCustomerPaymentStatusImpl
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return updateCustomerPaymentStatus?.call();
   }
@@ -2783,6 +2969,8 @@ class _$UpdateCustomerPaymentStatusImpl
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPaymentStatus != null) {
@@ -2814,6 +3002,10 @@ class _$UpdateCustomerPaymentStatusImpl
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return updateCustomerPaymentStatus(this);
   }
@@ -2837,6 +3029,8 @@ class _$UpdateCustomerPaymentStatusImpl
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return updateCustomerPaymentStatus?.call(this);
   }
@@ -2860,6 +3054,8 @@ class _$UpdateCustomerPaymentStatusImpl
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (updateCustomerPaymentStatus != null) {
@@ -2932,6 +3128,8 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return selectedCustomerPayment();
   }
@@ -2956,6 +3154,8 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return selectedCustomerPayment?.call();
   }
@@ -2980,6 +3180,8 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (selectedCustomerPayment != null) {
@@ -3011,6 +3213,10 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return selectedCustomerPayment(this);
   }
@@ -3034,6 +3240,8 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return selectedCustomerPayment?.call(this);
   }
@@ -3057,6 +3265,8 @@ class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (selectedCustomerPayment != null) {
@@ -3153,6 +3363,8 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
     required TResult Function() updateCustomerPaymentStatus,
     required TResult Function() selectedCustomerPayment,
     required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
   }) {
     return removeCustomerService(id);
   }
@@ -3177,6 +3389,8 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
     TResult? Function()? updateCustomerPaymentStatus,
     TResult? Function()? selectedCustomerPayment,
     TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
   }) {
     return removeCustomerService?.call(id);
   }
@@ -3201,6 +3415,8 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
     TResult Function()? updateCustomerPaymentStatus,
     TResult Function()? selectedCustomerPayment,
     TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (removeCustomerService != null) {
@@ -3232,6 +3448,10 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
         selectedCustomerPayment,
     required TResult Function(_RemoveCustomerService value)
         removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
   }) {
     return removeCustomerService(this);
   }
@@ -3255,6 +3475,8 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
         updateCustomerPaymentStatus,
     TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
   }) {
     return removeCustomerService?.call(this);
   }
@@ -3278,6 +3500,8 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
         updateCustomerPaymentStatus,
     TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
     TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
     required TResult orElse(),
   }) {
     if (removeCustomerService != null) {
@@ -3294,6 +3518,492 @@ abstract class _RemoveCustomerService implements PosEvent {
   int get id;
   @JsonKey(ignore: true)
   _$$RemoveCustomerServiceImplCopyWith<_$RemoveCustomerServiceImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdatePaymentMethodNewImplCopyWith<$Res> {
+  factory _$$UpdatePaymentMethodNewImplCopyWith(
+          _$UpdatePaymentMethodNewImpl value,
+          $Res Function(_$UpdatePaymentMethodNewImpl) then) =
+      __$$UpdatePaymentMethodNewImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String paymentMethodId});
+}
+
+/// @nodoc
+class __$$UpdatePaymentMethodNewImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$UpdatePaymentMethodNewImpl>
+    implements _$$UpdatePaymentMethodNewImplCopyWith<$Res> {
+  __$$UpdatePaymentMethodNewImplCopyWithImpl(
+      _$UpdatePaymentMethodNewImpl _value,
+      $Res Function(_$UpdatePaymentMethodNewImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? paymentMethodId = null,
+  }) {
+    return _then(_$UpdatePaymentMethodNewImpl(
+      paymentMethodId: null == paymentMethodId
+          ? _value.paymentMethodId
+          : paymentMethodId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdatePaymentMethodNewImpl implements _UpdatePaymentMethodNew {
+  const _$UpdatePaymentMethodNewImpl({required this.paymentMethodId});
+
+  @override
+  final String paymentMethodId;
+
+  @override
+  String toString() {
+    return 'PosEvent.updatePaymentMethodNew(paymentMethodId: $paymentMethodId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdatePaymentMethodNewImpl &&
+            (identical(other.paymentMethodId, paymentMethodId) ||
+                other.paymentMethodId == paymentMethodId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, paymentMethodId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdatePaymentMethodNewImplCopyWith<_$UpdatePaymentMethodNewImpl>
+      get copyWith => __$$UpdatePaymentMethodNewImplCopyWithImpl<
+          _$UpdatePaymentMethodNewImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() checkingService,
+    required TResult Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)
+        addServiceToCart,
+    required TResult Function() submitService,
+    required TResult Function() submitToDb,
+    required TResult Function(String name) updateCustomerName,
+    required TResult Function(String phone) updateCustomerPhone,
+    required TResult Function(DateTime date) updateCustomerOrderDate,
+    required TResult Function() updateCustomerPayment,
+    required TResult Function() updateCustomerPaymentStatus,
+    required TResult Function() selectedCustomerPayment,
+    required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+  }) {
+    return updatePaymentMethodNew(paymentMethodId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? checkingService,
+    TResult? Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)?
+        addServiceToCart,
+    TResult? Function()? submitService,
+    TResult? Function()? submitToDb,
+    TResult? Function(String name)? updateCustomerName,
+    TResult? Function(String phone)? updateCustomerPhone,
+    TResult? Function(DateTime date)? updateCustomerOrderDate,
+    TResult? Function()? updateCustomerPayment,
+    TResult? Function()? updateCustomerPaymentStatus,
+    TResult? Function()? selectedCustomerPayment,
+    TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+  }) {
+    return updatePaymentMethodNew?.call(paymentMethodId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? checkingService,
+    TResult Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)?
+        addServiceToCart,
+    TResult Function()? submitService,
+    TResult Function()? submitToDb,
+    TResult Function(String name)? updateCustomerName,
+    TResult Function(String phone)? updateCustomerPhone,
+    TResult Function(DateTime date)? updateCustomerOrderDate,
+    TResult Function()? updateCustomerPayment,
+    TResult Function()? updateCustomerPaymentStatus,
+    TResult Function()? selectedCustomerPayment,
+    TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    required TResult orElse(),
+  }) {
+    if (updatePaymentMethodNew != null) {
+      return updatePaymentMethodNew(paymentMethodId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_CheckingService value) checkingService,
+    required TResult Function(_AddServiceToCart value) addServiceToCart,
+    required TResult Function(_SubmitService value) submitService,
+    required TResult Function(_SubmitToDb value) submitToDb,
+    required TResult Function(_UpdateCustomerName value) updateCustomerName,
+    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
+    required TResult Function(_UpdateCustomerOrderDate value)
+        updateCustomerOrderDate,
+    required TResult Function(_UpdateCustomerPayment value)
+        updateCustomerPayment,
+    required TResult Function(_UpdateCustomerPaymentStatus value)
+        updateCustomerPaymentStatus,
+    required TResult Function(_SelectedCustomerPayment value)
+        selectedCustomerPayment,
+    required TResult Function(_RemoveCustomerService value)
+        removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
+  }) {
+    return updatePaymentMethodNew(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_CheckingService value)? checkingService,
+    TResult? Function(_AddServiceToCart value)? addServiceToCart,
+    TResult? Function(_SubmitService value)? submitService,
+    TResult? Function(_SubmitToDb value)? submitToDb,
+    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
+    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
+    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
+    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
+    TResult? Function(_UpdateCustomerPaymentStatus value)?
+        updateCustomerPaymentStatus,
+    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
+    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+  }) {
+    return updatePaymentMethodNew?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetCart value)? getCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_CheckingService value)? checkingService,
+    TResult Function(_AddServiceToCart value)? addServiceToCart,
+    TResult Function(_SubmitService value)? submitService,
+    TResult Function(_SubmitToDb value)? submitToDb,
+    TResult Function(_UpdateCustomerName value)? updateCustomerName,
+    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
+    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
+    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
+    TResult Function(_UpdateCustomerPaymentStatus value)?
+        updateCustomerPaymentStatus,
+    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
+    TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    required TResult orElse(),
+  }) {
+    if (updatePaymentMethodNew != null) {
+      return updatePaymentMethodNew(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdatePaymentMethodNew implements PosEvent {
+  const factory _UpdatePaymentMethodNew(
+      {required final String paymentMethodId}) = _$UpdatePaymentMethodNewImpl;
+
+  String get paymentMethodId;
+  @JsonKey(ignore: true)
+  _$$UpdatePaymentMethodNewImplCopyWith<_$UpdatePaymentMethodNewImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdatePaymentStatusNewImplCopyWith<$Res> {
+  factory _$$UpdatePaymentStatusNewImplCopyWith(
+          _$UpdatePaymentStatusNewImpl value,
+          $Res Function(_$UpdatePaymentStatusNewImpl) then) =
+      __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String paymentStatusId});
+}
+
+/// @nodoc
+class __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$UpdatePaymentStatusNewImpl>
+    implements _$$UpdatePaymentStatusNewImplCopyWith<$Res> {
+  __$$UpdatePaymentStatusNewImplCopyWithImpl(
+      _$UpdatePaymentStatusNewImpl _value,
+      $Res Function(_$UpdatePaymentStatusNewImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? paymentStatusId = null,
+  }) {
+    return _then(_$UpdatePaymentStatusNewImpl(
+      paymentStatusId: null == paymentStatusId
+          ? _value.paymentStatusId
+          : paymentStatusId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdatePaymentStatusNewImpl implements _UpdatePaymentStatusNew {
+  const _$UpdatePaymentStatusNewImpl({required this.paymentStatusId});
+
+  @override
+  final String paymentStatusId;
+
+  @override
+  String toString() {
+    return 'PosEvent.updatePaymentStatusNew(paymentStatusId: $paymentStatusId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdatePaymentStatusNewImpl &&
+            (identical(other.paymentStatusId, paymentStatusId) ||
+                other.paymentStatusId == paymentStatusId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, paymentStatusId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdatePaymentStatusNewImplCopyWith<_$UpdatePaymentStatusNewImpl>
+      get copyWith => __$$UpdatePaymentStatusNewImplCopyWithImpl<
+          _$UpdatePaymentStatusNewImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() checkingService,
+    required TResult Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)
+        addServiceToCart,
+    required TResult Function() submitService,
+    required TResult Function() submitToDb,
+    required TResult Function(String name) updateCustomerName,
+    required TResult Function(String phone) updateCustomerPhone,
+    required TResult Function(DateTime date) updateCustomerOrderDate,
+    required TResult Function() updateCustomerPayment,
+    required TResult Function() updateCustomerPaymentStatus,
+    required TResult Function() selectedCustomerPayment,
+    required TResult Function(int id) removeCustomerService,
+    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
+    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+  }) {
+    return updatePaymentStatusNew(paymentStatusId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? checkingService,
+    TResult? Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)?
+        addServiceToCart,
+    TResult? Function()? submitService,
+    TResult? Function()? submitToDb,
+    TResult? Function(String name)? updateCustomerName,
+    TResult? Function(String phone)? updateCustomerPhone,
+    TResult? Function(DateTime date)? updateCustomerOrderDate,
+    TResult? Function()? updateCustomerPayment,
+    TResult? Function()? updateCustomerPaymentStatus,
+    TResult? Function()? selectedCustomerPayment,
+    TResult? Function(int id)? removeCustomerService,
+    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+  }) {
+    return updatePaymentStatusNew?.call(paymentStatusId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? checkingService,
+    TResult Function(String laundryTypes, String laundryNames, int qty,
+            String keterangan, double price)?
+        addServiceToCart,
+    TResult Function()? submitService,
+    TResult Function()? submitToDb,
+    TResult Function(String name)? updateCustomerName,
+    TResult Function(String phone)? updateCustomerPhone,
+    TResult Function(DateTime date)? updateCustomerOrderDate,
+    TResult Function()? updateCustomerPayment,
+    TResult Function()? updateCustomerPaymentStatus,
+    TResult Function()? selectedCustomerPayment,
+    TResult Function(int id)? removeCustomerService,
+    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
+    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    required TResult orElse(),
+  }) {
+    if (updatePaymentStatusNew != null) {
+      return updatePaymentStatusNew(paymentStatusId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_CheckingService value) checkingService,
+    required TResult Function(_AddServiceToCart value) addServiceToCart,
+    required TResult Function(_SubmitService value) submitService,
+    required TResult Function(_SubmitToDb value) submitToDb,
+    required TResult Function(_UpdateCustomerName value) updateCustomerName,
+    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
+    required TResult Function(_UpdateCustomerOrderDate value)
+        updateCustomerOrderDate,
+    required TResult Function(_UpdateCustomerPayment value)
+        updateCustomerPayment,
+    required TResult Function(_UpdateCustomerPaymentStatus value)
+        updateCustomerPaymentStatus,
+    required TResult Function(_SelectedCustomerPayment value)
+        selectedCustomerPayment,
+    required TResult Function(_RemoveCustomerService value)
+        removeCustomerService,
+    required TResult Function(_UpdatePaymentMethodNew value)
+        updatePaymentMethodNew,
+    required TResult Function(_UpdatePaymentStatusNew value)
+        updatePaymentStatusNew,
+  }) {
+    return updatePaymentStatusNew(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_CheckingService value)? checkingService,
+    TResult? Function(_AddServiceToCart value)? addServiceToCart,
+    TResult? Function(_SubmitService value)? submitService,
+    TResult? Function(_SubmitToDb value)? submitToDb,
+    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
+    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
+    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
+    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
+    TResult? Function(_UpdateCustomerPaymentStatus value)?
+        updateCustomerPaymentStatus,
+    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
+    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+  }) {
+    return updatePaymentStatusNew?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetCart value)? getCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_CheckingService value)? checkingService,
+    TResult Function(_AddServiceToCart value)? addServiceToCart,
+    TResult Function(_SubmitService value)? submitService,
+    TResult Function(_SubmitToDb value)? submitToDb,
+    TResult Function(_UpdateCustomerName value)? updateCustomerName,
+    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
+    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
+    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
+    TResult Function(_UpdateCustomerPaymentStatus value)?
+        updateCustomerPaymentStatus,
+    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
+    TResult Function(_RemoveCustomerService value)? removeCustomerService,
+    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
+    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    required TResult orElse(),
+  }) {
+    if (updatePaymentStatusNew != null) {
+      return updatePaymentStatusNew(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdatePaymentStatusNew implements PosEvent {
+  const factory _UpdatePaymentStatusNew(
+      {required final String paymentStatusId}) = _$UpdatePaymentStatusNewImpl;
+
+  String get paymentStatusId;
+  @JsonKey(ignore: true)
+  _$$UpdatePaymentStatusNewImplCopyWith<_$UpdatePaymentStatusNewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 

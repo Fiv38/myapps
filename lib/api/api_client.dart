@@ -765,7 +765,7 @@ class APIClient {
 
   /// Inserts one OrderDetail row into Supabase
   Future<RawResponse> submitOrderDetail(Map<String, dynamic> detailJson) async {
-    final url = '${config.supabaseUrl}/rest/v1/order_detail';
+    final url = '${config.supabaseUrl}/rest/v1/detail_orders';
     final headers = {
       'apikey':       config.supabaseAnonKey,
       'Authorization':'Bearer ${config.supabaseAnonKey}',
@@ -1024,7 +1024,8 @@ class APIClient {
     };
 
     try {
-      final response = await dio.get(
+
+         final response = await dio.get(
         url,
         options: Options(
           headers: headers,
@@ -1050,6 +1051,7 @@ class APIClient {
           message: "Failed with status: ${response.statusCode}",
           responseCode: response.statusCode,
           data: null,
+
         );
       }
     } catch (e, stackTrace) {
@@ -1112,6 +1114,97 @@ class APIClient {
     }
   }
 
+  /// Update Daily Cash Summaries by unique dcs_id
+  Future<RawResponse> updateDailyCashSummaries({
+    required String dcsId,
+    required Map<String, dynamic> payload,
+  }) async {
+    final base = '${config.supabaseUrl}/rest/v1/daily_cash_summary';
+    final patchUrl = '$base?dcs_id=eq.$dcsId'; // ← penting
+
+    final headers = {
+      'apikey':        config.supabaseAnonKey,
+      'Authorization': 'Bearer ${config.supabaseAnonKey}',
+      'Content-Type':  'application/json',
+    };
+
+    try {
+      final resp = await dio.patch(
+        patchUrl,
+        data: payload,
+        options: Options(headers: headers),
+      );
+
+      // 200: sukses + body (array). 204: sukses tanpa body (misal SELECT tidak diizinkan)
+      if (resp.statusCode == 200) {
+        return RawResponse(
+          status: true,
+          message: 'Patched DCS',
+          responseCode: 200,
+          data: resp.data, // biasanya List<Map> satu elemen; cek di pemanggil
+        );
+      }
+
+      if (resp.statusCode == 204) {
+        // Fallback ambil data terbaru (kalau SELECT diizinkan)
+        return RawResponse(
+          status: true,
+          message: 'Patched DCS (no body)',
+          responseCode: 204,
+          data: null,
+        );
+      }
+
+      return RawResponse(
+        status: false,
+        message: 'Patch failed: ${resp.statusCode} ${resp.statusMessage ?? ""}',
+        responseCode: resp.statusCode,
+        data: resp.data,
+      );
+    } on DioException catch (e, st) {
+      logger.e('updateDailyCashSummaries failed', error: e, stackTrace: st);
+      return RawResponse(
+        status: false,
+        message: 'Error: ${e.response?.data ?? e.message}',
+        responseCode: e.response?.statusCode,
+        data: e.response?.data,
+      );
+    } catch (e, st) {
+      logger.e('updateDailyCashSummaries failed', error: e, stackTrace: st);
+      return RawResponse(status: false, message: 'Error: $e', responseCode: null, data: null);
+    }
+  }
+
+
+  // APIClient.dart
+  Future<RawResponse> createExpense({
+    required Map<String, dynamic> payload,
+  }) async {
+    final url = '${config.supabaseUrl}/rest/v1/expenses'; // ganti kalau nama tabel beda
+    final headers = {
+      'apikey':        config.supabaseAnonKey,
+      'Authorization': 'Bearer ${config.supabaseAnonKey}',
+      'Content-Type':  'application/json',
+      'Accept':        'application/json',
+      'Prefer':        'return=representation', // balikin row yg diinsert
+    };
+
+    try {
+      final resp = await dio.post(url, data: payload, options: Options(headers: headers));
+
+      // Supabase biasanya 201 (Created) saat insert; 200 juga OK
+      if (resp.statusCode == 201 || resp.statusCode == 200) {
+        return RawResponse(status: true, message: 'Created expense', responseCode: resp.statusCode, data: resp.data);
+      }
+      return RawResponse(status: false, message: 'Insert failed: ${resp.statusCode}', responseCode: resp.statusCode, data: resp.data);
+    } on DioException catch (e, st) {
+      logger.e('createExpense failed', error: e, stackTrace: st);
+      return RawResponse(status: false, message: 'Error: ${e.message}', responseCode: e.response?.statusCode, data: e.response?.data);
+    } catch (e, st) {
+      logger.e('createExpense failed', error: e, stackTrace: st);
+      return RawResponse(status: false, message: 'Error: $e', responseCode: null, data: null);
+    }
+  }
 
 
 }

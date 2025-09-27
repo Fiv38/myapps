@@ -1,6 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
+import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../api/api_client.dart';
@@ -14,10 +16,22 @@ part 'cashflow_bloc.freezed.dart';
 final sl = GetIt.instance; // Service locator
 
 class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
-  /// Holds the loaded cash flow summaries
   final List<DailyCashSummary> cashFlowSummaries = [];
-  /// Holds the loaded expenses
   final List<Expense> expenses = [];
+
+  int totalClosingBalanceUpdate = 0;
+  int totalPemasukanCashflowToday = 0;
+  int totalPengeluaranCashflowToday = 0;
+
+  String userId = '';
+  String userName = '';
+  String userPhone = '';
+  String userAddress = '';
+  String userBranch = '';
+  String roleName = '';
+  String branchId = '';
+  String branchName = '';
+  String branchAddress = '';
 
   CashflowBloc() : super(const CashflowState.initial()) {
     on<_Started>(_onStarted);
@@ -30,7 +44,14 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
       Emitter<CashflowState> emit,
       ) async {
     emit(const CashflowState.loading());
-    // Trigger data load
+    final prefs = await sl.getAsync<SharedPreferences>();
+    userId        = prefs.getString('userId')        ?? '';
+    userName      = prefs.getString('userName')      ?? '';
+    userPhone     = prefs.getString('userPhone')     ?? '';
+    userAddress   = prefs.getString('userAddress')   ?? '';
+    branchName    = prefs.getString('branchName')    ?? '';
+    branchId      = prefs.getString('branchId')      ?? '';
+    branchAddress = prefs.getString('branchAddress') ?? '';
     add(const CashflowEvent.getAllCashFlow());
   }
 
@@ -39,22 +60,51 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
       Emitter<CashflowState> emit,
       ) async {
     emit(const CashflowState.loading());
+    await Future.delayed(const Duration(seconds: 3));
     try {
-      // Fetch daily summaries
       final summaryResponse = await sl<APIClient>().fetchDailyCashSummariesWithDio();
       cashFlowSummaries
         ..clear()
-        ..addAll((summaryResponse.data as List).cast<DailyCashSummary>());
+        ..addAll(
+          (summaryResponse.data as List)
+              .map((e) => DailyCashSummary.fromJson(e as Map<String, dynamic>)),
+        );
 
-      // Fetch associated expenses
       final expenseResponse = await sl<APIClient>().fetchExpensesWithDio();
       expenses
         ..clear()
-        ..addAll((expenseResponse.data as List).cast<Expense>());
+        ..addAll(
+          (expenseResponse.data as List)
+              .map((e) => Expense.fromJson(e as Map<String, dynamic>)),
+        );
+
+      // ✅ Recompute totals for TODAY
+      final now = DateTime.now();
+      totalPemasukanCashflowToday = 0;
+      totalPengeluaranCashflowToday = 0;
+
+      for (final ex in expenses) {
+        final dt = _parseDate(ex.createdAt ?? ex.date);
+        if (dt == null || !_isSameDay(dt, now)) continue;
+
+        // pastikan amount jadi int
+        final amount = ((ex.amount) as num).toInt();
+        final catId = ex.categoryId;
+
+        if (catId == 100) {
+          totalPemasukanCashflowToday += amount;
+        } else {
+          totalPengeluaranCashflowToday += amount;
+        }
+      }
+
+      totalClosingBalanceUpdate = cashFlowSummaries.isEmpty
+          ? 0
+          : (cashFlowSummaries.first.closingBalance).toInt();
 
       emit(const CashflowState.loaded());
     } catch (e) {
-      emit(CashflowState.error(e.toString()));
+      emit(const CashflowState.error(message: "Error while Get Data Cash Summary!"));
     }
   }
 
@@ -64,20 +114,78 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
       ) async {
     emit(const CashflowState.loading());
     try {
-      // Create summary if provided
-      // if (event.summary != null) {
-      //   await sl<APIClient>().createDailyCashSummary(event.summary!);
-      // }
-      // // Create expense if provided
-      // if (event.expense != null) {
-      //   await sl<APIClient>().createExpense(event.expense!);
-      // }
+      // 1) Ambil DCS aktif
+      final onCurrent = await sl<APIClient>().fetchDailyCashSummariesWithDio();
+      if (!onCurrent.status || onCurrent.data == null || (onCurrent.data as List).isEmpty) {
+        emit(const CashflowState.error(message: "Error Get DCS (kosong/invalid)."));
+        return;
+      }
+      final dcsRow              = (onCurrent.data as List).first as Map<String, dynamic>;
+      final dcsId               = dcsRow['dcs_id'] as String;
+      final closingBalance      = (dcsRow['opening_balance'] ?? 0) as int;
+      final totalExpense        = (dcsRow['total_expense'] ?? 0) as int;
+
+      //2 step for add to expense table from data event
+      final now = DateTime.now();
+      final dateStr = DateFormat('yyyy-MM-dd').format(now); // simpan DATE harian
+      final jakartaNow = DateTime.now().toUtc().add(const Duration(hours: 7));
+
+      final expensePayload = <String, dynamic>{
+        'dcs_id'     : dcsId,
+        'date'       : dateStr,                // tipe DATE/string di DB
+        'branch_id'  : branchId,
+        'category_id': event.categoryId,       // 100 = pemasukan
+        'description': event.description,
+        'amount'     : event.amount,           // int/num
+        'created_by' : userId,                 // isi dari session kamu
+        'created_at' : now.toIso8601String(),
+        // jangan kirim expense_id/idx kalau auto-increment
+      };
+
+      final ins = await sl<APIClient>().createExpense(payload: expensePayload);
+      if (!ins.status) {
+        emit(CashflowState.error(message: 'Gagal insert expense: ${ins.message}'));
+        return;
+      }
+
+      // 2) Hitung dari event
+      final isIncome          = event.categoryId == 100;
+      final newPemasukan      = isIncome ? event.amount : 0;
+      final newPengeluaran    = isIncome ? totalExpense : totalExpense + event.amount;
+      final newClosing        = closingBalance + newPemasukan - newPengeluaran;
+
+      final dcsUpdatePayload = {
+        'date': dateStr,
+        'total_expense': 340000,   // ← hanya ini
+        'closing_balance': newClosing, // ← dan ini
+        'updated_by': userId,
+        'updated_at': now.toIso8601String(),
+      };
+
+      debugPrint('$dcsUpdatePayload');
+      // 3) Update DCS (pakai argumen!)
+      final onUpdate = await sl<APIClient>().updateDailyCashSummaries(
+        dcsId: dcsId,
+        payload: dcsUpdatePayload,
+      );
+      if (!onUpdate.status) {
+        emit(CashflowState.error(message: "Error Update DCS: ${onUpdate.message}"));
+        return;
+      }
 
       emit(const CashflowState.added());
-      // Refresh data
       add(const CashflowEvent.getAllCashFlow());
     } catch (e) {
-      emit(CashflowState.error(e.toString()));
+      emit(CashflowState.error(message: "Add cashflow failed: $e"));
     }
+  }
+
+  bool _isSameDay(DateTime a, DateTime b) =>
+      a.year == b.year && a.month == b.month && a.day == b.day;
+
+  DateTime? _parseDate(dynamic v) {
+    if (v is DateTime) return v;
+    if (v is String) return DateTime.tryParse(v);
+    return null;
   }
 }
