@@ -70,6 +70,56 @@ class APIClient {
     }
   }
 
+  Future<RawResponse> checkUserWithDio({required String phoneNumber, required String roleId}) async {
+    final String url = '${config.supabaseUrl}/rest/v1/users?user_phone=eq.$phoneNumber&select=*,role(role_name),branches(branch_name, branch_address)';
+    final headers = {
+      'apikey': config.supabaseAnonKey,
+      'Authorization': 'Bearer ${config.supabaseAnonKey}',
+      'Content-Type': 'application/json',
+    };
+    try {
+      final response = await dio.get(
+        url,
+        options: Options(headers: headers),
+      );
+
+      if (response.statusCode == 200) {
+        final data = response.data;
+
+        if (data is List && data.isNotEmpty) {
+          return RawResponse(
+            status: true,
+            message: "Valid user",
+            responseCode: 200,
+            data: data.first,
+          );
+        } else {
+          return RawResponse(
+            status: false,
+            message: "User not found",
+            responseCode: 404,
+            data: null,
+          );
+        }
+      } else {
+        return RawResponse(
+          status: false,
+          message: "Request failed with status: ${response.statusCode}",
+          responseCode: response.statusCode,
+          data: null,
+        );
+      }
+    } catch (e, stackTrace) {
+      logger.e("Login failed", error: e, stackTrace: stackTrace);
+      return RawResponse(
+        status: false,
+        message: "An error occurred",
+        responseCode: null,
+        data: null,
+      );
+    }
+  }
+
   /// Fetch List Order
   Future<RawResponse> fetchListOrderWithDio() async {
     final String url =
@@ -128,9 +178,9 @@ class APIClient {
     }
   }
 
-  /// Fetch Order Detail
+  /// Fetch Order Detail https://supabase.com/dashboard/project/ygannoowryfwenysrutq/editor/17682?schema=public&loadFromCache=true
   Future<RawResponse> fetchOrderDetailWithDio() async {
-    final String url = '${config.supabaseUrl}/rest/v1/users?select=*';
+    final String url = '${config.supabaseUrl}/rest/v1/detail_orders?select=*';
 
     final headers = {
       'apikey': config.supabaseAnonKey,
@@ -151,9 +201,9 @@ class APIClient {
           // TODO: Check password match here if needed
           return RawResponse(
             status: true,
-            message: "Valid user",
+            message: "Valid Detail Order",
             responseCode: 200,
-            data: data.first,
+            data: data,
           );
         } else {
           return RawResponse(
@@ -512,7 +562,7 @@ class APIClient {
 
     // <-- This line now mirrors your exact URL structure -->
     final url = '${config.supabaseUrl}/rest/v1/orders'
-        '?select=order_total_payment,order_total_change,order_total_transaction'
+        '?select=*'
         '&created_at=gte.$startIso'
         '&created_at=lte.$endIso';
 

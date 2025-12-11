@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
+
 import '../../components/custom_card_separate.dart';
 import '../../components/custom_search_field.dart';
 import '../../utils/theme/global_colors.dart';
@@ -45,6 +46,13 @@ class _CustomerScreenViewState extends State<CustomerScreenView> {
     });
   }
 
+  void _clearSearch(CustomerBloc bloc) {
+    bloc.searchController.clear();
+    bloc.add(const CustomerEvent.filterCustomer(""));
+    FocusManager.instance.primaryFocus?.unfocus();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     final bloc = context.read<CustomerBloc>();
@@ -59,31 +67,56 @@ class _CustomerScreenViewState extends State<CustomerScreenView> {
       },
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
+          backgroundColor: GlobalColors.primaryBlue, // ⬅️ ikutin theme
+          elevation: 10,                              // ⬅️ sesuai request
           automaticallyImplyLeading: true,
-          iconTheme: const IconThemeData(color: GlobalColors.mainTextBlack),
+          iconTheme: const IconThemeData(color: GlobalColors.white), // ⬅️ ikon putih
           title: Text(
             "Customer",
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: GlobalFonts.fontFamilyJakarta,
               fontWeight: FontWeight.w600,
-              color: GlobalColors.mainTextBlack,
+              color: GlobalColors.white, // ⬅️ judul putih
             ),
           ),
         ),
+
+        // FAB: lingkaran
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // TODO: context.router.push(const AddCustomerRoute());
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text("Add Customer tapped")),
+            );
+          },
+          backgroundColor: GlobalColors.primaryBlue, // cocok sama appbar
+          foregroundColor: GlobalColors.white,
+          child: const Icon(Icons.person_add_alt_1),
+        ),
+
         body: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-              CustomSearchField(
-                controller: bloc.searchController,
-                hintText: 'Search customer...',
-                leftIcon: Icons.person,
-                rightIcon: Icons.close,
-                onChanged: (val) => _onSearchChanged(bloc, val),
+              // Search
+              Row(
+                children: [
+                  Expanded(
+                    child: CustomSearchField(
+                      controller: bloc.searchController,
+                      hintText: 'Search customer...',
+                      leftIcon: Icons.person,
+                      rightIcon: Icons.close,
+                      onChanged: (val) => _onSearchChanged(bloc, val),
+                      // kalau CustomSearchField punya onRightIconTap:
+                      // onRightIconTap: () => _clearSearch(bloc),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 12),
+              const Divider(),
+              const SizedBox(height: 6),
               Expanded(
                 child: BlocBuilder<CustomerBloc, CustomerState>(
                   builder: (context, state) {
@@ -96,12 +129,12 @@ class _CustomerScreenViewState extends State<CustomerScreenView> {
                       return ListView.builder(
                         itemCount: 6,
                         itemBuilder: (_, __) => Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          padding: const EdgeInsets.symmetric(vertical: 7),
                           child: Shimmer.fromColors(
                             baseColor: Colors.grey[300]!,
                             highlightColor: Colors.grey[100]!,
                             child: Container(
-                              height: 70,
+                              height: 100,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
@@ -140,24 +173,39 @@ class _CustomerScreenViewState extends State<CustomerScreenView> {
                           : ListView.separated(
                         itemCount: bloc.filteredUser.length,
                         separatorBuilder: (_, __) =>
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 3),
                         itemBuilder: (context, index) {
                           final user = bloc.filteredUser[index];
-                          return CustomCardSeparate(
-                            title: user.userName,
-                            detail: user.userPhone,
-                            rightIcon: Icons.arrow_forward_ios,
-                            titleStyle: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontFamily:
-                              GlobalFonts.fontFamilyJakarta,
-                              fontSize: 14,
-                            ),
-                            detailStyle: TextStyle(
-                              fontFamily:
-                              GlobalFonts.fontFamilyJakarta,
-                              fontSize: 14,
-                              color: Colors.grey[700],
+
+                          final address = (user.userAddress ?? '').trim();
+                          final phone   = (user.userPhone   ?? '').trim();
+
+                          return InkWell(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                bottom: 2,
+                              ),
+                              child: CustomCardSeparate(
+                                title: user.userName,
+                                detail: [
+                                  if (address.isNotEmpty) address,
+                                  if (phone.isNotEmpty) phone,
+                                ].join('\n'),
+                                titleStyle: const TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily:
+                                  GlobalFonts.fontFamilyJakarta,
+                                  fontSize: 16,
+                                  height: 1.1,
+                                ),
+                                detailStyle: TextStyle(
+                                  fontFamily: GlobalFonts.fontFamilyJakarta,
+                                  fontSize: 12,
+                                  height: 1.25,
+                                  color: Colors.grey[700],
+                                ),
+                              ),
                             ),
                           );
                         },

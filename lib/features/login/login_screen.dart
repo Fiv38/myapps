@@ -163,11 +163,11 @@ class _LoginScreenViewState extends State<LoginScreenView> {
                                     ),
                                     borderRadius: BorderRadius.circular(10),
                                     onPressed: () async {
-                                      final hasInternet = await NetworkUtils.isConnected();
-                                      if (!hasInternet) {
-                                        ToastUtils.showFailure(context, message: "No Internet Connection");
-                                        return;
-                                      }
+                                      // final hasInternet = await NetworkUtils.isConnected();
+                                      // if (!hasInternet) {
+                                      //   ToastUtils.showFailure(context, message: "No Internet Connection");
+                                      //   return;
+                                      // }
                                       FocusManager.instance.primaryFocus?.unfocus();
                                       bloc.add(const LoginEvent.submitlogin());
                                     },

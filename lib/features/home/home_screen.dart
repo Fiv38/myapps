@@ -7,8 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../components/custom_dialog.dart';
-import '../../components/custom_elevated_button.dart';
 import '../../components/dashboard_card.dart';
+import '../../components/dashed_line.dart';
 import '../../routes/app_router.gr.dart';
 import '../../utils/double_back_exit.dart';
 import '../../utils/theme/global_colors.dart';
@@ -39,18 +39,19 @@ class HomeScreenView extends StatelessWidget {
     await Future.delayed(const Duration(milliseconds: 300));
   }
 
-
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     final todayText = DateFormat('dd MMMM yyyy').format(DateTime.now());
-
+    final size = MediaQuery.of(context).size;
+    final bool isTablet = size.shortestSide >= 600; // tablet breakpoint
+    final int cross = isTablet ? 4 : 3;
+    final double aspect = isTablet ? 1.4 : 1.3;     // optional tweak
+    final double gridHeight = isTablet ? 420 : 350; // optional tweak
     return BlocListener<HomeBloc, HomeState>(
       listener: (context, state) {
         state.maybeWhen(
           loadingTotalCount: () {},
           loadedTotalCount: () {
-            // Navigator.of(context).pop();
             ToastUtils.showSuccess(context, message: "Refreshed!");
           },
           invalid: (message, isCloseLoading) {
@@ -58,7 +59,6 @@ class HomeScreenView extends StatelessWidget {
             ToastUtils.showFailure(context, message: message);
           },
           error: (message) {
-            // Navigator.of(context).pop();
             ToastUtils.showFailure(context, message: "Error");
           },
           orElse: () {},
@@ -75,7 +75,12 @@ class HomeScreenView extends StatelessWidget {
                 child: SafeArea(
                   child: DoubleBackExit(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
+                      padding: const EdgeInsets.only(
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10,
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -99,17 +104,7 @@ class HomeScreenView extends StatelessWidget {
                                         (HomeBloc b) => b.userName,
                                       ),
                                       style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: GlobalFonts.fontFamilyJakarta,
-                                      ),
-                                    ),
-                                    Text(
-                                      context.select(
-                                        (HomeBloc b) => b.branchName,
-                                      ),
-                                      style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         fontFamily:
                                             GlobalFonts.fontFamilyJakarta,
@@ -117,10 +112,21 @@ class HomeScreenView extends StatelessWidget {
                                     ),
                                     Text(
                                       context.select(
-                                        (HomeBloc b) => b.branchAddress,
+                                        (HomeBloc b) => b.branchName,
                                       ),
                                       style: TextStyle(
-                                        fontSize: 12,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily:
+                                            GlobalFonts.fontFamilyJakarta,
+                                      ),
+                                    ),
+                                    Text(
+                                      context.select(
+                                        (HomeBloc b) => b.userAddress,
+                                      ),
+                                      style: TextStyle(
+                                        fontSize: 14,
                                         color: Colors.black54,
                                         fontFamily:
                                             GlobalFonts.fontFamilyJakarta,
@@ -147,8 +153,8 @@ class HomeScreenView extends StatelessWidget {
                                     ),
                                     onPressed:
                                         () => _showLogoutConfirmationDialog(
-                                      context,
-                                    ),
+                                          context,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -162,10 +168,27 @@ class HomeScreenView extends StatelessWidget {
                                 orElse: () => false,
                               );
 
-                              final totalOrderCount = context.select((HomeBloc b) => b.totalOrderCount);
-                              final totalOrderAmount = context.select((HomeBloc b) => b.totalPemasukanByOrder);
-                              final totalKasHariIni = context.select((HomeBloc b) => b.totalKasHariIni);
-                              final totalExpenseHariIni = context.select((HomeBloc b) => b.totalExpenseHariIni);
+                              final totalOrderCount = context.select(
+                                (HomeBloc b) => b.totalOrderCount,
+                              );
+                              final totalOrderAmount = context.select(
+                                (HomeBloc b) => b.totalPemasukanByOrder,
+                              );
+                              final totalKasHariIni = context.select(
+                                (HomeBloc b) => b.totalClosingBalanceUpdate,
+                              );
+                              final totalExpenseHariIni = context.select(
+                                (HomeBloc b) => b.totalPengeluaranCashflowToday,
+                              );
+                              final totalCash = context.select(
+                                    (HomeBloc b) => b.totalCashByOrder,
+                              );
+                              final totalQris = context.select(
+                                    (HomeBloc b) => b.totalQrisByOrder,
+                              );
+                              final totalTransfer = context.select(
+                                    (HomeBloc b) => b.totalTransferByOrder,
+                              );
 
                               return Container(
                                 padding: const EdgeInsets.all(16),
@@ -189,116 +212,233 @@ class HomeScreenView extends StatelessWidget {
                                         fontSize: 14,
                                         color: GlobalColors.mainTextBlack,
                                         fontWeight: FontWeight.bold,
-                                        fontFamily: GlobalFonts.fontFamilyJakarta,
+                                        fontFamily:
+                                            GlobalFonts.fontFamilyJakarta,
                                       ),
                                     ),
-                                    // Row(
-                                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    //   children: [
-                                    //     Text(
-                                    //       "Periode",
-                                    //       style: TextStyle(
-                                    //         fontSize: 14,
-                                    //         fontWeight: FontWeight.bold,
-                                    //         fontFamily: GlobalFonts.fontFamilyJakarta,
-                                    //       ),
-                                    //     ),
-                                    //     BlocBuilder<HomeBloc, HomeState>(
-                                    //       builder: (context, state) {
-                                    //         final filter = context.select((HomeBloc b) => b.currentFilter);
-                                    //         return DropdownButton<DateFilterOption>(
-                                    //           value: filter,
-                                    //           underline: SizedBox(),
-                                    //           items: const [
-                                    //             DropdownMenuItem(
-                                    //               value: DateFilterOption.today,
-                                    //               child: Text("Hari Ini"),
-                                    //             ),
-                                    //             DropdownMenuItem(
-                                    //               value: DateFilterOption.thisWeek,
-                                    //               child: Text("Minggu Ini"),
-                                    //             ),
-                                    //             DropdownMenuItem(
-                                    //               value: DateFilterOption.thisMonth,
-                                    //               child: Text("Bulan Ini"),
-                                    //             ),
-                                    //           ],
-                                    //           onChanged: (value) {
-                                    //             if (value != null) {
-                                    //               context.read<HomeBloc>().add(HomeEvent.changeFilter(value));
-                                    //             }
-                                    //           },
-                                    //         );
-                                    //       },
-                                    //     ),
-                                    //   ],
-                                    // ),
                                     const SizedBox(height: 24),
                                     // TOTAL ORDER
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         const Text(
                                           "Total Order Hari Ini",
-                                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily:
+                                                GlobalFonts.fontFamilyJakarta,
+                                          ),
                                         ),
                                         isLoading
-                                            ? _shimmerLine(width: 100)
+                                            ? _shimmerLine()
                                             : Text(
-                                          '$totalOrderCount',
-                                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
-                                        ),
+                                              '$totalOrderCount',
+                                              style: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                              ),
+                                            ),
                                       ],
                                     ),
                                     const SizedBox(height: 8),
                                     // TOTAL PEMASUKAN DARI ORDER
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         const Text(
                                           "Total Pemasukan dari Order",
-                                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
-                                        ),
-                                        isLoading
-                                            ? _shimmerLine(width: 100)
-                                            : Text(
-                                          CurrencyFormat.convertToIdr(totalOrderAmount, 0),
-                                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily:
+                                                GlobalFonts.fontFamilyJakarta,
+                                          ),
                                         ),
                                       ],
                                     ),
+                                    // BREAKDOWN: cash, qris, transfer
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 8.0),
+                                      child: Column(
+                                        children: [
+                                          // CASH
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 20), // padding 20 untuk tiap item
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+
+                                                Text(
+                                                  "Cash",
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: GlobalFonts.fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                                isLoading
+                                                    ? _shimmerLine(width: 80)
+                                                    : Text(
+                                                  CurrencyFormat.convertToIdr(
+                                                    totalCash ?? 0,
+                                                    0,
+                                                  ),
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight:
+                                                    FontWeight.w600,
+                                                    fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+
+                                          const SizedBox(height: 6),
+
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 20), // padding 20 untuk tiap item
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text(
+                                                  "Qris",
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: GlobalFonts.fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                                isLoading
+                                                    ? _shimmerLine(width: 80)
+                                                    : Text(
+                                                  CurrencyFormat.convertToIdr(
+                                                    totalQris ?? 0,
+                                                    0,
+                                                  ),
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight:
+                                                    FontWeight.w600,
+                                                    fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+
+                                          const SizedBox(height: 6),
+
+                                          // TRANSFER
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 20), // padding 20 untuk tiap item
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text(
+                                                  "Transfer",
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: GlobalFonts.fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                                isLoading
+                                                    ? _shimmerLine(width: 80)
+                                                    : Text(
+                                                  CurrencyFormat.convertToIdr(
+                                                    totalTransfer ?? 0,
+                                                    0,
+                                                  ),
+                                                  style: const TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight:
+                                                    FontWeight.w600,
+                                                    fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    const Divider(),
                                     const SizedBox(height: 8),
                                     // TOTAL KAS
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         const Text(
-                                          "Total Kas Hari Ini",
-                                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
+                                          "Total Kas",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily:
+                                                GlobalFonts.fontFamilyJakarta,
+                                          ),
                                         ),
                                         isLoading
-                                            ? _shimmerLine(width: 100)
+                                            ? _shimmerLine()
                                             : Text(
-                                          CurrencyFormat.convertToIdr(totalKasHariIni, 0),
-                                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
-                                        ),
+                                              CurrencyFormat.convertToIdr(
+                                                totalKasHariIni,
+                                                0,
+                                              ),
+                                              style: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                              ),
+                                            ),
                                       ],
                                     ),
                                     const SizedBox(height: 8),
                                     // TOTAL PENGELUARAN
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         const Text(
                                           "Total Pengeluaran Hari Ini",
-                                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily:
+                                                GlobalFonts.fontFamilyJakarta,
+                                          ),
                                         ),
                                         isLoading
-                                            ? _shimmerLine(width: 100)
+                                            ? _shimmerLine()
                                             : Text(
-                                          CurrencyFormat.convertToIdr(totalExpenseHariIni, 0),
-                                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: GlobalFonts.fontFamilyJakarta),
-                                        ),
+                                              CurrencyFormat.convertToIdr(
+                                                totalExpenseHariIni,
+                                                0,
+                                              ),
+                                              style: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily:
+                                                    GlobalFonts
+                                                        .fontFamilyJakarta,
+                                              ),
+                                            ),
                                       ],
                                     ),
                                     const SizedBox(height: 8),
@@ -308,64 +448,49 @@ class HomeScreenView extends StatelessWidget {
                             },
                           ),
                           const Divider(thickness: 0.5),
-                          Center(
-                            child: SizedBox(
-                              height: size.height * 0.3,
-                              child: GridView.count(
-                                crossAxisCount: 3,
-                                mainAxisSpacing: 8,
-                                crossAxisSpacing: 8,
-                                shrinkWrap: true,
-                                physics: const NeverScrollableScrollPhysics(),
-                                childAspectRatio: 1.2,
-                                children: [
-                                  DashboardCard(
-                                    icon: Icons.point_of_sale,
-                                    label: "POS",
-                                    onTap:
-                                        () => context.router.push(
-                                          const PosRoute(),
-                                        ),
-                                  ),
-                                  DashboardCard(
-                                    icon: Icons.hourglass_top,
-                                    label: "On Going",
-                                    onTap:
-                                        () => context.router.push(
-                                          const OngoingRoute(),
-                                        ),
-                                  ),
-                                  DashboardCard(
-                                    icon: Icons.manage_history,
-                                    label: "Cashflow",
-                                    onTap:
-                                        () => context.router.push(
-                                          const CashFlowRoute(),
-                                        ),
-                                  ),
-                                  DashboardCard(
-                                    icon: Icons.people_alt_outlined,
-                                    label: "List Customer",
-                                    onTap:
-                                        () => context.router.push(
-                                          const CustomerRoute(),
-                                        ),
-                                  ),
-                                  DashboardCard(
-                                    icon: Icons.receipt_long,
-                                    label: "Reports",
-                                    onTap:
-                                        () => context.router.push(
-                                          const ReportRoute(),
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          const Divider(thickness: 0.5),
-                          const SizedBox(height: 8),
-                          const Spacer(), // <-- Pushes footer to the bottom
+
+
+                  Center(
+                  child: SizedBox(
+                  height: gridHeight,
+                    child: GridView.count(
+                      crossAxisCount: cross,
+                      mainAxisSpacing: 7,
+                      crossAxisSpacing: 7,
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      childAspectRatio: aspect,
+                      children: [
+                        DashboardCard(
+                          icon: Icons.point_of_sale,
+                          label: "POS",
+                          onTap: () => context.router.push(const PosRoute()),
+                        ),
+                        DashboardCard(
+                          icon: Icons.hourglass_top,
+                          label: "On Going",
+                          onTap: () => context.router.push(const OngoingRoute()),
+                        ),
+                        DashboardCard(
+                          icon: Icons.manage_history,
+                          label: "Cashflow",
+                          onTap: () => context.router.push(const CashFlowRoute()),
+                        ),
+                        DashboardCard(
+                          icon: Icons.people_alt_outlined,
+                          label: "List Customer",
+                          onTap: () => context.router.push(const CustomerRoute()),
+                        ),
+                        DashboardCard(
+                          icon: Icons.receipt_long,
+                          label: "Reports",
+                          onTap: () => context.router.push(const ReportRoute()),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                  const Spacer(), // <-- Pushes footer to the bottom
                           Center(
                             child: Text(
                               '© 2025 MaxClean App',
@@ -376,7 +501,6 @@ class HomeScreenView extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 8),
                         ],
                       ),
                     ),
@@ -458,7 +582,7 @@ class HomeScreenView extends StatelessWidget {
   }
 
   Widget _shimmerLine({
-    double width = 120,
+    double width = 80,
     double height = 18,
     BorderRadius? radius,
   }) {
@@ -475,5 +599,4 @@ class HomeScreenView extends StatelessWidget {
       ),
     );
   }
-
 }

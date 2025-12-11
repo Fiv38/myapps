@@ -2,30 +2,36 @@ part of 'pos_bloc.dart';
 
 @freezed
 class PosState with _$PosState {
+  // lifecycle
   const factory PosState.initial() = _Initial;
   const factory PosState.loading() = _Loading;
-  const factory PosState.loaded() = _Loaded;
-  const factory PosState.error() = _Error;
-  const factory PosState.finish() = _Finish;
-  const factory PosState.done() = _Done;
+  const factory PosState.ready() = _Ready;
+
+  // generic outcomes
+  const factory PosState.failure({required String message}) = _Failure;
+  const factory PosState.finished() = _Finished;
+  const factory PosState.paymentUpdated() = _PaymentUpdated;
   const factory PosState.reset() = _Reset;
-  const factory PosState.updated({required String message}) = _Updated;
-  //Cart
-  const factory PosState.loadingRemoveCart() = _LoadingRemoveCart;
-  const factory PosState.addedCart() = _AddedCart;
 
-  //Add Service
-  const factory PosState.loadingService() = _LoadingService;
-  const factory PosState.addedService() = _AddedService;
+  // cart
+  const factory PosState.cartRemoving() = _CartRemoving;
+  const factory PosState.cartAdded() = _CartAdded;
 
-  //Delete Service
-  const factory PosState.deleteService() = _DeleteService;
+  // service
+  const factory PosState.serviceAdding() = _ServiceAdding;
+  const factory PosState.serviceAdded() = _ServiceAdded;
+  const factory PosState.serviceDeleted() = _ServiceDeleted;
+  const factory PosState.serviceEdited() = _ServiceEdited;
 
-  //Edit Service
-  const factory PosState.editService() = _EditService;
+  // submit to DB
+  const factory PosState.savingOrder() = _SavingOrder;
+  const factory PosState.orderSaved() = _OrderSaved;
 
-  const factory PosState.loadingSaveToDB() = _LoadingSaveToDB;
-  const factory PosState.finishSaveToDB() = _FinishSaveToDB;
+  // Get state username
+  const factory PosState.gettingAllUsername() = _GettingAllUsername;
+  const factory PosState.loadedAllUsername() = _LoadedAllUsername;
 
-
+  // WhatsApp
+  const factory PosState.sendingWhatsApp() = _SendingWhatsApp;
+  const factory PosState.whatsAppSent() = _WhatsAppSent;
 }

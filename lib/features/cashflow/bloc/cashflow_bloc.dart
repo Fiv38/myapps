@@ -108,38 +108,109 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
     }
   }
 
+  // Future<void> _onAddCashFlow(
+  //     _AddCashFlow event,
+  //     Emitter<CashflowState> emit,
+  //     ) async {
+  //   emit(const CashflowState.loading());
+  //   try {
+  //     // 1) Ambil DCS aktif
+  //     final onCurrent = await sl<APIClient>().fetchDailyCashSummariesWithDio();
+  //     if (!onCurrent.status || onCurrent.data == null || (onCurrent.data as List).isEmpty) {
+  //       emit(const CashflowState.error(message: "Error Get DCS (kosong/invalid)."));
+  //       return;
+  //     }
+  //     final dcsRow              = (onCurrent.data as List).first as Map<String, dynamic>;
+  //     final dcsId               = dcsRow['dcs_id'] as String;
+  //     final closingBalance      = (dcsRow['opening_balance'] ?? 0) as int;
+  //     final totalExpense        = (dcsRow['total_expense'] ?? 0) as int;
+  //
+  //     //2 step for add to expense table from data event
+  //     final now = DateTime.now();
+  //     final dateStr = DateFormat('yyyy-MM-dd').format(now); // simpan DATE harian
+  //     final jakartaNow = DateTime.now().toUtc().add(const Duration(hours: 7));
+  //
+  //     final expensePayload = <String, dynamic>{
+  //       'dcs_id'     : dcsId,
+  //       'date'       : dateStr,                // tipe DATE/string di DB
+  //       'branch_id'  : branchId,
+  //       'category_id': event.categoryId,       // 100 = pemasukan
+  //       'description': event.description,
+  //       'amount'     : event.amount,           // int/num
+  //       'created_by' : userName,                 // isi dari session kamu
+  //       'created_at' : now.toIso8601String(),
+  //       // jangan kirim expense_id/idx kalau auto-increment
+  //     };
+  //
+  //     final ins = await sl<APIClient>().createExpense(payload: expensePayload);
+  //     if (!ins.status) {
+  //       emit(CashflowState.error(message: 'Gagal insert expense: ${ins.message}'));
+  //       return;
+  //     }
+  //
+  //     // 2) Hitung dari event
+  //     final isIncome          = event.categoryId == 100;
+  //     final newPemasukan      = isIncome ? event.amount : 0;
+  //     final newPengeluaran    = isIncome ? totalExpense : totalExpense + event.amount;
+  //     final newClosing        = closingBalance + newPemasukan - newPengeluaran;
+  //
+  //     final dcsUpdatePayload = {
+  //       'date': dateStr,
+  //       'total_expense': newPengeluaran,   // ← hanya ini
+  //       'closing_balance': newClosing, // ← dan ini
+  //       'updated_by': userId,
+  //       'updated_at': now.toIso8601String(),
+  //     };
+  //
+  //     debugPrint('$dcsUpdatePayload');
+  //     // 3) Update DCS (pakai argumen!)
+  //     final onUpdate = await sl<APIClient>().updateDailyCashSummaries(
+  //       dcsId: dcsId,
+  //       payload: dcsUpdatePayload,
+  //     );
+  //     if (!onUpdate.status) {
+  //       emit(CashflowState.error(message: "Error Update DCS: ${onUpdate.message}"));
+  //       return;
+  //     }
+  //
+  //     emit(const CashflowState.added());
+  //     add(const CashflowEvent.getAllCashFlow());
+  //   } catch (e) {
+  //     emit(CashflowState.error(message: "Add cashflow failed: $e"));
+  //   }
+  // }
   Future<void> _onAddCashFlow(
       _AddCashFlow event,
       Emitter<CashflowState> emit,
       ) async {
     emit(const CashflowState.loading());
     try {
-      // 1) Ambil DCS aktif
+      // 1) Ambil DCS aktif (pakai elemen pertama dari summaries)
       final onCurrent = await sl<APIClient>().fetchDailyCashSummariesWithDio();
       if (!onCurrent.status || onCurrent.data == null || (onCurrent.data as List).isEmpty) {
         emit(const CashflowState.error(message: "Error Get DCS (kosong/invalid)."));
         return;
       }
-      final dcsRow              = (onCurrent.data as List).first as Map<String, dynamic>;
-      final dcsId               = dcsRow['dcs_id'] as String;
-      final closingBalance      = (dcsRow['opening_balance'] ?? 0) as int;
-      final totalExpense        = (dcsRow['total_expense'] ?? 0) as int;
+      final dcsRow = (onCurrent.data as List).first as Map<String, dynamic>;
+      final dcsId  = (dcsRow['dcs_id'] ?? '') as String;
 
-      //2 step for add to expense table from data event
+      final int openingBalance  = (dcsRow['opening_balance'] as num?)?.toInt() ?? 0;
+      final int totalExpenseNow = (dcsRow['total_expense']   as num?)?.toInt() ?? 0;
+      final int closingBalance  = (dcsRow['closing_balance'] as num?)?.toInt() ?? 0;
+
+      // 2) Insert ke tabel expense dari event
       final now = DateTime.now();
-      final dateStr = DateFormat('yyyy-MM-dd').format(now); // simpan DATE harian
-      final jakartaNow = DateTime.now().toUtc().add(const Duration(hours: 7));
+      final dateStr = DateFormat('yyyy-MM-dd').format(now); // disimpan sebagai DATE
 
       final expensePayload = <String, dynamic>{
         'dcs_id'     : dcsId,
-        'date'       : dateStr,                // tipe DATE/string di DB
+        'date'       : dateStr,
         'branch_id'  : branchId,
-        'category_id': event.categoryId,       // 100 = pemasukan
+        'category_id': event.categoryId,   // 100 = pemasukan
         'description': event.description,
-        'amount'     : event.amount,           // int/num
-        'created_by' : userId,                 // isi dari session kamu
+        'amount'     : event.amount,
+        'created_by' : userName,
         'created_at' : now.toIso8601String(),
-        // jangan kirim expense_id/idx kalau auto-increment
       };
 
       final ins = await sl<APIClient>().createExpense(payload: expensePayload);
@@ -148,22 +219,28 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
         return;
       }
 
-      // 2) Hitung dari event
-      final isIncome          = event.categoryId == 100;
-      final newPemasukan      = isIncome ? event.amount : 0;
-      final newPengeluaran    = isIncome ? totalExpense : totalExpense + event.amount;
-      final newClosing        = closingBalance + newPemasukan - newPengeluaran;
+      // 3) Hitung update DCS berdasar aturan:
+      //    - income (100): opening += amount, total_expense (tetap), closing += amount
+      //    - expense (!=100): opening (tetap), total_expense += amount, closing -= amount
+      final bool isIncome = event.categoryId == 100;
+      final int amount = (event.amount as num).toInt();
 
-      final dcsUpdatePayload = {
-        'date': dateStr,
-        'total_expense': 340000,   // ← hanya ini
-        'closing_balance': newClosing, // ← dan ini
-        'updated_by': userId,
-        'updated_at': now.toIso8601String(),
+      final int newOpeningBalance  = isIncome ? (openingBalance + amount) : openingBalance;
+      final int newTotalExpense    = isIncome ? totalExpenseNow : (totalExpenseNow + amount);
+      final int newClosingBalance  = isIncome ? (closingBalance + amount) : (closingBalance - amount);
+
+      final dcsUpdatePayload = <String, dynamic>{
+        'date'            : dateStr,
+        'opening_balance' : newOpeningBalance,  // ↑ saat income
+        'total_expense'   : newTotalExpense,    // ↑ saat expense
+        'closing_balance' : newClosingBalance,  // +amount (income) / -amount (expense)
+        'updated_by'      : userId,
+        'updated_at'      : now.toIso8601String(),
       };
 
-      debugPrint('$dcsUpdatePayload');
-      // 3) Update DCS (pakai argumen!)
+      debugPrint('DCS UPDATE -> $dcsUpdatePayload');
+
+      // 4) Update DCS
       final onUpdate = await sl<APIClient>().updateDailyCashSummaries(
         dcsId: dcsId,
         payload: dcsUpdatePayload,
@@ -179,6 +256,7 @@ class CashflowBloc extends Bloc<CashflowEvent, CashflowState> {
       emit(CashflowState.error(message: "Add cashflow failed: $e"));
     }
   }
+
 
   bool _isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;

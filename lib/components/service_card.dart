@@ -23,34 +23,47 @@ class ServiceCard extends StatelessWidget {
     );
 
     return Card(
-      elevation: 5,
+      clipBehavior: Clip.antiAlias, // ripple & radius rapi
+      elevation: 7,
       color: GlobalColors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          child: Table(
-            columnWidths: const {
-              0: FlexColumnWidth(2),
-              1: FlexColumnWidth(3),
-            },
-            defaultVerticalAlignment: TableCellVerticalAlignment.top,
-            children: [
-              _buildRow('Service', item.serviceName),
-              _buildRow('Quantity', item.quantity.toString()),
-              _buildRow('Harga satuan', currency.format(item.price)),
-              if (item.keterangan.isNotEmpty)
-                _buildRow('Keterangan', item.keterangan),
-            ],
+        child: SizedBox.expand( // <-- isi penuh sel grid
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Table(
+              columnWidths: const {
+                0: FlexColumnWidth(2),
+                1: FlexColumnWidth(3),
+              },
+              defaultVerticalAlignment: TableCellVerticalAlignment.top,
+              children: [
+                _buildRow(
+                  'Service',
+                  item.serviceName,
+                  valueMaxLines: 2,         // nama panjang boleh 2 baris
+                  valueSoftWrap: true,
+                ),
+                _buildRow('Qty', item.quantity.toString()),
+                _buildRow('Harga', currency.format(item.price)),
+                if (item.keterangan.isNotEmpty)
+                  _buildRow('Keterangan', item.keterangan, valueMaxLines: 2, valueSoftWrap: true),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  TableRow _buildRow(String label, String value) {
+  TableRow _buildRow(
+      String label,
+      String value, {
+        int? valueMaxLines,
+        bool valueSoftWrap = false,
+      }) {
     return TableRow(
       children: [
         Padding(
@@ -59,7 +72,7 @@ class ServiceCard extends StatelessWidget {
             '$label:',
             style: const TextStyle(
               fontFamily: GlobalFonts.fontFamilyJakarta,
-              fontSize: 14,
+              fontSize: 13.5,
               fontWeight: FontWeight.w500,
               color: Colors.grey,
             ),
@@ -70,6 +83,11 @@ class ServiceCard extends StatelessWidget {
           child: Text(
             value,
             textAlign: TextAlign.right,
+            maxLines: valueMaxLines,
+            softWrap: valueSoftWrap,
+            overflow: valueMaxLines != null
+                ? TextOverflow.ellipsis
+                : TextOverflow.visible,
             style: const TextStyle(
               fontFamily: GlobalFonts.fontFamilyJakarta,
               fontSize: 14,

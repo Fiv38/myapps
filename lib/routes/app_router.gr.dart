@@ -9,94 +9,108 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i12;
-import 'package:myapps/features/cashflow/cashflow_screen.dart' as _i11;
-import 'package:myapps/features/config/config_screen.dart' as _i1;
-import 'package:myapps/features/customers/customer_screen.dart' as _i2;
-import 'package:myapps/features/home/home_screen.dart' as _i3;
-import 'package:myapps/features/login/login_screen.dart' as _i4;
-import 'package:myapps/features/ongoing/ongoing_screen.dart' as _i5;
-import 'package:myapps/features/pos/pos_screen.dart' as _i6;
-import 'package:myapps/features/profile/profile_screen.dart' as _i7;
-import 'package:myapps/features/register/register_screen.dart' as _i8;
-import 'package:myapps/features/reports/report_screen.dart' as _i9;
-import 'package:myapps/features/splash/splash_screen.dart' as _i10;
+import 'package:myapps/features/cashflow/cashflow_screen.dart' as _i1;
+import 'package:myapps/features/config/config_screen.dart' as _i2;
+import 'package:myapps/features/customers/customer_screen.dart' as _i3;
+import 'package:myapps/features/home/home_screen.dart' as _i4;
+import 'package:myapps/features/login/login_screen.dart' as _i5;
+import 'package:myapps/features/ongoing/ongoing_screen.dart' as _i6;
+import 'package:myapps/features/pos/pos_screen.dart' as _i7;
+import 'package:myapps/features/profile/profile_screen.dart' as _i8;
+import 'package:myapps/features/register/register_screen.dart' as _i9;
+import 'package:myapps/features/reports/report_screen.dart' as _i10;
+import 'package:myapps/features/splash/splash_screen.dart' as _i11;
 
 abstract class $AppRouter extends _i12.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
   final Map<String, _i12.PageFactory> pagesMap = {
+    CashFlowRoute.name: (routeData) {
+      return _i12.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.CashFlowScreen(),
+      );
+    },
     ConfigRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.ConfigScreen(),
+        child: const _i2.ConfigScreen(),
       );
     },
     CustomerRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.CustomerScreen(),
+        child: const _i3.CustomerScreen(),
       );
     },
     HomeRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.HomeScreen(),
+        child: const _i4.HomeScreen(),
       );
     },
     LoginRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.LoginScreen(),
+        child: const _i5.LoginScreen(),
       );
     },
     OngoingRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.OngoingScreen(),
+        child: const _i6.OngoingScreen(),
       );
     },
     PosRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.PosScreen(),
+        child: const _i7.PosScreen(),
       );
     },
     ProfileRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.ProfileScreen(),
+        child: const _i8.ProfileScreen(),
       );
     },
     RegisterRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.RegisterScreen(),
+        child: const _i9.RegisterScreen(),
       );
     },
     ReportRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.ReportScreen(),
+        child: const _i10.ReportScreen(),
       );
     },
     SplashRoute.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.SplashScreen(),
-      );
-    },
-    CashFlowRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i11.CashFlowScreen(),
+        child: const _i11.SplashScreen(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.ConfigScreen]
+/// [_i1.CashFlowScreen]
+class CashFlowRoute extends _i12.PageRouteInfo<void> {
+  const CashFlowRoute({List<_i12.PageRouteInfo>? children})
+      : super(
+          CashFlowRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CashFlowRoute';
+
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.ConfigScreen]
 class ConfigRoute extends _i12.PageRouteInfo<void> {
   const ConfigRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -110,7 +124,7 @@ class ConfigRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.CustomerScreen]
+/// [_i3.CustomerScreen]
 class CustomerRoute extends _i12.PageRouteInfo<void> {
   const CustomerRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -124,7 +138,7 @@ class CustomerRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.HomeScreen]
+/// [_i4.HomeScreen]
 class HomeRoute extends _i12.PageRouteInfo<void> {
   const HomeRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -138,7 +152,7 @@ class HomeRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.LoginScreen]
+/// [_i5.LoginScreen]
 class LoginRoute extends _i12.PageRouteInfo<void> {
   const LoginRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -152,7 +166,7 @@ class LoginRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.OngoingScreen]
+/// [_i6.OngoingScreen]
 class OngoingRoute extends _i12.PageRouteInfo<void> {
   const OngoingRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -166,7 +180,7 @@ class OngoingRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.PosScreen]
+/// [_i7.PosScreen]
 class PosRoute extends _i12.PageRouteInfo<void> {
   const PosRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -180,7 +194,7 @@ class PosRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.ProfileScreen]
+/// [_i8.ProfileScreen]
 class ProfileRoute extends _i12.PageRouteInfo<void> {
   const ProfileRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -194,7 +208,7 @@ class ProfileRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.RegisterScreen]
+/// [_i9.RegisterScreen]
 class RegisterRoute extends _i12.PageRouteInfo<void> {
   const RegisterRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -208,7 +222,7 @@ class RegisterRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.ReportScreen]
+/// [_i10.ReportScreen]
 class ReportRoute extends _i12.PageRouteInfo<void> {
   const ReportRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -222,7 +236,7 @@ class ReportRoute extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.SplashScreen]
+/// [_i11.SplashScreen]
 class SplashRoute extends _i12.PageRouteInfo<void> {
   const SplashRoute({List<_i12.PageRouteInfo>? children})
       : super(
@@ -231,20 +245,6 @@ class SplashRoute extends _i12.PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
-
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i11.CashFlowScreen]
-class CashFlowRoute extends _i12.PageRouteInfo<void> {
-  const CashFlowRoute({List<_i12.PageRouteInfo>? children})
-      : super(
-          CashFlowRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'CashFlowRoute';
 
   static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }

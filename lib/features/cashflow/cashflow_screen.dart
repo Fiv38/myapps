@@ -37,16 +37,16 @@ class CashFlowScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
+        backgroundColor: GlobalColors.primaryBlue,
+        elevation: 10,
         automaticallyImplyLeading: true,
-        iconTheme: const IconThemeData(color: GlobalColors.mainTextBlack),
+        iconTheme: const IconThemeData(color: GlobalColors.white),
         title: Text(
           "Cash Flow",
           style: TextStyle(
             fontFamily: GlobalFonts.fontFamilyJakarta,
             fontWeight: FontWeight.w600,
-            color: GlobalColors.mainTextBlack,
+            color: GlobalColors.white,
           ),
         ),
       ),
@@ -64,7 +64,7 @@ class CashFlowScreenView extends StatelessWidget {
         },
         backgroundColor: GlobalColors.primaryBlue,
         shape: const CircleBorder(),
-        elevation: 6,
+        elevation: 15,
         child: const Icon(Icons.add, color: Colors.white),
       ),
       body: BlocListener<CashflowBloc, CashflowState>(

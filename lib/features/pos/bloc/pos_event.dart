@@ -2,51 +2,43 @@ part of 'pos_bloc.dart';
 
 @freezed
 class PosEvent with _$PosEvent {
-  const factory PosEvent.started() = _Started;
+  /// lifecycle
+  const factory PosEvent.initialized() = _Initialized;
 
-  const factory PosEvent.getCart() = _GetCart;
+  /// cart
+  const factory PosEvent.fetchCart() = _FetchCart;
   const factory PosEvent.deleteCart() = _DeleteCart;
   const factory PosEvent.modifyCart() = _ModifyCart;
 
-  //Servie Add
-  const factory PosEvent.checkingService() = _CheckingService;
-  const factory PosEvent.addServiceToCart({
-    required String laundryTypes,   // the ID
-    required String laundryNames,   // the name
-    required int    qty,            // integer quantity
-    required String keterangan,     // note
-    required double price           // parsed double price
-  }) = _AddServiceToCart;
-  const factory PosEvent.submitService() = _SubmitService;
+  /// Get Username
+  const factory PosEvent.getAllUsername() = _GetAllUsername;
 
-  const factory PosEvent.submitToDb() = _SubmitToDb;
+  /// services
+  const factory PosEvent.validateService() = _ValidateService;
+  const factory PosEvent.addService({
+    required String laundryTypeId,
+    required String laundryTypeName,
+    required int qty,
+    required String note,
+    required double price,
+  }) = _AddService;
+  const factory PosEvent.commitServices() = _CommitServices;
+  const factory PosEvent.removeService({required int id}) = _RemoveService;
 
-  const factory PosEvent.updateCustomerName({
-    required String name,
-  }) = _UpdateCustomerName;
+  /// submit
+  const factory PosEvent.submitOrder() = _SubmitOrder;
 
-  const factory PosEvent.updateCustomerPhone({
-    required String phone,
-  }) = _UpdateCustomerPhone;
+  /// customer
+  const factory PosEvent.setCustomerName({required String name}) = _SetCustomerName;
+  const factory PosEvent.setCustomerPhone({required String phone}) = _SetCustomerPhone;
+  const factory PosEvent.setOrderDate({required DateTime date}) = _SetOrderDate;
 
-  const factory PosEvent.updateCustomerOrderDate({
-    required DateTime date,
-  }) = _UpdateCustomerOrderDate;
+  /// payment
+  const factory PosEvent.recalculatePayment() = _RecalculatePayment;
+  const factory PosEvent.setPaymentStatus({required String paymentStatusId}) = _SetPaymentStatus;
+  const factory PosEvent.setPaymentMethod({required String paymentMethodId}) = _SetPaymentMethod;
+  const factory PosEvent.confirmCustomerPayment() = _ConfirmCustomerPayment;
 
-  const factory PosEvent.updateCustomerPayment() = _UpdateCustomerPayment;
-  const factory PosEvent.updateCustomerPaymentStatus() = _UpdateCustomerPaymentStatus;
-
-  const factory PosEvent.selectedCustomerPayment() = _SelectedCustomerPayment;
-
-  const factory PosEvent.removeCustomerService({ required int id }) = _RemoveCustomerService;
-
-  const factory PosEvent.updatePaymentMethodNew({
-    required String paymentMethodId,
-  }) = _UpdatePaymentMethodNew;
-
-  const factory PosEvent.updatePaymentStatusNew({
-    required String paymentStatusId,
-  }) = _UpdatePaymentStatusNew;
-
-
+  /// WhatsApp (opsional bila kirim struk via BLoC)
+  const factory PosEvent.sendWhatsAppReceipt() = _SendWhatsAppReceipt;
 }

@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:geolocator/geolocator.dart';
+// import 'package:geolocator/geolocator.dart';
 
 import '../../../api/api_client.dart';
 import '../../../api/raw_response.dart';
@@ -119,23 +119,23 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       print("Error fetching device info: $e");
     }
   }
-
-  // Fetch the user's location
-  Future<void> getLocation() async {
-    try {
-      var permission = await Geolocator.checkPermission();
-      if (permission == LocationPermission.denied) {
-        permission = await Geolocator.requestPermission();
-      }
-      if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) {
-        print("❌ Location permission denied");
-        return;
-      }
-
-      final position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-      print('📍 Current location: ${position.latitude}, ${position.longitude}');
-    } catch (e) {
-      print("Error fetching location: $e");
-    }
-  }
+  //
+  // // Fetch the user's location
+  // Future<void> getLocation() async {
+  //   try {
+  //     var permission = await Geolocator.checkPermission();
+  //     if (permission == LocationPermission.denied) {
+  //       permission = await Geolocator.requestPermission();
+  //     }
+  //     if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) {
+  //       print("❌ Location permission denied");
+  //       return;
+  //     }
+  //
+  //     final position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+  //     print('📍 Current location: ${position.latitude}, ${position.longitude}');
+  //   } catch (e) {
+  //     print("Error fetching location: $e");
+  //   }
+  // }
 }

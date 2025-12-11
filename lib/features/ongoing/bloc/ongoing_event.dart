@@ -4,6 +4,7 @@ part of 'ongoing_bloc.dart';
 class OngoingEvent with _$OngoingEvent {
   const factory OngoingEvent.started() = _Started;
   const factory OngoingEvent.getAllOrder() = _GetAllOrder;
+  const factory OngoingEvent.getAllOrderWithDetail() = _GetAllOrderWithDetail;
 
   const factory OngoingEvent.editOrder({
     required String orderId,

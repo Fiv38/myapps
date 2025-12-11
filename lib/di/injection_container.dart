@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:geolocator/geolocator.dart';
+// import 'package:geolocator/geolocator.dart';
 import 'package:battery_plus/battery_plus.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
@@ -11,6 +11,8 @@ import '../api/api_config.dart';
 import '../api/api_interceptor.dart';
 import '../repository/auth_repository.dart';
 import '../routes/app_router.dart';
+import '../services/receipt_builder_service.dart';
+import '../services/wa_service.dart';
 
 final sl = GetIt.instance;
 
@@ -26,7 +28,7 @@ Future<void> initializeDependencies() async {
       ..registerLazySingleton<APIConfig>(() => APIConfig())
       ..registerLazySingleton<APIInterceptors>(() => APIInterceptors())
       ..registerLazySingleton<DeviceInfoPlugin>(() => DeviceInfoPlugin())
-      ..registerLazySingleton<Geolocator>(() => Geolocator())
+      // ..registerLazySingleton<Geolocator>(() => Geolocator())
       ..registerLazySingleton<Battery>(() => Battery())
       ..registerLazySingleton<Connectivity>(() => Connectivity())
       ..registerLazySingleton<AppRouter>(() => AppRouter());
@@ -48,6 +50,9 @@ Future<void> initializeDependencies() async {
         prefs: sl<SharedPreferences>(),
       );
     });
+
+    sl.registerLazySingleton<WaService>(() => WaService());
+    sl.registerLazySingleton<ReceiptBuilder>(() => ReceiptBuilder());
 
     debugPrint("✅ All dependencies are registered.");
   } catch (e) {

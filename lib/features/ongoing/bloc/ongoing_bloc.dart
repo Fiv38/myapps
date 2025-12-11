@@ -1,11 +1,15 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
 
 import '../../../api/api_client.dart';
+import '../../../models/detail_carts.dart';
+import '../../../models/order_with_detail.dart';
 import '../../../models/orders.dart';
+import '../../../utils/helper.dart';
 
 part 'ongoing_event.dart';
 part 'ongoing_state.dart';
@@ -28,10 +32,13 @@ class OngoingBloc extends Bloc<OngoingEvent, OngoingState> {
 
   //List Order
   List<Order> myOrders = [];
+  List<DetailCart> myOrderDetails = [];
+  List<OrderWithDetails> myOrdersWithDetails = [];
 
   OngoingBloc() : super(const OngoingState.initial()) {
     on<_Started>(_onStarted);
     on<_GetAllOrder>(_onGetAllOrder);
+    on<_GetAllOrderWithDetail>(_onGetAllOrderWithDetail);
     on<_EditOrder>(_onEditOrder);
     on<_CancelOrder>(_onCancelOrder);
   }
@@ -53,7 +60,80 @@ class OngoingBloc extends Bloc<OngoingEvent, OngoingState> {
     isLogin       = prefs.getBool('isLogin')         ?? false;
     fcmToken      = prefs.getString('fcmToken')      ?? '';
     myOrders = [];
-    add(const OngoingEvent.getAllOrder());
+    // add(const OngoingEvent.getAllOrder());
+    add(const OngoingEvent.getAllOrderWithDetail());
+  }
+
+  Future<void> _onGetAllOrderWithDetail(
+      _GetAllOrderWithDetail event,
+      Emitter<OngoingState> emit,
+      ) async {
+    try {
+      final resHeader  = await sl<APIClient>().fetchListOrderAllWithDio();
+      final resDetails = await sl<APIClient>().fetchOrderDetailWithDio();
+
+      // --- Guard: header wajib OK ---
+      if (resHeader.status != true || resHeader.data == null || resHeader.data is! List) {
+        debugPrint('[ONGOING] Header fetch failed');
+        myOrdersWithDetails = [];
+        return;
+      }
+
+      // --- Parse header ---
+      myOrders = (resHeader.data as List).cast<Order>();
+
+      // --- Parse details (JANGAN cast langsung) ---
+      final List<DetailCart> parsedDetails = [];
+      if (resDetails.data is List) {
+        for (final item in (resDetails.data as List)) {
+          if (item is Map) {
+            final map = Map<String, dynamic>.from(item as Map);
+            parsedDetails.add(Helper.parseDetailCartFromApi(map));
+          } else if (item is DetailCart) {
+            parsedDetails.add(item);
+          } else {
+            debugPrint('[ONGOING] skip detail item type=${item.runtimeType}');
+          }
+        }
+      }
+      myOrderDetails = parsedDetails;
+
+      // --- Lookup orderId -> Order (pakai instance yang sama dengan myOrders) ---
+      final Map<String, Order> orderById = {
+        for (final o in myOrders) o.orderId: o,
+      };
+
+      // --- Group detail: key = Order ---
+      final Map<Order, List<DetailCart>> byOrder = {
+        for (final o in myOrders) o: <DetailCart>[],
+      };
+
+      for (final d in myOrderDetails) {
+        final order = orderById[d.orderId];
+        if (order != null) {
+          byOrder[order]!.add(d);
+        } else {
+          debugPrint('[ONGOING] detail tanpa header: ${d.orderId}');
+        }
+      }
+
+      // --- Gabungkan header + detail ---
+      myOrdersWithDetails = [
+        for (final h in myOrders)
+          OrderWithDetails(
+            header: h,
+            details: byOrder[h] ?? const <DetailCart>[],
+          )
+      ];
+
+      debugPrint('[ONGOING] ✅ Fetched ${myOrdersWithDetails.length} orders '
+          'with ${myOrderDetails.length} details');
+      emit(const OngoingState.loaded());
+    } catch (e, st) {
+      debugPrint('[ONGOING][ERR] $e\n$st');
+      myOrdersWithDetails = [];
+    }
+
   }
 
   Future<void> _onGetAllOrder(
@@ -67,6 +147,8 @@ class OngoingBloc extends Bloc<OngoingEvent, OngoingState> {
       myOrders = [];
       myOrders = (raw.data as List).cast<Order>();
 
+
+      // DetailCart
       emit(const OngoingState.loaded());
     } catch (e) {
       emit(OngoingState.error(e.toString()));

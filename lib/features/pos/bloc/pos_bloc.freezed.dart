@@ -18,144 +18,142 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PosEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -179,35 +177,35 @@ class _$PosEventCopyWithImpl<$Res, $Val extends PosEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$InitializedImplCopyWith<$Res> {
+  factory _$$InitializedImplCopyWith(
+          _$InitializedImpl value, $Res Function(_$InitializedImpl) then) =
+      __$$InitializedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$InitializedImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$InitializedImpl>
+    implements _$$InitializedImplCopyWith<$Res> {
+  __$$InitializedImplCopyWithImpl(
+      _$InitializedImpl _value, $Res Function(_$InitializedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$InitializedImpl implements _Initialized {
+  const _$InitializedImpl();
 
   @override
   String toString() {
-    return 'PosEvent.started()';
+    return 'PosEvent.initialized()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType && other is _$InitializedImpl);
   }
 
   @override
@@ -216,81 +214,84 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return started();
+    return initialized();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return started?.call();
+    return initialized?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (initialized != null) {
+      return initialized();
     }
     return orElse();
   }
@@ -298,123 +299,118 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return started(this);
+    return initialized(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return started?.call(this);
+    return initialized?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (initialized != null) {
+      return initialized(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements PosEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Initialized implements PosEvent {
+  const factory _Initialized() = _$InitializedImpl;
 }
 
 /// @nodoc
-abstract class _$$GetCartImplCopyWith<$Res> {
-  factory _$$GetCartImplCopyWith(
-          _$GetCartImpl value, $Res Function(_$GetCartImpl) then) =
-      __$$GetCartImplCopyWithImpl<$Res>;
+abstract class _$$FetchCartImplCopyWith<$Res> {
+  factory _$$FetchCartImplCopyWith(
+          _$FetchCartImpl value, $Res Function(_$FetchCartImpl) then) =
+      __$$FetchCartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetCartImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$GetCartImpl>
-    implements _$$GetCartImplCopyWith<$Res> {
-  __$$GetCartImplCopyWithImpl(
-      _$GetCartImpl _value, $Res Function(_$GetCartImpl) _then)
+class __$$FetchCartImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$FetchCartImpl>
+    implements _$$FetchCartImplCopyWith<$Res> {
+  __$$FetchCartImplCopyWithImpl(
+      _$FetchCartImpl _value, $Res Function(_$FetchCartImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetCartImpl implements _GetCart {
-  const _$GetCartImpl();
+class _$FetchCartImpl implements _FetchCart {
+  const _$FetchCartImpl();
 
   @override
   String toString() {
-    return 'PosEvent.getCart()';
+    return 'PosEvent.fetchCart()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetCartImpl);
+        (other.runtimeType == runtimeType && other is _$FetchCartImpl);
   }
 
   @override
@@ -423,81 +419,84 @@ class _$GetCartImpl implements _GetCart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return getCart();
+    return fetchCart();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return getCart?.call();
+    return fetchCart?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (getCart != null) {
-      return getCart();
+    if (fetchCart != null) {
+      return fetchCart();
     }
     return orElse();
   }
@@ -505,91 +504,86 @@ class _$GetCartImpl implements _GetCart {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return getCart(this);
+    return fetchCart(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return getCart?.call(this);
+    return fetchCart?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (getCart != null) {
-      return getCart(this);
+    if (fetchCart != null) {
+      return fetchCart(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetCart implements PosEvent {
-  const factory _GetCart() = _$GetCartImpl;
+abstract class _FetchCart implements PosEvent {
+  const factory _FetchCart() = _$FetchCartImpl;
 }
 
 /// @nodoc
@@ -630,25 +624,26 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
     return deleteCart();
   }
@@ -656,25 +651,26 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
     return deleteCart?.call();
   }
@@ -682,25 +678,26 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
     if (deleteCart != null) {
@@ -712,30 +709,25 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
     return deleteCart(this);
   }
@@ -743,24 +735,24 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
     return deleteCart?.call(this);
   }
@@ -768,24 +760,24 @@ class _$DeleteCartImpl implements _DeleteCart {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
     if (deleteCart != null) {
@@ -837,25 +829,26 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
     return modifyCart();
   }
@@ -863,25 +856,26 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
     return modifyCart?.call();
   }
@@ -889,25 +883,26 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
     if (modifyCart != null) {
@@ -919,30 +914,25 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
     return modifyCart(this);
   }
@@ -950,24 +940,24 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
     return modifyCart?.call(this);
   }
@@ -975,24 +965,24 @@ class _$ModifyCartImpl implements _ModifyCart {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
     if (modifyCart != null) {
@@ -1007,35 +997,35 @@ abstract class _ModifyCart implements PosEvent {
 }
 
 /// @nodoc
-abstract class _$$CheckingServiceImplCopyWith<$Res> {
-  factory _$$CheckingServiceImplCopyWith(_$CheckingServiceImpl value,
-          $Res Function(_$CheckingServiceImpl) then) =
-      __$$CheckingServiceImplCopyWithImpl<$Res>;
+abstract class _$$GetAllUsernameImplCopyWith<$Res> {
+  factory _$$GetAllUsernameImplCopyWith(_$GetAllUsernameImpl value,
+          $Res Function(_$GetAllUsernameImpl) then) =
+      __$$GetAllUsernameImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CheckingServiceImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$CheckingServiceImpl>
-    implements _$$CheckingServiceImplCopyWith<$Res> {
-  __$$CheckingServiceImplCopyWithImpl(
-      _$CheckingServiceImpl _value, $Res Function(_$CheckingServiceImpl) _then)
+class __$$GetAllUsernameImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$GetAllUsernameImpl>
+    implements _$$GetAllUsernameImplCopyWith<$Res> {
+  __$$GetAllUsernameImplCopyWithImpl(
+      _$GetAllUsernameImpl _value, $Res Function(_$GetAllUsernameImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CheckingServiceImpl implements _CheckingService {
-  const _$CheckingServiceImpl();
+class _$GetAllUsernameImpl implements _GetAllUsername {
+  const _$GetAllUsernameImpl();
 
   @override
   String toString() {
-    return 'PosEvent.checkingService()';
+    return 'PosEvent.getAllUsername()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CheckingServiceImpl);
+        (other.runtimeType == runtimeType && other is _$GetAllUsernameImpl);
   }
 
   @override
@@ -1044,81 +1034,84 @@ class _$CheckingServiceImpl implements _CheckingService {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return checkingService();
+    return getAllUsername();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return checkingService?.call();
+    return getAllUsername?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (checkingService != null) {
-      return checkingService();
+    if (getAllUsername != null) {
+      return getAllUsername();
     }
     return orElse();
   }
@@ -1126,140 +1119,340 @@ class _$CheckingServiceImpl implements _CheckingService {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return checkingService(this);
+    return getAllUsername(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return checkingService?.call(this);
+    return getAllUsername?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (checkingService != null) {
-      return checkingService(this);
+    if (getAllUsername != null) {
+      return getAllUsername(this);
     }
     return orElse();
   }
 }
 
-abstract class _CheckingService implements PosEvent {
-  const factory _CheckingService() = _$CheckingServiceImpl;
+abstract class _GetAllUsername implements PosEvent {
+  const factory _GetAllUsername() = _$GetAllUsernameImpl;
 }
 
 /// @nodoc
-abstract class _$$AddServiceToCartImplCopyWith<$Res> {
-  factory _$$AddServiceToCartImplCopyWith(_$AddServiceToCartImpl value,
-          $Res Function(_$AddServiceToCartImpl) then) =
-      __$$AddServiceToCartImplCopyWithImpl<$Res>;
+abstract class _$$ValidateServiceImplCopyWith<$Res> {
+  factory _$$ValidateServiceImplCopyWith(_$ValidateServiceImpl value,
+          $Res Function(_$ValidateServiceImpl) then) =
+      __$$ValidateServiceImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ValidateServiceImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$ValidateServiceImpl>
+    implements _$$ValidateServiceImplCopyWith<$Res> {
+  __$$ValidateServiceImplCopyWithImpl(
+      _$ValidateServiceImpl _value, $Res Function(_$ValidateServiceImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ValidateServiceImpl implements _ValidateService {
+  const _$ValidateServiceImpl();
+
+  @override
+  String toString() {
+    return 'PosEvent.validateService()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ValidateServiceImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return validateService();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return validateService?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (validateService != null) {
+      return validateService();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return validateService(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return validateService?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (validateService != null) {
+      return validateService(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ValidateService implements PosEvent {
+  const factory _ValidateService() = _$ValidateServiceImpl;
+}
+
+/// @nodoc
+abstract class _$$AddServiceImplCopyWith<$Res> {
+  factory _$$AddServiceImplCopyWith(
+          _$AddServiceImpl value, $Res Function(_$AddServiceImpl) then) =
+      __$$AddServiceImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
-      {String laundryTypes,
-      String laundryNames,
+      {String laundryTypeId,
+      String laundryTypeName,
       int qty,
-      String keterangan,
+      String note,
       double price});
 }
 
 /// @nodoc
-class __$$AddServiceToCartImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$AddServiceToCartImpl>
-    implements _$$AddServiceToCartImplCopyWith<$Res> {
-  __$$AddServiceToCartImplCopyWithImpl(_$AddServiceToCartImpl _value,
-      $Res Function(_$AddServiceToCartImpl) _then)
+class __$$AddServiceImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$AddServiceImpl>
+    implements _$$AddServiceImplCopyWith<$Res> {
+  __$$AddServiceImplCopyWithImpl(
+      _$AddServiceImpl _value, $Res Function(_$AddServiceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? laundryTypes = null,
-    Object? laundryNames = null,
+    Object? laundryTypeId = null,
+    Object? laundryTypeName = null,
     Object? qty = null,
-    Object? keterangan = null,
+    Object? note = null,
     Object? price = null,
   }) {
-    return _then(_$AddServiceToCartImpl(
-      laundryTypes: null == laundryTypes
-          ? _value.laundryTypes
-          : laundryTypes // ignore: cast_nullable_to_non_nullable
+    return _then(_$AddServiceImpl(
+      laundryTypeId: null == laundryTypeId
+          ? _value.laundryTypeId
+          : laundryTypeId // ignore: cast_nullable_to_non_nullable
               as String,
-      laundryNames: null == laundryNames
-          ? _value.laundryNames
-          : laundryNames // ignore: cast_nullable_to_non_nullable
+      laundryTypeName: null == laundryTypeName
+          ? _value.laundryTypeName
+          : laundryTypeName // ignore: cast_nullable_to_non_nullable
               as String,
       qty: null == qty
           ? _value.qty
           : qty // ignore: cast_nullable_to_non_nullable
               as int,
-      keterangan: null == keterangan
-          ? _value.keterangan
-          : keterangan // ignore: cast_nullable_to_non_nullable
+      note: null == note
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
               as String,
       price: null == price
           ? _value.price
@@ -1271,140 +1464,135 @@ class __$$AddServiceToCartImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddServiceToCartImpl implements _AddServiceToCart {
-  const _$AddServiceToCartImpl(
-      {required this.laundryTypes,
-      required this.laundryNames,
+class _$AddServiceImpl implements _AddService {
+  const _$AddServiceImpl(
+      {required this.laundryTypeId,
+      required this.laundryTypeName,
       required this.qty,
-      required this.keterangan,
+      required this.note,
       required this.price});
 
   @override
-  final String laundryTypes;
-// the ID
+  final String laundryTypeId;
   @override
-  final String laundryNames;
-// the name
+  final String laundryTypeName;
   @override
   final int qty;
-// integer quantity
   @override
-  final String keterangan;
-// note
+  final String note;
   @override
   final double price;
 
   @override
   String toString() {
-    return 'PosEvent.addServiceToCart(laundryTypes: $laundryTypes, laundryNames: $laundryNames, qty: $qty, keterangan: $keterangan, price: $price)';
+    return 'PosEvent.addService(laundryTypeId: $laundryTypeId, laundryTypeName: $laundryTypeName, qty: $qty, note: $note, price: $price)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddServiceToCartImpl &&
-            (identical(other.laundryTypes, laundryTypes) ||
-                other.laundryTypes == laundryTypes) &&
-            (identical(other.laundryNames, laundryNames) ||
-                other.laundryNames == laundryNames) &&
+            other is _$AddServiceImpl &&
+            (identical(other.laundryTypeId, laundryTypeId) ||
+                other.laundryTypeId == laundryTypeId) &&
+            (identical(other.laundryTypeName, laundryTypeName) ||
+                other.laundryTypeName == laundryTypeName) &&
             (identical(other.qty, qty) || other.qty == qty) &&
-            (identical(other.keterangan, keterangan) ||
-                other.keterangan == keterangan) &&
+            (identical(other.note, note) || other.note == note) &&
             (identical(other.price, price) || other.price == price));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, laundryTypes, laundryNames, qty, keterangan, price);
+      runtimeType, laundryTypeId, laundryTypeName, qty, note, price);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddServiceToCartImplCopyWith<_$AddServiceToCartImpl> get copyWith =>
-      __$$AddServiceToCartImplCopyWithImpl<_$AddServiceToCartImpl>(
-          this, _$identity);
+  _$$AddServiceImplCopyWith<_$AddServiceImpl> get copyWith =>
+      __$$AddServiceImplCopyWithImpl<_$AddServiceImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return addServiceToCart(laundryTypes, laundryNames, qty, keterangan, price);
+    return addService(laundryTypeId, laundryTypeName, qty, note, price);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return addServiceToCart?.call(
-        laundryTypes, laundryNames, qty, keterangan, price);
+    return addService?.call(laundryTypeId, laundryTypeName, qty, note, price);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (addServiceToCart != null) {
-      return addServiceToCart(
-          laundryTypes, laundryNames, qty, keterangan, price);
+    if (addService != null) {
+      return addService(laundryTypeId, laundryTypeName, qty, note, price);
     }
     return orElse();
   }
@@ -1412,137 +1600,132 @@ class _$AddServiceToCartImpl implements _AddServiceToCart {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return addServiceToCart(this);
+    return addService(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return addServiceToCart?.call(this);
+    return addService?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (addServiceToCart != null) {
-      return addServiceToCart(this);
+    if (addService != null) {
+      return addService(this);
     }
     return orElse();
   }
 }
 
-abstract class _AddServiceToCart implements PosEvent {
-  const factory _AddServiceToCart(
-      {required final String laundryTypes,
-      required final String laundryNames,
+abstract class _AddService implements PosEvent {
+  const factory _AddService(
+      {required final String laundryTypeId,
+      required final String laundryTypeName,
       required final int qty,
-      required final String keterangan,
-      required final double price}) = _$AddServiceToCartImpl;
+      required final String note,
+      required final double price}) = _$AddServiceImpl;
 
-  String get laundryTypes; // the ID
-  String get laundryNames; // the name
-  int get qty; // integer quantity
-  String get keterangan; // note
+  String get laundryTypeId;
+  String get laundryTypeName;
+  int get qty;
+  String get note;
   double get price;
   @JsonKey(ignore: true)
-  _$$AddServiceToCartImplCopyWith<_$AddServiceToCartImpl> get copyWith =>
+  _$$AddServiceImplCopyWith<_$AddServiceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SubmitServiceImplCopyWith<$Res> {
-  factory _$$SubmitServiceImplCopyWith(
-          _$SubmitServiceImpl value, $Res Function(_$SubmitServiceImpl) then) =
-      __$$SubmitServiceImplCopyWithImpl<$Res>;
+abstract class _$$CommitServicesImplCopyWith<$Res> {
+  factory _$$CommitServicesImplCopyWith(_$CommitServicesImpl value,
+          $Res Function(_$CommitServicesImpl) then) =
+      __$$CommitServicesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SubmitServiceImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$SubmitServiceImpl>
-    implements _$$SubmitServiceImplCopyWith<$Res> {
-  __$$SubmitServiceImplCopyWithImpl(
-      _$SubmitServiceImpl _value, $Res Function(_$SubmitServiceImpl) _then)
+class __$$CommitServicesImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$CommitServicesImpl>
+    implements _$$CommitServicesImplCopyWith<$Res> {
+  __$$CommitServicesImplCopyWithImpl(
+      _$CommitServicesImpl _value, $Res Function(_$CommitServicesImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SubmitServiceImpl implements _SubmitService {
-  const _$SubmitServiceImpl();
+class _$CommitServicesImpl implements _CommitServices {
+  const _$CommitServicesImpl();
 
   @override
   String toString() {
-    return 'PosEvent.submitService()';
+    return 'PosEvent.commitServices()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SubmitServiceImpl);
+        (other.runtimeType == runtimeType && other is _$CommitServicesImpl);
   }
 
   @override
@@ -1551,81 +1734,84 @@ class _$SubmitServiceImpl implements _SubmitService {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return submitService();
+    return commitServices();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return submitService?.call();
+    return commitServices?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (submitService != null) {
-      return submitService();
+    if (commitServices != null) {
+      return commitServices();
     }
     return orElse();
   }
@@ -1633,1669 +1819,103 @@ class _$SubmitServiceImpl implements _SubmitService {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return submitService(this);
+    return commitServices(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return submitService?.call(this);
+    return commitServices?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (submitService != null) {
-      return submitService(this);
+    if (commitServices != null) {
+      return commitServices(this);
     }
     return orElse();
   }
 }
 
-abstract class _SubmitService implements PosEvent {
-  const factory _SubmitService() = _$SubmitServiceImpl;
+abstract class _CommitServices implements PosEvent {
+  const factory _CommitServices() = _$CommitServicesImpl;
 }
 
 /// @nodoc
-abstract class _$$SubmitToDbImplCopyWith<$Res> {
-  factory _$$SubmitToDbImplCopyWith(
-          _$SubmitToDbImpl value, $Res Function(_$SubmitToDbImpl) then) =
-      __$$SubmitToDbImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SubmitToDbImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$SubmitToDbImpl>
-    implements _$$SubmitToDbImplCopyWith<$Res> {
-  __$$SubmitToDbImplCopyWithImpl(
-      _$SubmitToDbImpl _value, $Res Function(_$SubmitToDbImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SubmitToDbImpl implements _SubmitToDb {
-  const _$SubmitToDbImpl();
-
-  @override
-  String toString() {
-    return 'PosEvent.submitToDb()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SubmitToDbImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return submitToDb();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return submitToDb?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (submitToDb != null) {
-      return submitToDb();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return submitToDb(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return submitToDb?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (submitToDb != null) {
-      return submitToDb(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _SubmitToDb implements PosEvent {
-  const factory _SubmitToDb() = _$SubmitToDbImpl;
-}
-
-/// @nodoc
-abstract class _$$UpdateCustomerNameImplCopyWith<$Res> {
-  factory _$$UpdateCustomerNameImplCopyWith(_$UpdateCustomerNameImpl value,
-          $Res Function(_$UpdateCustomerNameImpl) then) =
-      __$$UpdateCustomerNameImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String name});
-}
-
-/// @nodoc
-class __$$UpdateCustomerNameImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdateCustomerNameImpl>
-    implements _$$UpdateCustomerNameImplCopyWith<$Res> {
-  __$$UpdateCustomerNameImplCopyWithImpl(_$UpdateCustomerNameImpl _value,
-      $Res Function(_$UpdateCustomerNameImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_$UpdateCustomerNameImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UpdateCustomerNameImpl implements _UpdateCustomerName {
-  const _$UpdateCustomerNameImpl({required this.name});
-
-  @override
-  final String name;
-
-  @override
-  String toString() {
-    return 'PosEvent.updateCustomerName(name: $name)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateCustomerNameImpl &&
-            (identical(other.name, name) || other.name == name));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, name);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateCustomerNameImplCopyWith<_$UpdateCustomerNameImpl> get copyWith =>
-      __$$UpdateCustomerNameImplCopyWithImpl<_$UpdateCustomerNameImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return updateCustomerName(name);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerName?.call(name);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerName != null) {
-      return updateCustomerName(name);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return updateCustomerName(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerName?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerName != null) {
-      return updateCustomerName(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateCustomerName implements PosEvent {
-  const factory _UpdateCustomerName({required final String name}) =
-      _$UpdateCustomerNameImpl;
-
-  String get name;
-  @JsonKey(ignore: true)
-  _$$UpdateCustomerNameImplCopyWith<_$UpdateCustomerNameImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdateCustomerPhoneImplCopyWith<$Res> {
-  factory _$$UpdateCustomerPhoneImplCopyWith(_$UpdateCustomerPhoneImpl value,
-          $Res Function(_$UpdateCustomerPhoneImpl) then) =
-      __$$UpdateCustomerPhoneImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String phone});
-}
-
-/// @nodoc
-class __$$UpdateCustomerPhoneImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdateCustomerPhoneImpl>
-    implements _$$UpdateCustomerPhoneImplCopyWith<$Res> {
-  __$$UpdateCustomerPhoneImplCopyWithImpl(_$UpdateCustomerPhoneImpl _value,
-      $Res Function(_$UpdateCustomerPhoneImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? phone = null,
-  }) {
-    return _then(_$UpdateCustomerPhoneImpl(
-      phone: null == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UpdateCustomerPhoneImpl implements _UpdateCustomerPhone {
-  const _$UpdateCustomerPhoneImpl({required this.phone});
-
-  @override
-  final String phone;
-
-  @override
-  String toString() {
-    return 'PosEvent.updateCustomerPhone(phone: $phone)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateCustomerPhoneImpl &&
-            (identical(other.phone, phone) || other.phone == phone));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, phone);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateCustomerPhoneImplCopyWith<_$UpdateCustomerPhoneImpl> get copyWith =>
-      __$$UpdateCustomerPhoneImplCopyWithImpl<_$UpdateCustomerPhoneImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return updateCustomerPhone(phone);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPhone?.call(phone);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPhone != null) {
-      return updateCustomerPhone(phone);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return updateCustomerPhone(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPhone?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPhone != null) {
-      return updateCustomerPhone(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateCustomerPhone implements PosEvent {
-  const factory _UpdateCustomerPhone({required final String phone}) =
-      _$UpdateCustomerPhoneImpl;
-
-  String get phone;
-  @JsonKey(ignore: true)
-  _$$UpdateCustomerPhoneImplCopyWith<_$UpdateCustomerPhoneImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdateCustomerOrderDateImplCopyWith<$Res> {
-  factory _$$UpdateCustomerOrderDateImplCopyWith(
-          _$UpdateCustomerOrderDateImpl value,
-          $Res Function(_$UpdateCustomerOrderDateImpl) then) =
-      __$$UpdateCustomerOrderDateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({DateTime date});
-}
-
-/// @nodoc
-class __$$UpdateCustomerOrderDateImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdateCustomerOrderDateImpl>
-    implements _$$UpdateCustomerOrderDateImplCopyWith<$Res> {
-  __$$UpdateCustomerOrderDateImplCopyWithImpl(
-      _$UpdateCustomerOrderDateImpl _value,
-      $Res Function(_$UpdateCustomerOrderDateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? date = null,
-  }) {
-    return _then(_$UpdateCustomerOrderDateImpl(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UpdateCustomerOrderDateImpl implements _UpdateCustomerOrderDate {
-  const _$UpdateCustomerOrderDateImpl({required this.date});
-
-  @override
-  final DateTime date;
-
-  @override
-  String toString() {
-    return 'PosEvent.updateCustomerOrderDate(date: $date)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateCustomerOrderDateImpl &&
-            (identical(other.date, date) || other.date == date));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, date);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateCustomerOrderDateImplCopyWith<_$UpdateCustomerOrderDateImpl>
-      get copyWith => __$$UpdateCustomerOrderDateImplCopyWithImpl<
-          _$UpdateCustomerOrderDateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return updateCustomerOrderDate(date);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerOrderDate?.call(date);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerOrderDate != null) {
-      return updateCustomerOrderDate(date);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return updateCustomerOrderDate(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerOrderDate?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerOrderDate != null) {
-      return updateCustomerOrderDate(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateCustomerOrderDate implements PosEvent {
-  const factory _UpdateCustomerOrderDate({required final DateTime date}) =
-      _$UpdateCustomerOrderDateImpl;
-
-  DateTime get date;
-  @JsonKey(ignore: true)
-  _$$UpdateCustomerOrderDateImplCopyWith<_$UpdateCustomerOrderDateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdateCustomerPaymentImplCopyWith<$Res> {
-  factory _$$UpdateCustomerPaymentImplCopyWith(
-          _$UpdateCustomerPaymentImpl value,
-          $Res Function(_$UpdateCustomerPaymentImpl) then) =
-      __$$UpdateCustomerPaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UpdateCustomerPaymentImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdateCustomerPaymentImpl>
-    implements _$$UpdateCustomerPaymentImplCopyWith<$Res> {
-  __$$UpdateCustomerPaymentImplCopyWithImpl(_$UpdateCustomerPaymentImpl _value,
-      $Res Function(_$UpdateCustomerPaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UpdateCustomerPaymentImpl implements _UpdateCustomerPayment {
-  const _$UpdateCustomerPaymentImpl();
-
-  @override
-  String toString() {
-    return 'PosEvent.updateCustomerPayment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateCustomerPaymentImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return updateCustomerPayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPayment != null) {
-      return updateCustomerPayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return updateCustomerPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPayment != null) {
-      return updateCustomerPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateCustomerPayment implements PosEvent {
-  const factory _UpdateCustomerPayment() = _$UpdateCustomerPaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$UpdateCustomerPaymentStatusImplCopyWith<$Res> {
-  factory _$$UpdateCustomerPaymentStatusImplCopyWith(
-          _$UpdateCustomerPaymentStatusImpl value,
-          $Res Function(_$UpdateCustomerPaymentStatusImpl) then) =
-      __$$UpdateCustomerPaymentStatusImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UpdateCustomerPaymentStatusImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdateCustomerPaymentStatusImpl>
-    implements _$$UpdateCustomerPaymentStatusImplCopyWith<$Res> {
-  __$$UpdateCustomerPaymentStatusImplCopyWithImpl(
-      _$UpdateCustomerPaymentStatusImpl _value,
-      $Res Function(_$UpdateCustomerPaymentStatusImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UpdateCustomerPaymentStatusImpl
-    implements _UpdateCustomerPaymentStatus {
-  const _$UpdateCustomerPaymentStatusImpl();
-
-  @override
-  String toString() {
-    return 'PosEvent.updateCustomerPaymentStatus()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateCustomerPaymentStatusImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return updateCustomerPaymentStatus();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPaymentStatus?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPaymentStatus != null) {
-      return updateCustomerPaymentStatus();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return updateCustomerPaymentStatus(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return updateCustomerPaymentStatus?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (updateCustomerPaymentStatus != null) {
-      return updateCustomerPaymentStatus(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateCustomerPaymentStatus implements PosEvent {
-  const factory _UpdateCustomerPaymentStatus() =
-      _$UpdateCustomerPaymentStatusImpl;
-}
-
-/// @nodoc
-abstract class _$$SelectedCustomerPaymentImplCopyWith<$Res> {
-  factory _$$SelectedCustomerPaymentImplCopyWith(
-          _$SelectedCustomerPaymentImpl value,
-          $Res Function(_$SelectedCustomerPaymentImpl) then) =
-      __$$SelectedCustomerPaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SelectedCustomerPaymentImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$SelectedCustomerPaymentImpl>
-    implements _$$SelectedCustomerPaymentImplCopyWith<$Res> {
-  __$$SelectedCustomerPaymentImplCopyWithImpl(
-      _$SelectedCustomerPaymentImpl _value,
-      $Res Function(_$SelectedCustomerPaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SelectedCustomerPaymentImpl implements _SelectedCustomerPayment {
-  const _$SelectedCustomerPaymentImpl();
-
-  @override
-  String toString() {
-    return 'PosEvent.selectedCustomerPayment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SelectedCustomerPaymentImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
-    required TResult Function() deleteCart,
-    required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
-  }) {
-    return selectedCustomerPayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
-    TResult? Function()? deleteCart,
-    TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
-  }) {
-    return selectedCustomerPayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
-    TResult Function()? deleteCart,
-    TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (selectedCustomerPayment != null) {
-      return selectedCustomerPayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
-    required TResult Function(_DeleteCart value) deleteCart,
-    required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
-  }) {
-    return selectedCustomerPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
-    TResult? Function(_DeleteCart value)? deleteCart,
-    TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-  }) {
-    return selectedCustomerPayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
-    TResult Function(_DeleteCart value)? deleteCart,
-    TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
-    required TResult orElse(),
-  }) {
-    if (selectedCustomerPayment != null) {
-      return selectedCustomerPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _SelectedCustomerPayment implements PosEvent {
-  const factory _SelectedCustomerPayment() = _$SelectedCustomerPaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$RemoveCustomerServiceImplCopyWith<$Res> {
-  factory _$$RemoveCustomerServiceImplCopyWith(
-          _$RemoveCustomerServiceImpl value,
-          $Res Function(_$RemoveCustomerServiceImpl) then) =
-      __$$RemoveCustomerServiceImplCopyWithImpl<$Res>;
+abstract class _$$RemoveServiceImplCopyWith<$Res> {
+  factory _$$RemoveServiceImplCopyWith(
+          _$RemoveServiceImpl value, $Res Function(_$RemoveServiceImpl) then) =
+      __$$RemoveServiceImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class __$$RemoveCustomerServiceImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$RemoveCustomerServiceImpl>
-    implements _$$RemoveCustomerServiceImplCopyWith<$Res> {
-  __$$RemoveCustomerServiceImplCopyWithImpl(_$RemoveCustomerServiceImpl _value,
-      $Res Function(_$RemoveCustomerServiceImpl) _then)
+class __$$RemoveServiceImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$RemoveServiceImpl>
+    implements _$$RemoveServiceImplCopyWith<$Res> {
+  __$$RemoveServiceImplCopyWithImpl(
+      _$RemoveServiceImpl _value, $Res Function(_$RemoveServiceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3303,7 +1923,7 @@ class __$$RemoveCustomerServiceImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$RemoveCustomerServiceImpl(
+    return _then(_$RemoveServiceImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3314,22 +1934,22 @@ class __$$RemoveCustomerServiceImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
-  const _$RemoveCustomerServiceImpl({required this.id});
+class _$RemoveServiceImpl implements _RemoveService {
+  const _$RemoveServiceImpl({required this.id});
 
   @override
   final int id;
 
   @override
   String toString() {
-    return 'PosEvent.removeCustomerService(id: $id)';
+    return 'PosEvent.removeService(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RemoveCustomerServiceImpl &&
+            other is _$RemoveServiceImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
@@ -3339,88 +1959,90 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemoveCustomerServiceImplCopyWith<_$RemoveCustomerServiceImpl>
-      get copyWith => __$$RemoveCustomerServiceImplCopyWithImpl<
-          _$RemoveCustomerServiceImpl>(this, _$identity);
+  _$$RemoveServiceImplCopyWith<_$RemoveServiceImpl> get copyWith =>
+      __$$RemoveServiceImplCopyWithImpl<_$RemoveServiceImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return removeCustomerService(id);
+    return removeService(id);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return removeCustomerService?.call(id);
+    return removeService?.call(id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (removeCustomerService != null) {
-      return removeCustomerService(id);
+    if (removeService != null) {
+      return removeService(id);
     }
     return orElse();
   }
@@ -3428,127 +2050,324 @@ class _$RemoveCustomerServiceImpl implements _RemoveCustomerService {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return removeCustomerService(this);
+    return removeService(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return removeCustomerService?.call(this);
+    return removeService?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (removeCustomerService != null) {
-      return removeCustomerService(this);
+    if (removeService != null) {
+      return removeService(this);
     }
     return orElse();
   }
 }
 
-abstract class _RemoveCustomerService implements PosEvent {
-  const factory _RemoveCustomerService({required final int id}) =
-      _$RemoveCustomerServiceImpl;
+abstract class _RemoveService implements PosEvent {
+  const factory _RemoveService({required final int id}) = _$RemoveServiceImpl;
 
   int get id;
   @JsonKey(ignore: true)
-  _$$RemoveCustomerServiceImplCopyWith<_$RemoveCustomerServiceImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RemoveServiceImplCopyWith<_$RemoveServiceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UpdatePaymentMethodNewImplCopyWith<$Res> {
-  factory _$$UpdatePaymentMethodNewImplCopyWith(
-          _$UpdatePaymentMethodNewImpl value,
-          $Res Function(_$UpdatePaymentMethodNewImpl) then) =
-      __$$UpdatePaymentMethodNewImplCopyWithImpl<$Res>;
+abstract class _$$SubmitOrderImplCopyWith<$Res> {
+  factory _$$SubmitOrderImplCopyWith(
+          _$SubmitOrderImpl value, $Res Function(_$SubmitOrderImpl) then) =
+      __$$SubmitOrderImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SubmitOrderImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SubmitOrderImpl>
+    implements _$$SubmitOrderImplCopyWith<$Res> {
+  __$$SubmitOrderImplCopyWithImpl(
+      _$SubmitOrderImpl _value, $Res Function(_$SubmitOrderImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SubmitOrderImpl implements _SubmitOrder {
+  const _$SubmitOrderImpl();
+
+  @override
+  String toString() {
+    return 'PosEvent.submitOrder()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SubmitOrderImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return submitOrder();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return submitOrder?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (submitOrder != null) {
+      return submitOrder();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return submitOrder(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return submitOrder?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (submitOrder != null) {
+      return submitOrder(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SubmitOrder implements PosEvent {
+  const factory _SubmitOrder() = _$SubmitOrderImpl;
+}
+
+/// @nodoc
+abstract class _$$SetCustomerNameImplCopyWith<$Res> {
+  factory _$$SetCustomerNameImplCopyWith(_$SetCustomerNameImpl value,
+          $Res Function(_$SetCustomerNameImpl) then) =
+      __$$SetCustomerNameImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String paymentMethodId});
+  $Res call({String name});
 }
 
 /// @nodoc
-class __$$UpdatePaymentMethodNewImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdatePaymentMethodNewImpl>
-    implements _$$UpdatePaymentMethodNewImplCopyWith<$Res> {
-  __$$UpdatePaymentMethodNewImplCopyWithImpl(
-      _$UpdatePaymentMethodNewImpl _value,
-      $Res Function(_$UpdatePaymentMethodNewImpl) _then)
+class __$$SetCustomerNameImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SetCustomerNameImpl>
+    implements _$$SetCustomerNameImplCopyWith<$Res> {
+  __$$SetCustomerNameImplCopyWithImpl(
+      _$SetCustomerNameImpl _value, $Res Function(_$SetCustomerNameImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? paymentMethodId = null,
+    Object? name = null,
   }) {
-    return _then(_$UpdatePaymentMethodNewImpl(
-      paymentMethodId: null == paymentMethodId
-          ? _value.paymentMethodId
-          : paymentMethodId // ignore: cast_nullable_to_non_nullable
+    return _then(_$SetCustomerNameImpl(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -3556,114 +2375,116 @@ class __$$UpdatePaymentMethodNewImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdatePaymentMethodNewImpl implements _UpdatePaymentMethodNew {
-  const _$UpdatePaymentMethodNewImpl({required this.paymentMethodId});
+class _$SetCustomerNameImpl implements _SetCustomerName {
+  const _$SetCustomerNameImpl({required this.name});
 
   @override
-  final String paymentMethodId;
+  final String name;
 
   @override
   String toString() {
-    return 'PosEvent.updatePaymentMethodNew(paymentMethodId: $paymentMethodId)';
+    return 'PosEvent.setCustomerName(name: $name)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdatePaymentMethodNewImpl &&
-            (identical(other.paymentMethodId, paymentMethodId) ||
-                other.paymentMethodId == paymentMethodId));
+            other is _$SetCustomerNameImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, paymentMethodId);
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdatePaymentMethodNewImplCopyWith<_$UpdatePaymentMethodNewImpl>
-      get copyWith => __$$UpdatePaymentMethodNewImplCopyWithImpl<
-          _$UpdatePaymentMethodNewImpl>(this, _$identity);
+  _$$SetCustomerNameImplCopyWith<_$SetCustomerNameImpl> get copyWith =>
+      __$$SetCustomerNameImplCopyWithImpl<_$SetCustomerNameImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return updatePaymentMethodNew(paymentMethodId);
+    return setCustomerName(name);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return updatePaymentMethodNew?.call(paymentMethodId);
+    return setCustomerName?.call(name);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (updatePaymentMethodNew != null) {
-      return updatePaymentMethodNew(paymentMethodId);
+    if (setCustomerName != null) {
+      return setCustomerName(name);
     }
     return orElse();
   }
@@ -3671,116 +2492,789 @@ class _$UpdatePaymentMethodNewImpl implements _UpdatePaymentMethodNew {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return updatePaymentMethodNew(this);
+    return setCustomerName(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return updatePaymentMethodNew?.call(this);
+    return setCustomerName?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (updatePaymentMethodNew != null) {
-      return updatePaymentMethodNew(this);
+    if (setCustomerName != null) {
+      return setCustomerName(this);
     }
     return orElse();
   }
 }
 
-abstract class _UpdatePaymentMethodNew implements PosEvent {
-  const factory _UpdatePaymentMethodNew(
-      {required final String paymentMethodId}) = _$UpdatePaymentMethodNewImpl;
+abstract class _SetCustomerName implements PosEvent {
+  const factory _SetCustomerName({required final String name}) =
+      _$SetCustomerNameImpl;
 
-  String get paymentMethodId;
+  String get name;
   @JsonKey(ignore: true)
-  _$$UpdatePaymentMethodNewImplCopyWith<_$UpdatePaymentMethodNewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SetCustomerNameImplCopyWith<_$SetCustomerNameImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UpdatePaymentStatusNewImplCopyWith<$Res> {
-  factory _$$UpdatePaymentStatusNewImplCopyWith(
-          _$UpdatePaymentStatusNewImpl value,
-          $Res Function(_$UpdatePaymentStatusNewImpl) then) =
-      __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>;
+abstract class _$$SetCustomerPhoneImplCopyWith<$Res> {
+  factory _$$SetCustomerPhoneImplCopyWith(_$SetCustomerPhoneImpl value,
+          $Res Function(_$SetCustomerPhoneImpl) then) =
+      __$$SetCustomerPhoneImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String phone});
+}
+
+/// @nodoc
+class __$$SetCustomerPhoneImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SetCustomerPhoneImpl>
+    implements _$$SetCustomerPhoneImplCopyWith<$Res> {
+  __$$SetCustomerPhoneImplCopyWithImpl(_$SetCustomerPhoneImpl _value,
+      $Res Function(_$SetCustomerPhoneImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? phone = null,
+  }) {
+    return _then(_$SetCustomerPhoneImpl(
+      phone: null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetCustomerPhoneImpl implements _SetCustomerPhone {
+  const _$SetCustomerPhoneImpl({required this.phone});
+
+  @override
+  final String phone;
+
+  @override
+  String toString() {
+    return 'PosEvent.setCustomerPhone(phone: $phone)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetCustomerPhoneImpl &&
+            (identical(other.phone, phone) || other.phone == phone));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, phone);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetCustomerPhoneImplCopyWith<_$SetCustomerPhoneImpl> get copyWith =>
+      __$$SetCustomerPhoneImplCopyWithImpl<_$SetCustomerPhoneImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return setCustomerPhone(phone);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return setCustomerPhone?.call(phone);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setCustomerPhone != null) {
+      return setCustomerPhone(phone);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return setCustomerPhone(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return setCustomerPhone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setCustomerPhone != null) {
+      return setCustomerPhone(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetCustomerPhone implements PosEvent {
+  const factory _SetCustomerPhone({required final String phone}) =
+      _$SetCustomerPhoneImpl;
+
+  String get phone;
+  @JsonKey(ignore: true)
+  _$$SetCustomerPhoneImplCopyWith<_$SetCustomerPhoneImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetOrderDateImplCopyWith<$Res> {
+  factory _$$SetOrderDateImplCopyWith(
+          _$SetOrderDateImpl value, $Res Function(_$SetOrderDateImpl) then) =
+      __$$SetOrderDateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DateTime date});
+}
+
+/// @nodoc
+class __$$SetOrderDateImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SetOrderDateImpl>
+    implements _$$SetOrderDateImplCopyWith<$Res> {
+  __$$SetOrderDateImplCopyWithImpl(
+      _$SetOrderDateImpl _value, $Res Function(_$SetOrderDateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? date = null,
+  }) {
+    return _then(_$SetOrderDateImpl(
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetOrderDateImpl implements _SetOrderDate {
+  const _$SetOrderDateImpl({required this.date});
+
+  @override
+  final DateTime date;
+
+  @override
+  String toString() {
+    return 'PosEvent.setOrderDate(date: $date)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetOrderDateImpl &&
+            (identical(other.date, date) || other.date == date));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, date);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetOrderDateImplCopyWith<_$SetOrderDateImpl> get copyWith =>
+      __$$SetOrderDateImplCopyWithImpl<_$SetOrderDateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return setOrderDate(date);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return setOrderDate?.call(date);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setOrderDate != null) {
+      return setOrderDate(date);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return setOrderDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return setOrderDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setOrderDate != null) {
+      return setOrderDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetOrderDate implements PosEvent {
+  const factory _SetOrderDate({required final DateTime date}) =
+      _$SetOrderDateImpl;
+
+  DateTime get date;
+  @JsonKey(ignore: true)
+  _$$SetOrderDateImplCopyWith<_$SetOrderDateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RecalculatePaymentImplCopyWith<$Res> {
+  factory _$$RecalculatePaymentImplCopyWith(_$RecalculatePaymentImpl value,
+          $Res Function(_$RecalculatePaymentImpl) then) =
+      __$$RecalculatePaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RecalculatePaymentImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$RecalculatePaymentImpl>
+    implements _$$RecalculatePaymentImplCopyWith<$Res> {
+  __$$RecalculatePaymentImplCopyWithImpl(_$RecalculatePaymentImpl _value,
+      $Res Function(_$RecalculatePaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RecalculatePaymentImpl implements _RecalculatePayment {
+  const _$RecalculatePaymentImpl();
+
+  @override
+  String toString() {
+    return 'PosEvent.recalculatePayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RecalculatePaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return recalculatePayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return recalculatePayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (recalculatePayment != null) {
+      return recalculatePayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return recalculatePayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return recalculatePayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (recalculatePayment != null) {
+      return recalculatePayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RecalculatePayment implements PosEvent {
+  const factory _RecalculatePayment() = _$RecalculatePaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$SetPaymentStatusImplCopyWith<$Res> {
+  factory _$$SetPaymentStatusImplCopyWith(_$SetPaymentStatusImpl value,
+          $Res Function(_$SetPaymentStatusImpl) then) =
+      __$$SetPaymentStatusImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String paymentStatusId});
 }
 
 /// @nodoc
-class __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>
-    extends _$PosEventCopyWithImpl<$Res, _$UpdatePaymentStatusNewImpl>
-    implements _$$UpdatePaymentStatusNewImplCopyWith<$Res> {
-  __$$UpdatePaymentStatusNewImplCopyWithImpl(
-      _$UpdatePaymentStatusNewImpl _value,
-      $Res Function(_$UpdatePaymentStatusNewImpl) _then)
+class __$$SetPaymentStatusImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SetPaymentStatusImpl>
+    implements _$$SetPaymentStatusImplCopyWith<$Res> {
+  __$$SetPaymentStatusImplCopyWithImpl(_$SetPaymentStatusImpl _value,
+      $Res Function(_$SetPaymentStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3788,7 +3282,7 @@ class __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>
   $Res call({
     Object? paymentStatusId = null,
   }) {
-    return _then(_$UpdatePaymentStatusNewImpl(
+    return _then(_$SetPaymentStatusImpl(
       paymentStatusId: null == paymentStatusId
           ? _value.paymentStatusId
           : paymentStatusId // ignore: cast_nullable_to_non_nullable
@@ -3799,22 +3293,22 @@ class __$$UpdatePaymentStatusNewImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdatePaymentStatusNewImpl implements _UpdatePaymentStatusNew {
-  const _$UpdatePaymentStatusNewImpl({required this.paymentStatusId});
+class _$SetPaymentStatusImpl implements _SetPaymentStatus {
+  const _$SetPaymentStatusImpl({required this.paymentStatusId});
 
   @override
   final String paymentStatusId;
 
   @override
   String toString() {
-    return 'PosEvent.updatePaymentStatusNew(paymentStatusId: $paymentStatusId)';
+    return 'PosEvent.setPaymentStatus(paymentStatusId: $paymentStatusId)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdatePaymentStatusNewImpl &&
+            other is _$SetPaymentStatusImpl &&
             (identical(other.paymentStatusId, paymentStatusId) ||
                 other.paymentStatusId == paymentStatusId));
   }
@@ -3825,88 +3319,91 @@ class _$UpdatePaymentStatusNewImpl implements _UpdatePaymentStatusNew {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdatePaymentStatusNewImplCopyWith<_$UpdatePaymentStatusNewImpl>
-      get copyWith => __$$UpdatePaymentStatusNewImplCopyWithImpl<
-          _$UpdatePaymentStatusNewImpl>(this, _$identity);
+  _$$SetPaymentStatusImplCopyWith<_$SetPaymentStatusImpl> get copyWith =>
+      __$$SetPaymentStatusImplCopyWithImpl<_$SetPaymentStatusImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function() getCart,
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
     required TResult Function() deleteCart,
     required TResult Function() modifyCart,
-    required TResult Function() checkingService,
-    required TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)
-        addServiceToCart,
-    required TResult Function() submitService,
-    required TResult Function() submitToDb,
-    required TResult Function(String name) updateCustomerName,
-    required TResult Function(String phone) updateCustomerPhone,
-    required TResult Function(DateTime date) updateCustomerOrderDate,
-    required TResult Function() updateCustomerPayment,
-    required TResult Function() updateCustomerPaymentStatus,
-    required TResult Function() selectedCustomerPayment,
-    required TResult Function(int id) removeCustomerService,
-    required TResult Function(String paymentMethodId) updatePaymentMethodNew,
-    required TResult Function(String paymentStatusId) updatePaymentStatusNew,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
   }) {
-    return updatePaymentStatusNew(paymentStatusId);
+    return setPaymentStatus(paymentStatusId);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function()? getCart,
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
     TResult? Function()? deleteCart,
     TResult? Function()? modifyCart,
-    TResult? Function()? checkingService,
-    TResult? Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult? Function()? submitService,
-    TResult? Function()? submitToDb,
-    TResult? Function(String name)? updateCustomerName,
-    TResult? Function(String phone)? updateCustomerPhone,
-    TResult? Function(DateTime date)? updateCustomerOrderDate,
-    TResult? Function()? updateCustomerPayment,
-    TResult? Function()? updateCustomerPaymentStatus,
-    TResult? Function()? selectedCustomerPayment,
-    TResult? Function(int id)? removeCustomerService,
-    TResult? Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult? Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
   }) {
-    return updatePaymentStatusNew?.call(paymentStatusId);
+    return setPaymentStatus?.call(paymentStatusId);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? getCart,
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
     TResult Function()? deleteCart,
     TResult Function()? modifyCart,
-    TResult Function()? checkingService,
-    TResult Function(String laundryTypes, String laundryNames, int qty,
-            String keterangan, double price)?
-        addServiceToCart,
-    TResult Function()? submitService,
-    TResult Function()? submitToDb,
-    TResult Function(String name)? updateCustomerName,
-    TResult Function(String phone)? updateCustomerPhone,
-    TResult Function(DateTime date)? updateCustomerOrderDate,
-    TResult Function()? updateCustomerPayment,
-    TResult Function()? updateCustomerPaymentStatus,
-    TResult Function()? selectedCustomerPayment,
-    TResult Function(int id)? removeCustomerService,
-    TResult Function(String paymentMethodId)? updatePaymentMethodNew,
-    TResult Function(String paymentStatusId)? updatePaymentStatusNew,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (updatePaymentStatusNew != null) {
-      return updatePaymentStatusNew(paymentStatusId);
+    if (setPaymentStatus != null) {
+      return setPaymentStatus(paymentStatusId);
     }
     return orElse();
   }
@@ -3914,97 +3411,745 @@ class _$UpdatePaymentStatusNewImpl implements _UpdatePaymentStatusNew {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetCart value) getCart,
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
     required TResult Function(_DeleteCart value) deleteCart,
     required TResult Function(_ModifyCart value) modifyCart,
-    required TResult Function(_CheckingService value) checkingService,
-    required TResult Function(_AddServiceToCart value) addServiceToCart,
-    required TResult Function(_SubmitService value) submitService,
-    required TResult Function(_SubmitToDb value) submitToDb,
-    required TResult Function(_UpdateCustomerName value) updateCustomerName,
-    required TResult Function(_UpdateCustomerPhone value) updateCustomerPhone,
-    required TResult Function(_UpdateCustomerOrderDate value)
-        updateCustomerOrderDate,
-    required TResult Function(_UpdateCustomerPayment value)
-        updateCustomerPayment,
-    required TResult Function(_UpdateCustomerPaymentStatus value)
-        updateCustomerPaymentStatus,
-    required TResult Function(_SelectedCustomerPayment value)
-        selectedCustomerPayment,
-    required TResult Function(_RemoveCustomerService value)
-        removeCustomerService,
-    required TResult Function(_UpdatePaymentMethodNew value)
-        updatePaymentMethodNew,
-    required TResult Function(_UpdatePaymentStatusNew value)
-        updatePaymentStatusNew,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
   }) {
-    return updatePaymentStatusNew(this);
+    return setPaymentStatus(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetCart value)? getCart,
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
     TResult? Function(_DeleteCart value)? deleteCart,
     TResult? Function(_ModifyCart value)? modifyCart,
-    TResult? Function(_CheckingService value)? checkingService,
-    TResult? Function(_AddServiceToCart value)? addServiceToCart,
-    TResult? Function(_SubmitService value)? submitService,
-    TResult? Function(_SubmitToDb value)? submitToDb,
-    TResult? Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult? Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult? Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult? Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult? Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult? Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult? Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult? Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult? Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
   }) {
-    return updatePaymentStatusNew?.call(this);
+    return setPaymentStatus?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetCart value)? getCart,
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
     TResult Function(_DeleteCart value)? deleteCart,
     TResult Function(_ModifyCart value)? modifyCart,
-    TResult Function(_CheckingService value)? checkingService,
-    TResult Function(_AddServiceToCart value)? addServiceToCart,
-    TResult Function(_SubmitService value)? submitService,
-    TResult Function(_SubmitToDb value)? submitToDb,
-    TResult Function(_UpdateCustomerName value)? updateCustomerName,
-    TResult Function(_UpdateCustomerPhone value)? updateCustomerPhone,
-    TResult Function(_UpdateCustomerOrderDate value)? updateCustomerOrderDate,
-    TResult Function(_UpdateCustomerPayment value)? updateCustomerPayment,
-    TResult Function(_UpdateCustomerPaymentStatus value)?
-        updateCustomerPaymentStatus,
-    TResult Function(_SelectedCustomerPayment value)? selectedCustomerPayment,
-    TResult Function(_RemoveCustomerService value)? removeCustomerService,
-    TResult Function(_UpdatePaymentMethodNew value)? updatePaymentMethodNew,
-    TResult Function(_UpdatePaymentStatusNew value)? updatePaymentStatusNew,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
     required TResult orElse(),
   }) {
-    if (updatePaymentStatusNew != null) {
-      return updatePaymentStatusNew(this);
+    if (setPaymentStatus != null) {
+      return setPaymentStatus(this);
     }
     return orElse();
   }
 }
 
-abstract class _UpdatePaymentStatusNew implements PosEvent {
-  const factory _UpdatePaymentStatusNew(
-      {required final String paymentStatusId}) = _$UpdatePaymentStatusNewImpl;
+abstract class _SetPaymentStatus implements PosEvent {
+  const factory _SetPaymentStatus({required final String paymentStatusId}) =
+      _$SetPaymentStatusImpl;
 
   String get paymentStatusId;
   @JsonKey(ignore: true)
-  _$$UpdatePaymentStatusNewImplCopyWith<_$UpdatePaymentStatusNewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SetPaymentStatusImplCopyWith<_$SetPaymentStatusImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetPaymentMethodImplCopyWith<$Res> {
+  factory _$$SetPaymentMethodImplCopyWith(_$SetPaymentMethodImpl value,
+          $Res Function(_$SetPaymentMethodImpl) then) =
+      __$$SetPaymentMethodImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String paymentMethodId});
+}
+
+/// @nodoc
+class __$$SetPaymentMethodImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SetPaymentMethodImpl>
+    implements _$$SetPaymentMethodImplCopyWith<$Res> {
+  __$$SetPaymentMethodImplCopyWithImpl(_$SetPaymentMethodImpl _value,
+      $Res Function(_$SetPaymentMethodImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? paymentMethodId = null,
+  }) {
+    return _then(_$SetPaymentMethodImpl(
+      paymentMethodId: null == paymentMethodId
+          ? _value.paymentMethodId
+          : paymentMethodId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetPaymentMethodImpl implements _SetPaymentMethod {
+  const _$SetPaymentMethodImpl({required this.paymentMethodId});
+
+  @override
+  final String paymentMethodId;
+
+  @override
+  String toString() {
+    return 'PosEvent.setPaymentMethod(paymentMethodId: $paymentMethodId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetPaymentMethodImpl &&
+            (identical(other.paymentMethodId, paymentMethodId) ||
+                other.paymentMethodId == paymentMethodId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, paymentMethodId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetPaymentMethodImplCopyWith<_$SetPaymentMethodImpl> get copyWith =>
+      __$$SetPaymentMethodImplCopyWithImpl<_$SetPaymentMethodImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return setPaymentMethod(paymentMethodId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return setPaymentMethod?.call(paymentMethodId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setPaymentMethod != null) {
+      return setPaymentMethod(paymentMethodId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return setPaymentMethod(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return setPaymentMethod?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (setPaymentMethod != null) {
+      return setPaymentMethod(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetPaymentMethod implements PosEvent {
+  const factory _SetPaymentMethod({required final String paymentMethodId}) =
+      _$SetPaymentMethodImpl;
+
+  String get paymentMethodId;
+  @JsonKey(ignore: true)
+  _$$SetPaymentMethodImplCopyWith<_$SetPaymentMethodImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ConfirmCustomerPaymentImplCopyWith<$Res> {
+  factory _$$ConfirmCustomerPaymentImplCopyWith(
+          _$ConfirmCustomerPaymentImpl value,
+          $Res Function(_$ConfirmCustomerPaymentImpl) then) =
+      __$$ConfirmCustomerPaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ConfirmCustomerPaymentImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$ConfirmCustomerPaymentImpl>
+    implements _$$ConfirmCustomerPaymentImplCopyWith<$Res> {
+  __$$ConfirmCustomerPaymentImplCopyWithImpl(
+      _$ConfirmCustomerPaymentImpl _value,
+      $Res Function(_$ConfirmCustomerPaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ConfirmCustomerPaymentImpl implements _ConfirmCustomerPayment {
+  const _$ConfirmCustomerPaymentImpl();
+
+  @override
+  String toString() {
+    return 'PosEvent.confirmCustomerPayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConfirmCustomerPaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return confirmCustomerPayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return confirmCustomerPayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (confirmCustomerPayment != null) {
+      return confirmCustomerPayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return confirmCustomerPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return confirmCustomerPayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (confirmCustomerPayment != null) {
+      return confirmCustomerPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConfirmCustomerPayment implements PosEvent {
+  const factory _ConfirmCustomerPayment() = _$ConfirmCustomerPaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$SendWhatsAppReceiptImplCopyWith<$Res> {
+  factory _$$SendWhatsAppReceiptImplCopyWith(_$SendWhatsAppReceiptImpl value,
+          $Res Function(_$SendWhatsAppReceiptImpl) then) =
+      __$$SendWhatsAppReceiptImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SendWhatsAppReceiptImplCopyWithImpl<$Res>
+    extends _$PosEventCopyWithImpl<$Res, _$SendWhatsAppReceiptImpl>
+    implements _$$SendWhatsAppReceiptImplCopyWith<$Res> {
+  __$$SendWhatsAppReceiptImplCopyWithImpl(_$SendWhatsAppReceiptImpl _value,
+      $Res Function(_$SendWhatsAppReceiptImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SendWhatsAppReceiptImpl implements _SendWhatsAppReceipt {
+  const _$SendWhatsAppReceiptImpl();
+
+  @override
+  String toString() {
+    return 'PosEvent.sendWhatsAppReceipt()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendWhatsAppReceiptImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function() fetchCart,
+    required TResult Function() deleteCart,
+    required TResult Function() modifyCart,
+    required TResult Function() getAllUsername,
+    required TResult Function() validateService,
+    required TResult Function(String laundryTypeId, String laundryTypeName,
+            int qty, String note, double price)
+        addService,
+    required TResult Function() commitServices,
+    required TResult Function(int id) removeService,
+    required TResult Function() submitOrder,
+    required TResult Function(String name) setCustomerName,
+    required TResult Function(String phone) setCustomerPhone,
+    required TResult Function(DateTime date) setOrderDate,
+    required TResult Function() recalculatePayment,
+    required TResult Function(String paymentStatusId) setPaymentStatus,
+    required TResult Function(String paymentMethodId) setPaymentMethod,
+    required TResult Function() confirmCustomerPayment,
+    required TResult Function() sendWhatsAppReceipt,
+  }) {
+    return sendWhatsAppReceipt();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function()? fetchCart,
+    TResult? Function()? deleteCart,
+    TResult? Function()? modifyCart,
+    TResult? Function()? getAllUsername,
+    TResult? Function()? validateService,
+    TResult? Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult? Function()? commitServices,
+    TResult? Function(int id)? removeService,
+    TResult? Function()? submitOrder,
+    TResult? Function(String name)? setCustomerName,
+    TResult? Function(String phone)? setCustomerPhone,
+    TResult? Function(DateTime date)? setOrderDate,
+    TResult? Function()? recalculatePayment,
+    TResult? Function(String paymentStatusId)? setPaymentStatus,
+    TResult? Function(String paymentMethodId)? setPaymentMethod,
+    TResult? Function()? confirmCustomerPayment,
+    TResult? Function()? sendWhatsAppReceipt,
+  }) {
+    return sendWhatsAppReceipt?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function()? fetchCart,
+    TResult Function()? deleteCart,
+    TResult Function()? modifyCart,
+    TResult Function()? getAllUsername,
+    TResult Function()? validateService,
+    TResult Function(String laundryTypeId, String laundryTypeName, int qty,
+            String note, double price)?
+        addService,
+    TResult Function()? commitServices,
+    TResult Function(int id)? removeService,
+    TResult Function()? submitOrder,
+    TResult Function(String name)? setCustomerName,
+    TResult Function(String phone)? setCustomerPhone,
+    TResult Function(DateTime date)? setOrderDate,
+    TResult Function()? recalculatePayment,
+    TResult Function(String paymentStatusId)? setPaymentStatus,
+    TResult Function(String paymentMethodId)? setPaymentMethod,
+    TResult Function()? confirmCustomerPayment,
+    TResult Function()? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (sendWhatsAppReceipt != null) {
+      return sendWhatsAppReceipt();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FetchCart value) fetchCart,
+    required TResult Function(_DeleteCart value) deleteCart,
+    required TResult Function(_ModifyCart value) modifyCart,
+    required TResult Function(_GetAllUsername value) getAllUsername,
+    required TResult Function(_ValidateService value) validateService,
+    required TResult Function(_AddService value) addService,
+    required TResult Function(_CommitServices value) commitServices,
+    required TResult Function(_RemoveService value) removeService,
+    required TResult Function(_SubmitOrder value) submitOrder,
+    required TResult Function(_SetCustomerName value) setCustomerName,
+    required TResult Function(_SetCustomerPhone value) setCustomerPhone,
+    required TResult Function(_SetOrderDate value) setOrderDate,
+    required TResult Function(_RecalculatePayment value) recalculatePayment,
+    required TResult Function(_SetPaymentStatus value) setPaymentStatus,
+    required TResult Function(_SetPaymentMethod value) setPaymentMethod,
+    required TResult Function(_ConfirmCustomerPayment value)
+        confirmCustomerPayment,
+    required TResult Function(_SendWhatsAppReceipt value) sendWhatsAppReceipt,
+  }) {
+    return sendWhatsAppReceipt(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FetchCart value)? fetchCart,
+    TResult? Function(_DeleteCart value)? deleteCart,
+    TResult? Function(_ModifyCart value)? modifyCart,
+    TResult? Function(_GetAllUsername value)? getAllUsername,
+    TResult? Function(_ValidateService value)? validateService,
+    TResult? Function(_AddService value)? addService,
+    TResult? Function(_CommitServices value)? commitServices,
+    TResult? Function(_RemoveService value)? removeService,
+    TResult? Function(_SubmitOrder value)? submitOrder,
+    TResult? Function(_SetCustomerName value)? setCustomerName,
+    TResult? Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult? Function(_SetOrderDate value)? setOrderDate,
+    TResult? Function(_RecalculatePayment value)? recalculatePayment,
+    TResult? Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult? Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult? Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult? Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+  }) {
+    return sendWhatsAppReceipt?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FetchCart value)? fetchCart,
+    TResult Function(_DeleteCart value)? deleteCart,
+    TResult Function(_ModifyCart value)? modifyCart,
+    TResult Function(_GetAllUsername value)? getAllUsername,
+    TResult Function(_ValidateService value)? validateService,
+    TResult Function(_AddService value)? addService,
+    TResult Function(_CommitServices value)? commitServices,
+    TResult Function(_RemoveService value)? removeService,
+    TResult Function(_SubmitOrder value)? submitOrder,
+    TResult Function(_SetCustomerName value)? setCustomerName,
+    TResult Function(_SetCustomerPhone value)? setCustomerPhone,
+    TResult Function(_SetOrderDate value)? setOrderDate,
+    TResult Function(_RecalculatePayment value)? recalculatePayment,
+    TResult Function(_SetPaymentStatus value)? setPaymentStatus,
+    TResult Function(_SetPaymentMethod value)? setPaymentMethod,
+    TResult Function(_ConfirmCustomerPayment value)? confirmCustomerPayment,
+    TResult Function(_SendWhatsAppReceipt value)? sendWhatsAppReceipt,
+    required TResult orElse(),
+  }) {
+    if (sendWhatsAppReceipt != null) {
+      return sendWhatsAppReceipt(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendWhatsAppReceipt implements PosEvent {
+  const factory _SendWhatsAppReceipt() = _$SendWhatsAppReceiptImpl;
 }
 
 /// @nodoc
@@ -4013,60 +4158,69 @@ mixin _$PosState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4074,60 +4228,69 @@ mixin _$PosState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4190,20 +4353,23 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
     return initial();
   }
@@ -4213,20 +4379,23 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
     return initial?.call();
   }
@@ -4236,20 +4405,23 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4263,20 +4435,23 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
     return initial(this);
   }
@@ -4286,20 +4461,23 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
     return initial?.call(this);
   }
@@ -4309,20 +4487,23 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4376,20 +4557,23 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
     return loading();
   }
@@ -4399,20 +4583,23 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
     return loading?.call();
   }
@@ -4422,20 +4609,23 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -4449,20 +4639,23 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
     return loading(this);
   }
@@ -4472,20 +4665,23 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
     return loading?.call(this);
   }
@@ -4495,20 +4691,23 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -4523,35 +4722,35 @@ abstract class _Loading implements PosState {
 }
 
 /// @nodoc
-abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
-      __$$LoadedImplCopyWithImpl<$Res>;
+abstract class _$$ReadyImplCopyWith<$Res> {
+  factory _$$ReadyImplCopyWith(
+          _$ReadyImpl value, $Res Function(_$ReadyImpl) then) =
+      __$$ReadyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$LoadedImpl>
-    implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+class __$$ReadyImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$ReadyImpl>
+    implements _$$ReadyImplCopyWith<$Res> {
+  __$$ReadyImplCopyWithImpl(
+      _$ReadyImpl _value, $Res Function(_$ReadyImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl();
+class _$ReadyImpl implements _Ready {
+  const _$ReadyImpl();
 
   @override
   String toString() {
-    return 'PosState.loaded()';
+    return 'PosState.ready()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadedImpl);
+        (other.runtimeType == runtimeType && other is _$ReadyImpl);
   }
 
   @override
@@ -4562,22 +4761,25 @@ class _$LoadedImpl implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return loaded();
+    return ready();
   }
 
   @override
@@ -4585,22 +4787,25 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return loaded?.call();
+    return ready?.call();
   }
 
   @override
@@ -4608,24 +4813,27 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loaded != null) {
-      return loaded();
+    if (ready != null) {
+      return ready();
     }
     return orElse();
   }
@@ -4635,22 +4843,25 @@ class _$LoadedImpl implements _Loaded {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return loaded(this);
+    return ready(this);
   }
 
   @override
@@ -4658,22 +4869,25 @@ class _$LoadedImpl implements _Loaded {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return loaded?.call(this);
+    return ready?.call(this);
   }
 
   @override
@@ -4681,63 +4895,301 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loaded != null) {
-      return loaded(this);
+    if (ready != null) {
+      return ready(this);
     }
     return orElse();
   }
 }
 
-abstract class _Loaded implements PosState {
-  const factory _Loaded() = _$LoadedImpl;
+abstract class _Ready implements PosState {
+  const factory _Ready() = _$ReadyImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$FailureImplCopyWith<$Res> {
+  factory _$$FailureImplCopyWith(
+          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
+      __$$FailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$FailureImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$FailureImpl>
+    implements _$$FailureImplCopyWith<$Res> {
+  __$$FailureImplCopyWithImpl(
+      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$FailureImpl(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
-  const _$ErrorImpl();
+class _$FailureImpl implements _Failure {
+  const _$FailureImpl({required this.message});
+
+  @override
+  final String message;
 
   @override
   String toString() {
-    return 'PosState.error()';
+    return 'PosState.failure(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ErrorImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$FailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      __$$FailureImplCopyWithImpl<_$FailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
+    required TResult Function() reset,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
+  }) {
+    return failure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
+    TResult? Function()? reset,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
+  }) {
+    return failure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
+    TResult Function()? reset,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
+    required TResult Function(_Reset value) reset,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
+  }) {
+    return failure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
+    TResult? Function(_Reset value)? reset,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
+  }) {
+    return failure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
+    TResult Function(_Reset value)? reset,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Failure implements PosState {
+  const factory _Failure({required final String message}) = _$FailureImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FinishedImplCopyWith<$Res> {
+  factory _$$FinishedImplCopyWith(
+          _$FinishedImpl value, $Res Function(_$FinishedImpl) then) =
+      __$$FinishedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FinishedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$FinishedImpl>
+    implements _$$FinishedImplCopyWith<$Res> {
+  __$$FinishedImplCopyWithImpl(
+      _$FinishedImpl _value, $Res Function(_$FinishedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FinishedImpl implements _Finished {
+  const _$FinishedImpl();
+
+  @override
+  String toString() {
+    return 'PosState.finished()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FinishedImpl);
   }
 
   @override
@@ -4748,22 +5200,25 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return error();
+    return finished();
   }
 
   @override
@@ -4771,22 +5226,25 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return error?.call();
+    return finished?.call();
   }
 
   @override
@@ -4794,24 +5252,27 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error();
+    if (finished != null) {
+      return finished();
     }
     return orElse();
   }
@@ -4821,22 +5282,25 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return error(this);
+    return finished(this);
   }
 
   @override
@@ -4844,22 +5308,25 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return error?.call(this);
+    return finished?.call(this);
   }
 
   @override
@@ -4867,63 +5334,66 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(this);
+    if (finished != null) {
+      return finished(this);
     }
     return orElse();
   }
 }
 
-abstract class _Error implements PosState {
-  const factory _Error() = _$ErrorImpl;
+abstract class _Finished implements PosState {
+  const factory _Finished() = _$FinishedImpl;
 }
 
 /// @nodoc
-abstract class _$$FinishImplCopyWith<$Res> {
-  factory _$$FinishImplCopyWith(
-          _$FinishImpl value, $Res Function(_$FinishImpl) then) =
-      __$$FinishImplCopyWithImpl<$Res>;
+abstract class _$$PaymentUpdatedImplCopyWith<$Res> {
+  factory _$$PaymentUpdatedImplCopyWith(_$PaymentUpdatedImpl value,
+          $Res Function(_$PaymentUpdatedImpl) then) =
+      __$$PaymentUpdatedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$FinishImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$FinishImpl>
-    implements _$$FinishImplCopyWith<$Res> {
-  __$$FinishImplCopyWithImpl(
-      _$FinishImpl _value, $Res Function(_$FinishImpl) _then)
+class __$$PaymentUpdatedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$PaymentUpdatedImpl>
+    implements _$$PaymentUpdatedImplCopyWith<$Res> {
+  __$$PaymentUpdatedImplCopyWithImpl(
+      _$PaymentUpdatedImpl _value, $Res Function(_$PaymentUpdatedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FinishImpl implements _Finish {
-  const _$FinishImpl();
+class _$PaymentUpdatedImpl implements _PaymentUpdated {
+  const _$PaymentUpdatedImpl();
 
   @override
   String toString() {
-    return 'PosState.finish()';
+    return 'PosState.paymentUpdated()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FinishImpl);
+        (other.runtimeType == runtimeType && other is _$PaymentUpdatedImpl);
   }
 
   @override
@@ -4934,22 +5404,25 @@ class _$FinishImpl implements _Finish {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return finish();
+    return paymentUpdated();
   }
 
   @override
@@ -4957,22 +5430,25 @@ class _$FinishImpl implements _Finish {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return finish?.call();
+    return paymentUpdated?.call();
   }
 
   @override
@@ -4980,24 +5456,27 @@ class _$FinishImpl implements _Finish {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (finish != null) {
-      return finish();
+    if (paymentUpdated != null) {
+      return paymentUpdated();
     }
     return orElse();
   }
@@ -5007,22 +5486,25 @@ class _$FinishImpl implements _Finish {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return finish(this);
+    return paymentUpdated(this);
   }
 
   @override
@@ -5030,22 +5512,25 @@ class _$FinishImpl implements _Finish {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return finish?.call(this);
+    return paymentUpdated?.call(this);
   }
 
   @override
@@ -5053,216 +5538,34 @@ class _$FinishImpl implements _Finish {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (finish != null) {
-      return finish(this);
+    if (paymentUpdated != null) {
+      return paymentUpdated(this);
     }
     return orElse();
   }
 }
 
-abstract class _Finish implements PosState {
-  const factory _Finish() = _$FinishImpl;
-}
-
-/// @nodoc
-abstract class _$$DoneImplCopyWith<$Res> {
-  factory _$$DoneImplCopyWith(
-          _$DoneImpl value, $Res Function(_$DoneImpl) then) =
-      __$$DoneImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$DoneImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$DoneImpl>
-    implements _$$DoneImplCopyWith<$Res> {
-  __$$DoneImplCopyWithImpl(_$DoneImpl _value, $Res Function(_$DoneImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$DoneImpl implements _Done {
-  const _$DoneImpl();
-
-  @override
-  String toString() {
-    return 'PosState.done()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DoneImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
-    required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
-  }) {
-    return done();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
-    TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
-  }) {
-    return done?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
-    TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
-    required TResult orElse(),
-  }) {
-    if (done != null) {
-      return done();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
-    required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
-  }) {
-    return done(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
-    TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
-  }) {
-    return done?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
-    TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
-    required TResult orElse(),
-  }) {
-    if (done != null) {
-      return done(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Done implements PosState {
-  const factory _Done() = _$DoneImpl;
+abstract class _PaymentUpdated implements PosState {
+  const factory _PaymentUpdated() = _$PaymentUpdatedImpl;
 }
 
 /// @nodoc
@@ -5305,20 +5608,23 @@ class _$ResetImpl implements _Reset {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
     return reset();
   }
@@ -5328,20 +5634,23 @@ class _$ResetImpl implements _Reset {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
     return reset?.call();
   }
@@ -5351,20 +5660,23 @@ class _$ResetImpl implements _Reset {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
     if (reset != null) {
@@ -5378,20 +5690,23 @@ class _$ResetImpl implements _Reset {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
     return reset(this);
   }
@@ -5401,20 +5716,23 @@ class _$ResetImpl implements _Reset {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
     return reset?.call(this);
   }
@@ -5424,20 +5742,23 @@ class _$ResetImpl implements _Reset {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
     if (reset != null) {
@@ -5452,252 +5773,35 @@ abstract class _Reset implements PosState {
 }
 
 /// @nodoc
-abstract class _$$UpdatedImplCopyWith<$Res> {
-  factory _$$UpdatedImplCopyWith(
-          _$UpdatedImpl value, $Res Function(_$UpdatedImpl) then) =
-      __$$UpdatedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
+abstract class _$$CartRemovingImplCopyWith<$Res> {
+  factory _$$CartRemovingImplCopyWith(
+          _$CartRemovingImpl value, $Res Function(_$CartRemovingImpl) then) =
+      __$$CartRemovingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UpdatedImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$UpdatedImpl>
-    implements _$$UpdatedImplCopyWith<$Res> {
-  __$$UpdatedImplCopyWithImpl(
-      _$UpdatedImpl _value, $Res Function(_$UpdatedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$UpdatedImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UpdatedImpl implements _Updated {
-  const _$UpdatedImpl({required this.message});
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'PosState.updated(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdatedImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
-      __$$UpdatedImplCopyWithImpl<_$UpdatedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
-    required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
-  }) {
-    return updated(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
-    TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
-  }) {
-    return updated?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
-    TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
-    required TResult orElse(),
-  }) {
-    if (updated != null) {
-      return updated(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
-    required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
-  }) {
-    return updated(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
-    TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
-  }) {
-    return updated?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
-    TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
-    required TResult orElse(),
-  }) {
-    if (updated != null) {
-      return updated(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Updated implements PosState {
-  const factory _Updated({required final String message}) = _$UpdatedImpl;
-
-  String get message;
-  @JsonKey(ignore: true)
-  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingRemoveCartImplCopyWith<$Res> {
-  factory _$$LoadingRemoveCartImplCopyWith(_$LoadingRemoveCartImpl value,
-          $Res Function(_$LoadingRemoveCartImpl) then) =
-      __$$LoadingRemoveCartImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingRemoveCartImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$LoadingRemoveCartImpl>
-    implements _$$LoadingRemoveCartImplCopyWith<$Res> {
-  __$$LoadingRemoveCartImplCopyWithImpl(_$LoadingRemoveCartImpl _value,
-      $Res Function(_$LoadingRemoveCartImpl) _then)
+class __$$CartRemovingImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$CartRemovingImpl>
+    implements _$$CartRemovingImplCopyWith<$Res> {
+  __$$CartRemovingImplCopyWithImpl(
+      _$CartRemovingImpl _value, $Res Function(_$CartRemovingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
-  const _$LoadingRemoveCartImpl();
+class _$CartRemovingImpl implements _CartRemoving {
+  const _$CartRemovingImpl();
 
   @override
   String toString() {
-    return 'PosState.loadingRemoveCart()';
+    return 'PosState.cartRemoving()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingRemoveCartImpl);
+        (other.runtimeType == runtimeType && other is _$CartRemovingImpl);
   }
 
   @override
@@ -5708,22 +5812,25 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return loadingRemoveCart();
+    return cartRemoving();
   }
 
   @override
@@ -5731,22 +5838,25 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return loadingRemoveCart?.call();
+    return cartRemoving?.call();
   }
 
   @override
@@ -5754,24 +5864,27 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingRemoveCart != null) {
-      return loadingRemoveCart();
+    if (cartRemoving != null) {
+      return cartRemoving();
     }
     return orElse();
   }
@@ -5781,22 +5894,25 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return loadingRemoveCart(this);
+    return cartRemoving(this);
   }
 
   @override
@@ -5804,22 +5920,25 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return loadingRemoveCart?.call(this);
+    return cartRemoving?.call(this);
   }
 
   @override
@@ -5827,63 +5946,66 @@ class _$LoadingRemoveCartImpl implements _LoadingRemoveCart {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingRemoveCart != null) {
-      return loadingRemoveCart(this);
+    if (cartRemoving != null) {
+      return cartRemoving(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoadingRemoveCart implements PosState {
-  const factory _LoadingRemoveCart() = _$LoadingRemoveCartImpl;
+abstract class _CartRemoving implements PosState {
+  const factory _CartRemoving() = _$CartRemovingImpl;
 }
 
 /// @nodoc
-abstract class _$$AddedCartImplCopyWith<$Res> {
-  factory _$$AddedCartImplCopyWith(
-          _$AddedCartImpl value, $Res Function(_$AddedCartImpl) then) =
-      __$$AddedCartImplCopyWithImpl<$Res>;
+abstract class _$$CartAddedImplCopyWith<$Res> {
+  factory _$$CartAddedImplCopyWith(
+          _$CartAddedImpl value, $Res Function(_$CartAddedImpl) then) =
+      __$$CartAddedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AddedCartImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$AddedCartImpl>
-    implements _$$AddedCartImplCopyWith<$Res> {
-  __$$AddedCartImplCopyWithImpl(
-      _$AddedCartImpl _value, $Res Function(_$AddedCartImpl) _then)
+class __$$CartAddedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$CartAddedImpl>
+    implements _$$CartAddedImplCopyWith<$Res> {
+  __$$CartAddedImplCopyWithImpl(
+      _$CartAddedImpl _value, $Res Function(_$CartAddedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AddedCartImpl implements _AddedCart {
-  const _$AddedCartImpl();
+class _$CartAddedImpl implements _CartAdded {
+  const _$CartAddedImpl();
 
   @override
   String toString() {
-    return 'PosState.addedCart()';
+    return 'PosState.cartAdded()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AddedCartImpl);
+        (other.runtimeType == runtimeType && other is _$CartAddedImpl);
   }
 
   @override
@@ -5894,22 +6016,25 @@ class _$AddedCartImpl implements _AddedCart {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return addedCart();
+    return cartAdded();
   }
 
   @override
@@ -5917,22 +6042,25 @@ class _$AddedCartImpl implements _AddedCart {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return addedCart?.call();
+    return cartAdded?.call();
   }
 
   @override
@@ -5940,24 +6068,27 @@ class _$AddedCartImpl implements _AddedCart {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (addedCart != null) {
-      return addedCart();
+    if (cartAdded != null) {
+      return cartAdded();
     }
     return orElse();
   }
@@ -5967,22 +6098,25 @@ class _$AddedCartImpl implements _AddedCart {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return addedCart(this);
+    return cartAdded(this);
   }
 
   @override
@@ -5990,22 +6124,25 @@ class _$AddedCartImpl implements _AddedCart {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return addedCart?.call(this);
+    return cartAdded?.call(this);
   }
 
   @override
@@ -6013,63 +6150,66 @@ class _$AddedCartImpl implements _AddedCart {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (addedCart != null) {
-      return addedCart(this);
+    if (cartAdded != null) {
+      return cartAdded(this);
     }
     return orElse();
   }
 }
 
-abstract class _AddedCart implements PosState {
-  const factory _AddedCart() = _$AddedCartImpl;
+abstract class _CartAdded implements PosState {
+  const factory _CartAdded() = _$CartAddedImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingServiceImplCopyWith<$Res> {
-  factory _$$LoadingServiceImplCopyWith(_$LoadingServiceImpl value,
-          $Res Function(_$LoadingServiceImpl) then) =
-      __$$LoadingServiceImplCopyWithImpl<$Res>;
+abstract class _$$ServiceAddingImplCopyWith<$Res> {
+  factory _$$ServiceAddingImplCopyWith(
+          _$ServiceAddingImpl value, $Res Function(_$ServiceAddingImpl) then) =
+      __$$ServiceAddingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingServiceImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$LoadingServiceImpl>
-    implements _$$LoadingServiceImplCopyWith<$Res> {
-  __$$LoadingServiceImplCopyWithImpl(
-      _$LoadingServiceImpl _value, $Res Function(_$LoadingServiceImpl) _then)
+class __$$ServiceAddingImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$ServiceAddingImpl>
+    implements _$$ServiceAddingImplCopyWith<$Res> {
+  __$$ServiceAddingImplCopyWithImpl(
+      _$ServiceAddingImpl _value, $Res Function(_$ServiceAddingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingServiceImpl implements _LoadingService {
-  const _$LoadingServiceImpl();
+class _$ServiceAddingImpl implements _ServiceAdding {
+  const _$ServiceAddingImpl();
 
   @override
   String toString() {
-    return 'PosState.loadingService()';
+    return 'PosState.serviceAdding()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingServiceImpl);
+        (other.runtimeType == runtimeType && other is _$ServiceAddingImpl);
   }
 
   @override
@@ -6080,22 +6220,25 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return loadingService();
+    return serviceAdding();
   }
 
   @override
@@ -6103,22 +6246,25 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return loadingService?.call();
+    return serviceAdding?.call();
   }
 
   @override
@@ -6126,24 +6272,27 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingService != null) {
-      return loadingService();
+    if (serviceAdding != null) {
+      return serviceAdding();
     }
     return orElse();
   }
@@ -6153,22 +6302,25 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return loadingService(this);
+    return serviceAdding(this);
   }
 
   @override
@@ -6176,22 +6328,25 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return loadingService?.call(this);
+    return serviceAdding?.call(this);
   }
 
   @override
@@ -6199,63 +6354,66 @@ class _$LoadingServiceImpl implements _LoadingService {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingService != null) {
-      return loadingService(this);
+    if (serviceAdding != null) {
+      return serviceAdding(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoadingService implements PosState {
-  const factory _LoadingService() = _$LoadingServiceImpl;
+abstract class _ServiceAdding implements PosState {
+  const factory _ServiceAdding() = _$ServiceAddingImpl;
 }
 
 /// @nodoc
-abstract class _$$AddedServiceImplCopyWith<$Res> {
-  factory _$$AddedServiceImplCopyWith(
-          _$AddedServiceImpl value, $Res Function(_$AddedServiceImpl) then) =
-      __$$AddedServiceImplCopyWithImpl<$Res>;
+abstract class _$$ServiceAddedImplCopyWith<$Res> {
+  factory _$$ServiceAddedImplCopyWith(
+          _$ServiceAddedImpl value, $Res Function(_$ServiceAddedImpl) then) =
+      __$$ServiceAddedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AddedServiceImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$AddedServiceImpl>
-    implements _$$AddedServiceImplCopyWith<$Res> {
-  __$$AddedServiceImplCopyWithImpl(
-      _$AddedServiceImpl _value, $Res Function(_$AddedServiceImpl) _then)
+class __$$ServiceAddedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$ServiceAddedImpl>
+    implements _$$ServiceAddedImplCopyWith<$Res> {
+  __$$ServiceAddedImplCopyWithImpl(
+      _$ServiceAddedImpl _value, $Res Function(_$ServiceAddedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AddedServiceImpl implements _AddedService {
-  const _$AddedServiceImpl();
+class _$ServiceAddedImpl implements _ServiceAdded {
+  const _$ServiceAddedImpl();
 
   @override
   String toString() {
-    return 'PosState.addedService()';
+    return 'PosState.serviceAdded()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AddedServiceImpl);
+        (other.runtimeType == runtimeType && other is _$ServiceAddedImpl);
   }
 
   @override
@@ -6266,22 +6424,25 @@ class _$AddedServiceImpl implements _AddedService {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return addedService();
+    return serviceAdded();
   }
 
   @override
@@ -6289,22 +6450,25 @@ class _$AddedServiceImpl implements _AddedService {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return addedService?.call();
+    return serviceAdded?.call();
   }
 
   @override
@@ -6312,24 +6476,27 @@ class _$AddedServiceImpl implements _AddedService {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (addedService != null) {
-      return addedService();
+    if (serviceAdded != null) {
+      return serviceAdded();
     }
     return orElse();
   }
@@ -6339,22 +6506,25 @@ class _$AddedServiceImpl implements _AddedService {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return addedService(this);
+    return serviceAdded(this);
   }
 
   @override
@@ -6362,22 +6532,25 @@ class _$AddedServiceImpl implements _AddedService {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return addedService?.call(this);
+    return serviceAdded?.call(this);
   }
 
   @override
@@ -6385,63 +6558,66 @@ class _$AddedServiceImpl implements _AddedService {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (addedService != null) {
-      return addedService(this);
+    if (serviceAdded != null) {
+      return serviceAdded(this);
     }
     return orElse();
   }
 }
 
-abstract class _AddedService implements PosState {
-  const factory _AddedService() = _$AddedServiceImpl;
+abstract class _ServiceAdded implements PosState {
+  const factory _ServiceAdded() = _$ServiceAddedImpl;
 }
 
 /// @nodoc
-abstract class _$$DeleteServiceImplCopyWith<$Res> {
-  factory _$$DeleteServiceImplCopyWith(
-          _$DeleteServiceImpl value, $Res Function(_$DeleteServiceImpl) then) =
-      __$$DeleteServiceImplCopyWithImpl<$Res>;
+abstract class _$$ServiceDeletedImplCopyWith<$Res> {
+  factory _$$ServiceDeletedImplCopyWith(_$ServiceDeletedImpl value,
+          $Res Function(_$ServiceDeletedImpl) then) =
+      __$$ServiceDeletedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DeleteServiceImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$DeleteServiceImpl>
-    implements _$$DeleteServiceImplCopyWith<$Res> {
-  __$$DeleteServiceImplCopyWithImpl(
-      _$DeleteServiceImpl _value, $Res Function(_$DeleteServiceImpl) _then)
+class __$$ServiceDeletedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$ServiceDeletedImpl>
+    implements _$$ServiceDeletedImplCopyWith<$Res> {
+  __$$ServiceDeletedImplCopyWithImpl(
+      _$ServiceDeletedImpl _value, $Res Function(_$ServiceDeletedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DeleteServiceImpl implements _DeleteService {
-  const _$DeleteServiceImpl();
+class _$ServiceDeletedImpl implements _ServiceDeleted {
+  const _$ServiceDeletedImpl();
 
   @override
   String toString() {
-    return 'PosState.deleteService()';
+    return 'PosState.serviceDeleted()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DeleteServiceImpl);
+        (other.runtimeType == runtimeType && other is _$ServiceDeletedImpl);
   }
 
   @override
@@ -6452,22 +6628,25 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return deleteService();
+    return serviceDeleted();
   }
 
   @override
@@ -6475,22 +6654,25 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return deleteService?.call();
+    return serviceDeleted?.call();
   }
 
   @override
@@ -6498,24 +6680,27 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (deleteService != null) {
-      return deleteService();
+    if (serviceDeleted != null) {
+      return serviceDeleted();
     }
     return orElse();
   }
@@ -6525,22 +6710,25 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return deleteService(this);
+    return serviceDeleted(this);
   }
 
   @override
@@ -6548,22 +6736,25 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return deleteService?.call(this);
+    return serviceDeleted?.call(this);
   }
 
   @override
@@ -6571,63 +6762,66 @@ class _$DeleteServiceImpl implements _DeleteService {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (deleteService != null) {
-      return deleteService(this);
+    if (serviceDeleted != null) {
+      return serviceDeleted(this);
     }
     return orElse();
   }
 }
 
-abstract class _DeleteService implements PosState {
-  const factory _DeleteService() = _$DeleteServiceImpl;
+abstract class _ServiceDeleted implements PosState {
+  const factory _ServiceDeleted() = _$ServiceDeletedImpl;
 }
 
 /// @nodoc
-abstract class _$$EditServiceImplCopyWith<$Res> {
-  factory _$$EditServiceImplCopyWith(
-          _$EditServiceImpl value, $Res Function(_$EditServiceImpl) then) =
-      __$$EditServiceImplCopyWithImpl<$Res>;
+abstract class _$$ServiceEditedImplCopyWith<$Res> {
+  factory _$$ServiceEditedImplCopyWith(
+          _$ServiceEditedImpl value, $Res Function(_$ServiceEditedImpl) then) =
+      __$$ServiceEditedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EditServiceImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$EditServiceImpl>
-    implements _$$EditServiceImplCopyWith<$Res> {
-  __$$EditServiceImplCopyWithImpl(
-      _$EditServiceImpl _value, $Res Function(_$EditServiceImpl) _then)
+class __$$ServiceEditedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$ServiceEditedImpl>
+    implements _$$ServiceEditedImplCopyWith<$Res> {
+  __$$ServiceEditedImplCopyWithImpl(
+      _$ServiceEditedImpl _value, $Res Function(_$ServiceEditedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$EditServiceImpl implements _EditService {
-  const _$EditServiceImpl();
+class _$ServiceEditedImpl implements _ServiceEdited {
+  const _$ServiceEditedImpl();
 
   @override
   String toString() {
-    return 'PosState.editService()';
+    return 'PosState.serviceEdited()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$EditServiceImpl);
+        (other.runtimeType == runtimeType && other is _$ServiceEditedImpl);
   }
 
   @override
@@ -6638,22 +6832,25 @@ class _$EditServiceImpl implements _EditService {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return editService();
+    return serviceEdited();
   }
 
   @override
@@ -6661,22 +6858,25 @@ class _$EditServiceImpl implements _EditService {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return editService?.call();
+    return serviceEdited?.call();
   }
 
   @override
@@ -6684,24 +6884,27 @@ class _$EditServiceImpl implements _EditService {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (editService != null) {
-      return editService();
+    if (serviceEdited != null) {
+      return serviceEdited();
     }
     return orElse();
   }
@@ -6711,22 +6914,25 @@ class _$EditServiceImpl implements _EditService {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return editService(this);
+    return serviceEdited(this);
   }
 
   @override
@@ -6734,22 +6940,25 @@ class _$EditServiceImpl implements _EditService {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return editService?.call(this);
+    return serviceEdited?.call(this);
   }
 
   @override
@@ -6757,63 +6966,66 @@ class _$EditServiceImpl implements _EditService {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (editService != null) {
-      return editService(this);
+    if (serviceEdited != null) {
+      return serviceEdited(this);
     }
     return orElse();
   }
 }
 
-abstract class _EditService implements PosState {
-  const factory _EditService() = _$EditServiceImpl;
+abstract class _ServiceEdited implements PosState {
+  const factory _ServiceEdited() = _$ServiceEditedImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingSaveToDBImplCopyWith<$Res> {
-  factory _$$LoadingSaveToDBImplCopyWith(_$LoadingSaveToDBImpl value,
-          $Res Function(_$LoadingSaveToDBImpl) then) =
-      __$$LoadingSaveToDBImplCopyWithImpl<$Res>;
+abstract class _$$SavingOrderImplCopyWith<$Res> {
+  factory _$$SavingOrderImplCopyWith(
+          _$SavingOrderImpl value, $Res Function(_$SavingOrderImpl) then) =
+      __$$SavingOrderImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingSaveToDBImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$LoadingSaveToDBImpl>
-    implements _$$LoadingSaveToDBImplCopyWith<$Res> {
-  __$$LoadingSaveToDBImplCopyWithImpl(
-      _$LoadingSaveToDBImpl _value, $Res Function(_$LoadingSaveToDBImpl) _then)
+class __$$SavingOrderImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$SavingOrderImpl>
+    implements _$$SavingOrderImplCopyWith<$Res> {
+  __$$SavingOrderImplCopyWithImpl(
+      _$SavingOrderImpl _value, $Res Function(_$SavingOrderImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
-  const _$LoadingSaveToDBImpl();
+class _$SavingOrderImpl implements _SavingOrder {
+  const _$SavingOrderImpl();
 
   @override
   String toString() {
-    return 'PosState.loadingSaveToDB()';
+    return 'PosState.savingOrder()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingSaveToDBImpl);
+        (other.runtimeType == runtimeType && other is _$SavingOrderImpl);
   }
 
   @override
@@ -6824,22 +7036,25 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return loadingSaveToDB();
+    return savingOrder();
   }
 
   @override
@@ -6847,22 +7062,25 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return loadingSaveToDB?.call();
+    return savingOrder?.call();
   }
 
   @override
@@ -6870,24 +7088,27 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingSaveToDB != null) {
-      return loadingSaveToDB();
+    if (savingOrder != null) {
+      return savingOrder();
     }
     return orElse();
   }
@@ -6897,22 +7118,25 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return loadingSaveToDB(this);
+    return savingOrder(this);
   }
 
   @override
@@ -6920,22 +7144,25 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return loadingSaveToDB?.call(this);
+    return savingOrder?.call(this);
   }
 
   @override
@@ -6943,63 +7170,66 @@ class _$LoadingSaveToDBImpl implements _LoadingSaveToDB {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (loadingSaveToDB != null) {
-      return loadingSaveToDB(this);
+    if (savingOrder != null) {
+      return savingOrder(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoadingSaveToDB implements PosState {
-  const factory _LoadingSaveToDB() = _$LoadingSaveToDBImpl;
+abstract class _SavingOrder implements PosState {
+  const factory _SavingOrder() = _$SavingOrderImpl;
 }
 
 /// @nodoc
-abstract class _$$FinishSaveToDBImplCopyWith<$Res> {
-  factory _$$FinishSaveToDBImplCopyWith(_$FinishSaveToDBImpl value,
-          $Res Function(_$FinishSaveToDBImpl) then) =
-      __$$FinishSaveToDBImplCopyWithImpl<$Res>;
+abstract class _$$OrderSavedImplCopyWith<$Res> {
+  factory _$$OrderSavedImplCopyWith(
+          _$OrderSavedImpl value, $Res Function(_$OrderSavedImpl) then) =
+      __$$OrderSavedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$FinishSaveToDBImplCopyWithImpl<$Res>
-    extends _$PosStateCopyWithImpl<$Res, _$FinishSaveToDBImpl>
-    implements _$$FinishSaveToDBImplCopyWith<$Res> {
-  __$$FinishSaveToDBImplCopyWithImpl(
-      _$FinishSaveToDBImpl _value, $Res Function(_$FinishSaveToDBImpl) _then)
+class __$$OrderSavedImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$OrderSavedImpl>
+    implements _$$OrderSavedImplCopyWith<$Res> {
+  __$$OrderSavedImplCopyWithImpl(
+      _$OrderSavedImpl _value, $Res Function(_$OrderSavedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FinishSaveToDBImpl implements _FinishSaveToDB {
-  const _$FinishSaveToDBImpl();
+class _$OrderSavedImpl implements _OrderSaved {
+  const _$OrderSavedImpl();
 
   @override
   String toString() {
-    return 'PosState.finishSaveToDB()';
+    return 'PosState.orderSaved()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FinishSaveToDBImpl);
+        (other.runtimeType == runtimeType && other is _$OrderSavedImpl);
   }
 
   @override
@@ -7010,22 +7240,25 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() error,
-    required TResult Function() finish,
-    required TResult Function() done,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
     required TResult Function() reset,
-    required TResult Function(String message) updated,
-    required TResult Function() loadingRemoveCart,
-    required TResult Function() addedCart,
-    required TResult Function() loadingService,
-    required TResult Function() addedService,
-    required TResult Function() deleteService,
-    required TResult Function() editService,
-    required TResult Function() loadingSaveToDB,
-    required TResult Function() finishSaveToDB,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
   }) {
-    return finishSaveToDB();
+    return orderSaved();
   }
 
   @override
@@ -7033,22 +7266,25 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? error,
-    TResult? Function()? finish,
-    TResult? Function()? done,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
     TResult? Function()? reset,
-    TResult? Function(String message)? updated,
-    TResult? Function()? loadingRemoveCart,
-    TResult? Function()? addedCart,
-    TResult? Function()? loadingService,
-    TResult? Function()? addedService,
-    TResult? Function()? deleteService,
-    TResult? Function()? editService,
-    TResult? Function()? loadingSaveToDB,
-    TResult? Function()? finishSaveToDB,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
   }) {
-    return finishSaveToDB?.call();
+    return orderSaved?.call();
   }
 
   @override
@@ -7056,24 +7292,27 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? error,
-    TResult Function()? finish,
-    TResult Function()? done,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
     TResult Function()? reset,
-    TResult Function(String message)? updated,
-    TResult Function()? loadingRemoveCart,
-    TResult Function()? addedCart,
-    TResult Function()? loadingService,
-    TResult Function()? addedService,
-    TResult Function()? deleteService,
-    TResult Function()? editService,
-    TResult Function()? loadingSaveToDB,
-    TResult Function()? finishSaveToDB,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (finishSaveToDB != null) {
-      return finishSaveToDB();
+    if (orderSaved != null) {
+      return orderSaved();
     }
     return orElse();
   }
@@ -7083,22 +7322,25 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Finish value) finish,
-    required TResult Function(_Done value) done,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
     required TResult Function(_Reset value) reset,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_LoadingRemoveCart value) loadingRemoveCart,
-    required TResult Function(_AddedCart value) addedCart,
-    required TResult Function(_LoadingService value) loadingService,
-    required TResult Function(_AddedService value) addedService,
-    required TResult Function(_DeleteService value) deleteService,
-    required TResult Function(_EditService value) editService,
-    required TResult Function(_LoadingSaveToDB value) loadingSaveToDB,
-    required TResult Function(_FinishSaveToDB value) finishSaveToDB,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
   }) {
-    return finishSaveToDB(this);
+    return orderSaved(this);
   }
 
   @override
@@ -7106,22 +7348,25 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Finish value)? finish,
-    TResult? Function(_Done value)? done,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
     TResult? Function(_Reset value)? reset,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult? Function(_AddedCart value)? addedCart,
-    TResult? Function(_LoadingService value)? loadingService,
-    TResult? Function(_AddedService value)? addedService,
-    TResult? Function(_DeleteService value)? deleteService,
-    TResult? Function(_EditService value)? editService,
-    TResult? Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult? Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
   }) {
-    return finishSaveToDB?.call(this);
+    return orderSaved?.call(this);
   }
 
   @override
@@ -7129,29 +7374,848 @@ class _$FinishSaveToDBImpl implements _FinishSaveToDB {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    TResult Function(_Finish value)? finish,
-    TResult Function(_Done value)? done,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
     TResult Function(_Reset value)? reset,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_LoadingRemoveCart value)? loadingRemoveCart,
-    TResult Function(_AddedCart value)? addedCart,
-    TResult Function(_LoadingService value)? loadingService,
-    TResult Function(_AddedService value)? addedService,
-    TResult Function(_DeleteService value)? deleteService,
-    TResult Function(_EditService value)? editService,
-    TResult Function(_LoadingSaveToDB value)? loadingSaveToDB,
-    TResult Function(_FinishSaveToDB value)? finishSaveToDB,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
     required TResult orElse(),
   }) {
-    if (finishSaveToDB != null) {
-      return finishSaveToDB(this);
+    if (orderSaved != null) {
+      return orderSaved(this);
     }
     return orElse();
   }
 }
 
-abstract class _FinishSaveToDB implements PosState {
-  const factory _FinishSaveToDB() = _$FinishSaveToDBImpl;
+abstract class _OrderSaved implements PosState {
+  const factory _OrderSaved() = _$OrderSavedImpl;
+}
+
+/// @nodoc
+abstract class _$$GettingAllUsernameImplCopyWith<$Res> {
+  factory _$$GettingAllUsernameImplCopyWith(_$GettingAllUsernameImpl value,
+          $Res Function(_$GettingAllUsernameImpl) then) =
+      __$$GettingAllUsernameImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GettingAllUsernameImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$GettingAllUsernameImpl>
+    implements _$$GettingAllUsernameImplCopyWith<$Res> {
+  __$$GettingAllUsernameImplCopyWithImpl(_$GettingAllUsernameImpl _value,
+      $Res Function(_$GettingAllUsernameImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GettingAllUsernameImpl implements _GettingAllUsername {
+  const _$GettingAllUsernameImpl();
+
+  @override
+  String toString() {
+    return 'PosState.gettingAllUsername()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GettingAllUsernameImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
+    required TResult Function() reset,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
+  }) {
+    return gettingAllUsername();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
+    TResult? Function()? reset,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
+  }) {
+    return gettingAllUsername?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
+    TResult Function()? reset,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (gettingAllUsername != null) {
+      return gettingAllUsername();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
+    required TResult Function(_Reset value) reset,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
+  }) {
+    return gettingAllUsername(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
+    TResult? Function(_Reset value)? reset,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
+  }) {
+    return gettingAllUsername?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
+    TResult Function(_Reset value)? reset,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (gettingAllUsername != null) {
+      return gettingAllUsername(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GettingAllUsername implements PosState {
+  const factory _GettingAllUsername() = _$GettingAllUsernameImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedAllUsernameImplCopyWith<$Res> {
+  factory _$$LoadedAllUsernameImplCopyWith(_$LoadedAllUsernameImpl value,
+          $Res Function(_$LoadedAllUsernameImpl) then) =
+      __$$LoadedAllUsernameImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadedAllUsernameImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$LoadedAllUsernameImpl>
+    implements _$$LoadedAllUsernameImplCopyWith<$Res> {
+  __$$LoadedAllUsernameImplCopyWithImpl(_$LoadedAllUsernameImpl _value,
+      $Res Function(_$LoadedAllUsernameImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadedAllUsernameImpl implements _LoadedAllUsername {
+  const _$LoadedAllUsernameImpl();
+
+  @override
+  String toString() {
+    return 'PosState.loadedAllUsername()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadedAllUsernameImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
+    required TResult Function() reset,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
+  }) {
+    return loadedAllUsername();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
+    TResult? Function()? reset,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
+  }) {
+    return loadedAllUsername?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
+    TResult Function()? reset,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (loadedAllUsername != null) {
+      return loadedAllUsername();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
+    required TResult Function(_Reset value) reset,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
+  }) {
+    return loadedAllUsername(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
+    TResult? Function(_Reset value)? reset,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
+  }) {
+    return loadedAllUsername?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
+    TResult Function(_Reset value)? reset,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (loadedAllUsername != null) {
+      return loadedAllUsername(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedAllUsername implements PosState {
+  const factory _LoadedAllUsername() = _$LoadedAllUsernameImpl;
+}
+
+/// @nodoc
+abstract class _$$SendingWhatsAppImplCopyWith<$Res> {
+  factory _$$SendingWhatsAppImplCopyWith(_$SendingWhatsAppImpl value,
+          $Res Function(_$SendingWhatsAppImpl) then) =
+      __$$SendingWhatsAppImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SendingWhatsAppImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$SendingWhatsAppImpl>
+    implements _$$SendingWhatsAppImplCopyWith<$Res> {
+  __$$SendingWhatsAppImplCopyWithImpl(
+      _$SendingWhatsAppImpl _value, $Res Function(_$SendingWhatsAppImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SendingWhatsAppImpl implements _SendingWhatsApp {
+  const _$SendingWhatsAppImpl();
+
+  @override
+  String toString() {
+    return 'PosState.sendingWhatsApp()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SendingWhatsAppImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
+    required TResult Function() reset,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
+  }) {
+    return sendingWhatsApp();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
+    TResult? Function()? reset,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
+  }) {
+    return sendingWhatsApp?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
+    TResult Function()? reset,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (sendingWhatsApp != null) {
+      return sendingWhatsApp();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
+    required TResult Function(_Reset value) reset,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
+  }) {
+    return sendingWhatsApp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
+    TResult? Function(_Reset value)? reset,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
+  }) {
+    return sendingWhatsApp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
+    TResult Function(_Reset value)? reset,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (sendingWhatsApp != null) {
+      return sendingWhatsApp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendingWhatsApp implements PosState {
+  const factory _SendingWhatsApp() = _$SendingWhatsAppImpl;
+}
+
+/// @nodoc
+abstract class _$$WhatsAppSentImplCopyWith<$Res> {
+  factory _$$WhatsAppSentImplCopyWith(
+          _$WhatsAppSentImpl value, $Res Function(_$WhatsAppSentImpl) then) =
+      __$$WhatsAppSentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$WhatsAppSentImplCopyWithImpl<$Res>
+    extends _$PosStateCopyWithImpl<$Res, _$WhatsAppSentImpl>
+    implements _$$WhatsAppSentImplCopyWith<$Res> {
+  __$$WhatsAppSentImplCopyWithImpl(
+      _$WhatsAppSentImpl _value, $Res Function(_$WhatsAppSentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WhatsAppSentImpl implements _WhatsAppSent {
+  const _$WhatsAppSentImpl();
+
+  @override
+  String toString() {
+    return 'PosState.whatsAppSent()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WhatsAppSentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() ready,
+    required TResult Function(String message) failure,
+    required TResult Function() finished,
+    required TResult Function() paymentUpdated,
+    required TResult Function() reset,
+    required TResult Function() cartRemoving,
+    required TResult Function() cartAdded,
+    required TResult Function() serviceAdding,
+    required TResult Function() serviceAdded,
+    required TResult Function() serviceDeleted,
+    required TResult Function() serviceEdited,
+    required TResult Function() savingOrder,
+    required TResult Function() orderSaved,
+    required TResult Function() gettingAllUsername,
+    required TResult Function() loadedAllUsername,
+    required TResult Function() sendingWhatsApp,
+    required TResult Function() whatsAppSent,
+  }) {
+    return whatsAppSent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? ready,
+    TResult? Function(String message)? failure,
+    TResult? Function()? finished,
+    TResult? Function()? paymentUpdated,
+    TResult? Function()? reset,
+    TResult? Function()? cartRemoving,
+    TResult? Function()? cartAdded,
+    TResult? Function()? serviceAdding,
+    TResult? Function()? serviceAdded,
+    TResult? Function()? serviceDeleted,
+    TResult? Function()? serviceEdited,
+    TResult? Function()? savingOrder,
+    TResult? Function()? orderSaved,
+    TResult? Function()? gettingAllUsername,
+    TResult? Function()? loadedAllUsername,
+    TResult? Function()? sendingWhatsApp,
+    TResult? Function()? whatsAppSent,
+  }) {
+    return whatsAppSent?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? ready,
+    TResult Function(String message)? failure,
+    TResult Function()? finished,
+    TResult Function()? paymentUpdated,
+    TResult Function()? reset,
+    TResult Function()? cartRemoving,
+    TResult Function()? cartAdded,
+    TResult Function()? serviceAdding,
+    TResult Function()? serviceAdded,
+    TResult Function()? serviceDeleted,
+    TResult Function()? serviceEdited,
+    TResult Function()? savingOrder,
+    TResult Function()? orderSaved,
+    TResult Function()? gettingAllUsername,
+    TResult Function()? loadedAllUsername,
+    TResult Function()? sendingWhatsApp,
+    TResult Function()? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (whatsAppSent != null) {
+      return whatsAppSent();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_Finished value) finished,
+    required TResult Function(_PaymentUpdated value) paymentUpdated,
+    required TResult Function(_Reset value) reset,
+    required TResult Function(_CartRemoving value) cartRemoving,
+    required TResult Function(_CartAdded value) cartAdded,
+    required TResult Function(_ServiceAdding value) serviceAdding,
+    required TResult Function(_ServiceAdded value) serviceAdded,
+    required TResult Function(_ServiceDeleted value) serviceDeleted,
+    required TResult Function(_ServiceEdited value) serviceEdited,
+    required TResult Function(_SavingOrder value) savingOrder,
+    required TResult Function(_OrderSaved value) orderSaved,
+    required TResult Function(_GettingAllUsername value) gettingAllUsername,
+    required TResult Function(_LoadedAllUsername value) loadedAllUsername,
+    required TResult Function(_SendingWhatsApp value) sendingWhatsApp,
+    required TResult Function(_WhatsAppSent value) whatsAppSent,
+  }) {
+    return whatsAppSent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Ready value)? ready,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_Finished value)? finished,
+    TResult? Function(_PaymentUpdated value)? paymentUpdated,
+    TResult? Function(_Reset value)? reset,
+    TResult? Function(_CartRemoving value)? cartRemoving,
+    TResult? Function(_CartAdded value)? cartAdded,
+    TResult? Function(_ServiceAdding value)? serviceAdding,
+    TResult? Function(_ServiceAdded value)? serviceAdded,
+    TResult? Function(_ServiceDeleted value)? serviceDeleted,
+    TResult? Function(_ServiceEdited value)? serviceEdited,
+    TResult? Function(_SavingOrder value)? savingOrder,
+    TResult? Function(_OrderSaved value)? orderSaved,
+    TResult? Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult? Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult? Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult? Function(_WhatsAppSent value)? whatsAppSent,
+  }) {
+    return whatsAppSent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_Finished value)? finished,
+    TResult Function(_PaymentUpdated value)? paymentUpdated,
+    TResult Function(_Reset value)? reset,
+    TResult Function(_CartRemoving value)? cartRemoving,
+    TResult Function(_CartAdded value)? cartAdded,
+    TResult Function(_ServiceAdding value)? serviceAdding,
+    TResult Function(_ServiceAdded value)? serviceAdded,
+    TResult Function(_ServiceDeleted value)? serviceDeleted,
+    TResult Function(_ServiceEdited value)? serviceEdited,
+    TResult Function(_SavingOrder value)? savingOrder,
+    TResult Function(_OrderSaved value)? orderSaved,
+    TResult Function(_GettingAllUsername value)? gettingAllUsername,
+    TResult Function(_LoadedAllUsername value)? loadedAllUsername,
+    TResult Function(_SendingWhatsApp value)? sendingWhatsApp,
+    TResult Function(_WhatsAppSent value)? whatsAppSent,
+    required TResult orElse(),
+  }) {
+    if (whatsAppSent != null) {
+      return whatsAppSent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WhatsAppSent implements PosState {
+  const factory _WhatsAppSent() = _$WhatsAppSentImpl;
 }

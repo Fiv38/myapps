@@ -16,6 +16,8 @@ final sl = GetIt.instance;
 class CustomerBloc extends Bloc<CustomerEvent, CustomerState> {
   final TextEditingController searchController = TextEditingController();
 
+  int _searchSeq = 0; // 👈 penanda sesi search aktif
+
   // Store prefs
   String userId = '';
   String userName = '';
@@ -75,7 +77,10 @@ class CustomerBloc extends Bloc<CustomerEvent, CustomerState> {
           .map((json) => User.fromJson(json as Map<String, dynamic>))
           .toList();
 
-      filteredUser = List.from(allUser); // 👈 initial display = full list
+      filteredUser = List.from(allUser);
+
+      // ✅ pastikan shimmer tampil minimal 1 detik
+      await Future.delayed(const Duration(seconds: 1));
 
       emit(const CustomerState.loaded());
     } catch (e) {
@@ -83,12 +88,23 @@ class CustomerBloc extends Bloc<CustomerEvent, CustomerState> {
     }
   }
 
-  void _onFilterCustomer(_FilterCustomer event, Emitter<CustomerState> emit) {
+  Future<void> _onFilterCustomer(_FilterCustomer event, Emitter<CustomerState> emit) async {
+    final int mySeq = ++_searchSeq; // 👈 seq sesi ini
+    emit(const CustomerState.loading()); // tampilkan shimmer
+
     final q = event.query.toLowerCase();
-    filteredUser = allUser.where((u) =>
+    final newFiltered = allUser.where((u) =>
     u.userName.toLowerCase().contains(q) ||
         u.userPhone.toLowerCase().contains(q)
     ).toList();
+
+    // delay 1 detik agar shimmer keliatan (debounce di UI tetap jalan)
+    await Future.delayed(const Duration(seconds: 1));
+
+    // jika selama nunggu ada search baru, jangan timpa hasil terbaru
+    if (mySeq != _searchSeq) return;
+
+    filteredUser = newFiltered;
     emit(const CustomerState.loaded());
   }
 

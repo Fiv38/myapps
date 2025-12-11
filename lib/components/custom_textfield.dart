@@ -4,6 +4,7 @@ import '../utils/theme/global_colors.dart';
 import '../utils/theme/global_fonts.dart';
 
 class CustomTextField extends StatefulWidget {
+  final bool normalizePhoneForWA; // NEW
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final String? prefixText; // Optional prefix text (e.g. 'Rp ')
@@ -59,6 +60,7 @@ class CustomTextField extends StatefulWidget {
     this.isRequired = false,
     this.readOnly = false,
     this.isUpperCase = false,
+    this.normalizePhoneForWA = false, // NEW (default off)
   });
 
   @override
@@ -67,6 +69,58 @@ class CustomTextField extends StatefulWidget {
 
 class _CustomTextFieldState extends State<CustomTextField> {
   final FocusNode _focusNode = FocusNode();
+
+  // ===== NEW: Normalisasi WA =====
+  @override
+  void initState() {
+    super.initState();
+    // Normalize ketika field kehilangan fokus (blur)
+    _focusNode.addListener(() {
+      if (!_focusNode.hasFocus && widget.normalizePhoneForWA) {
+        _applyWaNormalization();
+      }
+    });
+  }
+
+  // Util: normalisasi ke format WA Indonesia "62xxxxxxxxxx"
+  String _normalizePhoneWA(String input) {
+    if (input.isEmpty) return input;
+
+    // Hapus semua selain digit/plus, lalu buang '+'
+    String s = input.replaceAll(RegExp(r'[^0-9+]'), '').replaceAll('+', '');
+
+    // Kasus:
+    // 62xxxxxxxx      -> stay
+    // 0812xxxxxxx     -> 62812xxxxxxx
+    // 812xxxxxxx      -> 62812xxxxxxx
+    // 6208xxxxxx      -> 628xxxxxx (buang '0' setelah 62)
+    if (s.startsWith('62')) {
+      s = s.replaceFirst(RegExp(r'^620+'), '62');
+    } else if (s.startsWith('0')) {
+      s = '62${s.substring(1)}';
+    } else if (s.startsWith('8')) {
+      s = '62$s';
+    }
+
+    // (Opsional) batasi hingga 15 digit
+    if (s.length > 15) {
+      s = s.substring(0, 15);
+    }
+    return s;
+  }
+
+  void _applyWaNormalization() {
+    final c = widget.controller;
+    if (c == null) return;
+    final normalized = _normalizePhoneWA(c.text);
+    if (normalized != c.text) {
+      c.text = normalized;
+      c.selection = TextSelection.fromPosition(
+        TextPosition(offset: c.text.length),
+      );
+    }
+  }
+  // ===== END NEW =====
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +165,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           textInputAction: widget.textInputAction,
           inputFormatters: widget.inputFormatters,
           onEditingComplete: () {
+            // ===== NEW: normalize saat user tekan "Done" =====
+            if (widget.normalizePhoneForWA) _applyWaNormalization();
+            // ===== END NEW =====
             _focusNode.unfocus();
             if (widget.onEditingComplete != null) {
               widget.onEditingComplete!();

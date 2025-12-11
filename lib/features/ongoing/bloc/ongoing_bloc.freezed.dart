@@ -20,6 +20,7 @@ mixin _$OngoingEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
     required TResult Function(String orderId, String newStatus) editOrder,
     required TResult Function(String orderId, String newStatus) cancelOrder,
   }) =>
@@ -28,6 +29,7 @@ mixin _$OngoingEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
     TResult? Function(String orderId, String newStatus)? editOrder,
     TResult? Function(String orderId, String newStatus)? cancelOrder,
   }) =>
@@ -36,6 +38,7 @@ mixin _$OngoingEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
     TResult Function(String orderId, String newStatus)? editOrder,
     TResult Function(String orderId, String newStatus)? cancelOrder,
     required TResult orElse(),
@@ -45,6 +48,8 @@ mixin _$OngoingEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
     required TResult Function(_EditOrder value) editOrder,
     required TResult Function(_CancelOrder value) cancelOrder,
   }) =>
@@ -53,6 +58,7 @@ mixin _$OngoingEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult? Function(_EditOrder value)? editOrder,
     TResult? Function(_CancelOrder value)? cancelOrder,
   }) =>
@@ -61,6 +67,7 @@ mixin _$OngoingEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult Function(_EditOrder value)? editOrder,
     TResult Function(_CancelOrder value)? cancelOrder,
     required TResult orElse(),
@@ -126,6 +133,7 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
     required TResult Function(String orderId, String newStatus) editOrder,
     required TResult Function(String orderId, String newStatus) cancelOrder,
   }) {
@@ -137,6 +145,7 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
     TResult? Function(String orderId, String newStatus)? editOrder,
     TResult? Function(String orderId, String newStatus)? cancelOrder,
   }) {
@@ -148,6 +157,7 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
     TResult Function(String orderId, String newStatus)? editOrder,
     TResult Function(String orderId, String newStatus)? cancelOrder,
     required TResult orElse(),
@@ -163,6 +173,8 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
     required TResult Function(_EditOrder value) editOrder,
     required TResult Function(_CancelOrder value) cancelOrder,
   }) {
@@ -174,6 +186,7 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult? Function(_EditOrder value)? editOrder,
     TResult? Function(_CancelOrder value)? cancelOrder,
   }) {
@@ -185,6 +198,7 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult Function(_EditOrder value)? editOrder,
     TResult Function(_CancelOrder value)? cancelOrder,
     required TResult orElse(),
@@ -240,6 +254,7 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
     required TResult Function(String orderId, String newStatus) editOrder,
     required TResult Function(String orderId, String newStatus) cancelOrder,
   }) {
@@ -251,6 +266,7 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
     TResult? Function(String orderId, String newStatus)? editOrder,
     TResult? Function(String orderId, String newStatus)? cancelOrder,
   }) {
@@ -262,6 +278,7 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
     TResult Function(String orderId, String newStatus)? editOrder,
     TResult Function(String orderId, String newStatus)? cancelOrder,
     required TResult orElse(),
@@ -277,6 +294,8 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
     required TResult Function(_EditOrder value) editOrder,
     required TResult Function(_CancelOrder value) cancelOrder,
   }) {
@@ -288,6 +307,7 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult? Function(_EditOrder value)? editOrder,
     TResult? Function(_CancelOrder value)? cancelOrder,
   }) {
@@ -299,6 +319,7 @@ class _$GetAllOrderImpl implements _GetAllOrder {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult Function(_EditOrder value)? editOrder,
     TResult Function(_CancelOrder value)? cancelOrder,
     required TResult orElse(),
@@ -312,6 +333,129 @@ class _$GetAllOrderImpl implements _GetAllOrder {
 
 abstract class _GetAllOrder implements OngoingEvent {
   const factory _GetAllOrder() = _$GetAllOrderImpl;
+}
+
+/// @nodoc
+abstract class _$$GetAllOrderWithDetailImplCopyWith<$Res> {
+  factory _$$GetAllOrderWithDetailImplCopyWith(
+          _$GetAllOrderWithDetailImpl value,
+          $Res Function(_$GetAllOrderWithDetailImpl) then) =
+      __$$GetAllOrderWithDetailImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetAllOrderWithDetailImplCopyWithImpl<$Res>
+    extends _$OngoingEventCopyWithImpl<$Res, _$GetAllOrderWithDetailImpl>
+    implements _$$GetAllOrderWithDetailImplCopyWith<$Res> {
+  __$$GetAllOrderWithDetailImplCopyWithImpl(_$GetAllOrderWithDetailImpl _value,
+      $Res Function(_$GetAllOrderWithDetailImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetAllOrderWithDetailImpl implements _GetAllOrderWithDetail {
+  const _$GetAllOrderWithDetailImpl();
+
+  @override
+  String toString() {
+    return 'OngoingEvent.getAllOrderWithDetail()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAllOrderWithDetailImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
+    required TResult Function(String orderId, String newStatus) editOrder,
+    required TResult Function(String orderId, String newStatus) cancelOrder,
+  }) {
+    return getAllOrderWithDetail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
+    TResult? Function(String orderId, String newStatus)? editOrder,
+    TResult? Function(String orderId, String newStatus)? cancelOrder,
+  }) {
+    return getAllOrderWithDetail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
+    TResult Function(String orderId, String newStatus)? editOrder,
+    TResult Function(String orderId, String newStatus)? cancelOrder,
+    required TResult orElse(),
+  }) {
+    if (getAllOrderWithDetail != null) {
+      return getAllOrderWithDetail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
+    required TResult Function(_EditOrder value) editOrder,
+    required TResult Function(_CancelOrder value) cancelOrder,
+  }) {
+    return getAllOrderWithDetail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
+    TResult? Function(_EditOrder value)? editOrder,
+    TResult? Function(_CancelOrder value)? cancelOrder,
+  }) {
+    return getAllOrderWithDetail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
+    TResult Function(_EditOrder value)? editOrder,
+    TResult Function(_CancelOrder value)? cancelOrder,
+    required TResult orElse(),
+  }) {
+    if (getAllOrderWithDetail != null) {
+      return getAllOrderWithDetail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllOrderWithDetail implements OngoingEvent {
+  const factory _GetAllOrderWithDetail() = _$GetAllOrderWithDetailImpl;
 }
 
 /// @nodoc
@@ -389,6 +533,7 @@ class _$EditOrderImpl implements _EditOrder {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
     required TResult Function(String orderId, String newStatus) editOrder,
     required TResult Function(String orderId, String newStatus) cancelOrder,
   }) {
@@ -400,6 +545,7 @@ class _$EditOrderImpl implements _EditOrder {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
     TResult? Function(String orderId, String newStatus)? editOrder,
     TResult? Function(String orderId, String newStatus)? cancelOrder,
   }) {
@@ -411,6 +557,7 @@ class _$EditOrderImpl implements _EditOrder {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
     TResult Function(String orderId, String newStatus)? editOrder,
     TResult Function(String orderId, String newStatus)? cancelOrder,
     required TResult orElse(),
@@ -426,6 +573,8 @@ class _$EditOrderImpl implements _EditOrder {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
     required TResult Function(_EditOrder value) editOrder,
     required TResult Function(_CancelOrder value) cancelOrder,
   }) {
@@ -437,6 +586,7 @@ class _$EditOrderImpl implements _EditOrder {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult? Function(_EditOrder value)? editOrder,
     TResult? Function(_CancelOrder value)? cancelOrder,
   }) {
@@ -448,6 +598,7 @@ class _$EditOrderImpl implements _EditOrder {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult Function(_EditOrder value)? editOrder,
     TResult Function(_CancelOrder value)? cancelOrder,
     required TResult orElse(),
@@ -546,6 +697,7 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getAllOrder,
+    required TResult Function() getAllOrderWithDetail,
     required TResult Function(String orderId, String newStatus) editOrder,
     required TResult Function(String orderId, String newStatus) cancelOrder,
   }) {
@@ -557,6 +709,7 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getAllOrder,
+    TResult? Function()? getAllOrderWithDetail,
     TResult? Function(String orderId, String newStatus)? editOrder,
     TResult? Function(String orderId, String newStatus)? cancelOrder,
   }) {
@@ -568,6 +721,7 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getAllOrder,
+    TResult Function()? getAllOrderWithDetail,
     TResult Function(String orderId, String newStatus)? editOrder,
     TResult Function(String orderId, String newStatus)? cancelOrder,
     required TResult orElse(),
@@ -583,6 +737,8 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetAllOrder value) getAllOrder,
+    required TResult Function(_GetAllOrderWithDetail value)
+        getAllOrderWithDetail,
     required TResult Function(_EditOrder value) editOrder,
     required TResult Function(_CancelOrder value) cancelOrder,
   }) {
@@ -594,6 +750,7 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetAllOrder value)? getAllOrder,
+    TResult? Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult? Function(_EditOrder value)? editOrder,
     TResult? Function(_CancelOrder value)? cancelOrder,
   }) {
@@ -605,6 +762,7 @@ class _$CancelOrderImpl implements _CancelOrder {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetAllOrder value)? getAllOrder,
+    TResult Function(_GetAllOrderWithDetail value)? getAllOrderWithDetail,
     TResult Function(_EditOrder value)? editOrder,
     TResult Function(_CancelOrder value)? cancelOrder,
     required TResult orElse(),
