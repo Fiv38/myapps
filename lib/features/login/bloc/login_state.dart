@@ -14,6 +14,7 @@ class LoginState with _$LoginState {
   const factory LoginState.verificationFailed({String? message}) = _VerificationFailed;
   const factory LoginState.changePasswordVisibility() = _ChangePasswordVisibility;
   const factory LoginState.error(String message) = _Error;
+
   const factory LoginState.permissionDenied() = _PermissionDenied;
   const factory LoginState.locationFetched(double latitude, double longitude) = _LocationFetched;
 }
